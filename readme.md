@@ -78,6 +78,12 @@ python build\package-runtime.py --runtime . --dependencies . --stage build\runti
 - 保留官方同分最高规则重叠导致 `Single()` 异常的边界行为。
 - 仅处理有判据且 `TotalScore > 0` 的评分点；其他读数和标准答案 `StdResult` 保留。
 
+## 分光计 EXP 动态标准研究结论
+
+[最终结论、原始调用链与独立复现](<docs/spectrometer-exp-generation.md>) · [三次实际验证证据](<docs/evidence/spectrometer-generator-verification.json>)
+
+原模型和原 `GetStd` 的无界面生成探针已实测 3/3 通过：两个 EXP 标准共用本轮折射率，可由原函数生成，不以人工点击为生成依赖。本次仅归档结论和独立分析源码；主 EXE 未改，自动生成未接入主程序，也未验证服务器最终满分。
+
 ## Change Log
 
 - **1.3.0 runtime fix**：补齐 9 个匹配程序集；合法 loopback 默认配置；完整包与增量包分开；增加运行清单/启动检查；修正用法与人工测试输入。

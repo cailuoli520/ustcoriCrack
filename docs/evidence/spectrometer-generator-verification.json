@@ -1,0 +1,77 @@
+{
+  "sample": "isolated cached spectrometer package, branch 4",
+  "main_entrypoint_called": false,
+  "all_passed": true,
+  "trial_count": 3,
+  "sample_files_unchanged": true,
+  "trial_results": [
+    {
+      "trial": 1,
+      "exit_code": 0,
+      "output": [
+        "GENERATOR_VERIFIED",
+        "model_generated_n=1.56220183",
+        "original_SLJZSL_DOUBLE=1.56",
+        "original_SLJSXPXJ_DOUBLE=42.72",
+        "formula_matches_original=True",
+        "visible_windows_created=0",
+        "mouse_or_keyboard_actions=0",
+        "exam_files_modified=0",
+        "main_entrypoint_called=False"
+      ]
+    },
+    {
+      "trial": 2,
+      "exit_code": 0,
+      "output": [
+        "GENERATOR_VERIFIED",
+        "model_generated_n=1.6621417799999998",
+        "original_SLJZSL_DOUBLE=1.66",
+        "original_SLJSXPXJ_DOUBLE=52.42",
+        "formula_matches_original=True",
+        "visible_windows_created=0",
+        "mouse_or_keyboard_actions=0",
+        "exam_files_modified=0",
+        "main_entrypoint_called=False"
+      ]
+    },
+    {
+      "trial": 3,
+      "exit_code": 0,
+      "output": [
+        "GENERATOR_VERIFIED",
+        "model_generated_n=1.55691575",
+        "original_SLJZSL_DOUBLE=1.56",
+        "original_SLJSXPXJ_DOUBLE=42.24",
+        "formula_matches_original=True",
+        "visible_windows_created=0",
+        "mouse_or_keyboard_actions=0",
+        "exam_files_modified=0",
+        "main_entrypoint_called=False"
+      ]
+    }
+  ],
+  "sample_files": [
+    {
+      "bytes": 395776,
+      "sha256": "97ae4f74be578a0365d55c2278158edbc6c68a65cccadac724e1e22ead6e90b4",
+      "name": "Main.exe"
+    },
+    {
+      "bytes": 3401216,
+      "sha256": "a8599f2a2c5b8ed033cbd04f35fb55e2d3b6a443e7a8393b94ac0bdb90d68356",
+      "name": "USTCORi.SimExp.Instruments.FGJ.dll"
+    },
+    {
+      "bytes": 3406,
+      "sha256": "7ed36cd8d86e7a0d8c306448b77075fbeb4d976d0e9efe7b6736f665fe6655e7",
+      "name": "SimExpConfig/ExamConfig.bin"
+    },
+    {
+      "bytes": 20663,
+      "sha256": "16a3732d64aa63f871163552fe5f1db01c7629ffa380aec1ad0a4a0716cadc12",
+      "name": "SimExpConfig/ExamConfig.xml"
+    }
+  ],
+  "validation_scope": "Original model and GetStd only; no main-executable integration or server-score verification."
+}
