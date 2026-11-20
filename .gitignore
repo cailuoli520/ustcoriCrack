@@ -385,3 +385,24 @@ ustocri_crack/obj/
 build/protocol-tests/runtime/
 ustcori_crack-json-startup-fixed/
 *.exe
+
+# Complete root runtime: these pinned originals are part of the download.
+!/ustcori_crack.exe
+!/WebLabClient.exe
+!/ICSharpCode.SharpZipLib.dll
+!/Newtonsoft.Json.dll
+!/PackageLibrary.dll
+!/USTCORI.CommonLib.Security.dll
+!/USTCORi.SimExp.Instruments.Component.dll
+!/USTCORi.WebLabClient.Model.dll
+!/Unity3DWPFConnection.dll
+!/WpfAnimatedGif.dll
+# Local tests, captures, logs and deployment paths are not release inputs.
+build/protocol-tests/config-roundtrip/
+build/protocol-tests/cli-report.json
+build/protocol-tests/parser-report.json
+build/protocol-tests/fullscore-deployment.json
+build/user-messages.txt
+startup-error.log
+solved-exam.xml
+labwork/

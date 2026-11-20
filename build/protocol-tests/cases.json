@@ -1,59 +1,59 @@
 [
   {
     "name": "user-json-shape",
-    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly8xOTIuMTY4LjEyLjYxIiwiU3R1ZGVudElEIjoiVEVTVF9TVFVERU5UIiwiV2h0biI6IjMyMCoyNDAqMyozIiwiVXNlclR5cGUiOiIzIiwiQ2xpZW50aXAiOiIxMjcuMC4wLjEiLCJDbGllblRhcmVhIjoi5pyq55+lIiwiTGFuZ3VhZ2UiOiJaSC1DTiIsIkNvdXJzZUlEIjoiMTEwNCIsIlN5c0lEIjoiMSIsIlBvcnQiOiJmYWxzZSIsIk1vZGUiOiIyIn0=/",
+    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCIsIlN0dWRlbnRJRCI6IlRFU1RfU1RVREVOVCIsIldodG4iOiIzMjAqMjQwKjMqMyIsIlVzZXJUeXBlIjoiMyIsIkNsaWVudGlwIjoiMTI3LjAuMC4xIiwiQ2xpZW5UYXJlYSI6IuacquefpSIsIkxhbmd1YWdlIjoiWkgtQ04iLCJDb3Vyc2VJRCI6IjAwMDAiLCJTeXNJRCI6IjEiLCJQb3J0IjoiZmFsc2UiLCJNb2RlIjoiMiJ9/",
     "fail": false,
-    "service": "http://<SERVER_HOST>/BizService.svc",
+    "service": "http://127.0.0.1:8000/BizService.svc",
     "expect": {
       "LabId": "2",
       "StudentId": "TEST_STUDENT",
-      "SiteBaseUri": "http://<SERVER_HOST>/",
+      "SiteBaseUri": "http://127.0.0.1:8000/",
       "UseNewHall": true,
       "IsJson": true
     }
   },
   {
     "name": "no-trailing-delimiter",
-    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly8xOTIuMTY4LjEyLjYxIiwiU3R1ZGVudElEIjoiVEVTVF9TVFVERU5UIiwiV2h0biI6IjMyMCoyNDAqMyozIiwiVXNlclR5cGUiOiIzIiwiQ2xpZW50aXAiOiIxMjcuMC4wLjEiLCJDbGllblRhcmVhIjoi5pyq55+lIiwiTGFuZ3VhZ2UiOiJaSC1DTiIsIkNvdXJzZUlEIjoiMTEwNCIsIlN5c0lEIjoiMSIsIlBvcnQiOiJmYWxzZSIsIk1vZGUiOiIyIn0=",
+    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCIsIlN0dWRlbnRJRCI6IlRFU1RfU1RVREVOVCIsIldodG4iOiIzMjAqMjQwKjMqMyIsIlVzZXJUeXBlIjoiMyIsIkNsaWVudGlwIjoiMTI3LjAuMC4xIiwiQ2xpZW5UYXJlYSI6IuacquefpSIsIkxhbmd1YWdlIjoiWkgtQ04iLCJDb3Vyc2VJRCI6IjAwMDAiLCJTeXNJRCI6IjEiLCJQb3J0IjoiZmFsc2UiLCJNb2RlIjoiMiJ9",
     "fail": false,
-    "service": "http://<SERVER_HOST>/BizService.svc",
+    "service": "http://127.0.0.1:8000/BizService.svc",
     "expect": {
       "LabId": "2",
       "StudentId": "TEST_STUDENT",
-      "SiteBaseUri": "http://<SERVER_HOST>/",
+      "SiteBaseUri": "http://127.0.0.1:8000/",
       "UseNewHall": true,
       "IsJson": true
     }
   },
   {
     "name": "correct-address-spelling",
-    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU3R1ZGVudElEIjoiVEVTVF9TVFVERU5UIiwiV2h0biI6IjMyMCoyNDAqMyozIiwiVXNlclR5cGUiOiIzIiwiQ2xpZW50aXAiOiIxMjcuMC4wLjEiLCJDbGllblRhcmVhIjoi5pyq55+lIiwiTGFuZ3VhZ2UiOiJaSC1DTiIsIkNvdXJzZUlEIjoiMTEwNCIsIlN5c0lEIjoiMSIsIlBvcnQiOiJmYWxzZSIsIk1vZGUiOiIyIiwiU2l0ZUFkZHJlc3MiOiJodHRwOi8vMTkyLjE2OC4xMi42MSJ9/",
+    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU3R1ZGVudElEIjoiVEVTVF9TVFVERU5UIiwiV2h0biI6IjMyMCoyNDAqMyozIiwiVXNlclR5cGUiOiIzIiwiQ2xpZW50aXAiOiIxMjcuMC4wLjEiLCJDbGllblRhcmVhIjoi5pyq55+lIiwiTGFuZ3VhZ2UiOiJaSC1DTiIsIkNvdXJzZUlEIjoiMDAwMCIsIlN5c0lEIjoiMSIsIlBvcnQiOiJmYWxzZSIsIk1vZGUiOiIyIiwiU2l0ZUFkZHJlc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAifQ==/",
     "fail": false,
-    "service": "http://<SERVER_HOST>/BizService.svc",
+    "service": "http://127.0.0.1:8000/BizService.svc",
     "expect": {
       "LabId": "2",
       "StudentId": "TEST_STUDENT",
-      "SiteBaseUri": "http://<SERVER_HOST>/",
+      "SiteBaseUri": "http://127.0.0.1:8000/",
       "UseNewHall": true,
       "IsJson": true
     }
   },
   {
     "name": "case-insensitive-address",
-    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU3R1ZGVudElEIjoiVEVTVF9TVFVERU5UIiwiV2h0biI6IjMyMCoyNDAqMyozIiwiVXNlclR5cGUiOiIzIiwiQ2xpZW50aXAiOiIxMjcuMC4wLjEiLCJDbGllblRhcmVhIjoi5pyq55+lIiwiTGFuZ3VhZ2UiOiJaSC1DTiIsIkNvdXJzZUlEIjoiMTEwNCIsIlN5c0lEIjoiMSIsIlBvcnQiOiJmYWxzZSIsIk1vZGUiOiIyIiwic2l0ZWFkcmVzcyI6Imh0dHA6Ly8xOTIuMTY4LjEyLjYxIn0=/",
+    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU3R1ZGVudElEIjoiVEVTVF9TVFVERU5UIiwiV2h0biI6IjMyMCoyNDAqMyozIiwiVXNlclR5cGUiOiIzIiwiQ2xpZW50aXAiOiIxMjcuMC4wLjEiLCJDbGllblRhcmVhIjoi5pyq55+lIiwiTGFuZ3VhZ2UiOiJaSC1DTiIsIkNvdXJzZUlEIjoiMDAwMCIsIlN5c0lEIjoiMSIsIlBvcnQiOiJmYWxzZSIsIk1vZGUiOiIyIiwic2l0ZWFkcmVzcyI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCJ9/",
     "fail": false,
-    "service": "http://<SERVER_HOST>/BizService.svc",
+    "service": "http://127.0.0.1:8000/BizService.svc",
     "expect": {
       "LabId": "2",
       "StudentId": "TEST_STUDENT",
-      "SiteBaseUri": "http://<SERVER_HOST>/",
+      "SiteBaseUri": "http://127.0.0.1:8000/",
       "UseNewHall": true,
       "IsJson": true
     }
   },
   {
     "name": "https-port-prefix",
-    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHBzOi8vbG9jYWxob3N0Ojg0NDMvbGFicm9vdC8iLCJTdHVkZW50SUQiOiJURVNUX1NUVURFTlQiLCJXaHRuIjoiMzIwKjI0MCozKjMiLCJVc2VyVHlwZSI6IjMiLCJDbGllbnRpcCI6IjEyNy4wLjAuMSIsIkNsaWVuVGFyZWEiOiLmnKrnn6UiLCJMYW5ndWFnZSI6IlpILUNOIiwiQ291cnNlSUQiOiIxMTA0IiwiU3lzSUQiOiIxIiwiUG9ydCI6ImZhbHNlIiwiTW9kZSI6IjIifQ==/",
+    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHBzOi8vbG9jYWxob3N0Ojg0NDMvbGFicm9vdC8iLCJTdHVkZW50SUQiOiJURVNUX1NUVURFTlQiLCJXaHRuIjoiMzIwKjI0MCozKjMiLCJVc2VyVHlwZSI6IjMiLCJDbGllbnRpcCI6IjEyNy4wLjAuMSIsIkNsaWVuVGFyZWEiOiLmnKrnn6UiLCJMYW5ndWFnZSI6IlpILUNOIiwiQ291cnNlSUQiOiIwMDAwIiwiU3lzSUQiOiIxIiwiUG9ydCI6ImZhbHNlIiwiTW9kZSI6IjIifQ==/",
     "fail": false,
     "service": "https://localhost:8443/labroot/BizService.svc",
     "expect": {
@@ -66,7 +66,7 @@
   },
   {
     "name": "explicit-port-override",
-    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHBzOi8vbG9jYWxob3N0Ojg0NDMvbGFicm9vdC8iLCJTdHVkZW50SUQiOiJURVNUX1NUVURFTlQiLCJXaHRuIjoiMzIwKjI0MCozKjMiLCJVc2VyVHlwZSI6IjMiLCJDbGllbnRpcCI6IjEyNy4wLjAuMSIsIkNsaWVuVGFyZWEiOiLmnKrnn6UiLCJMYW5ndWFnZSI6IlpILUNOIiwiQ291cnNlSUQiOiIxMTA0IiwiU3lzSUQiOiIxIiwiUG9ydCI6IjUwMDEiLCJNb2RlIjoiMiJ9/",
+    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHBzOi8vbG9jYWxob3N0Ojg0NDMvbGFicm9vdC8iLCJTdHVkZW50SUQiOiJURVNUX1NUVURFTlQiLCJXaHRuIjoiMzIwKjI0MCozKjMiLCJVc2VyVHlwZSI6IjMiLCJDbGllbnRpcCI6IjEyNy4wLjAuMSIsIkNsaWVuVGFyZWEiOiLmnKrnn6UiLCJMYW5ndWFnZSI6IlpILUNOIiwiQ291cnNlSUQiOiIwMDAwIiwiU3lzSUQiOiIxIiwiUG9ydCI6IjUwMDEiLCJNb2RlIjoiMiJ9/",
     "fail": false,
     "service": "https://localhost:5001/labroot/BizService.svc",
     "expect": {
@@ -79,7 +79,7 @@
   },
   {
     "name": "non-port-False",
-    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODM4Ni9wcmVmaXgiLCJTdHVkZW50SUQiOiJURVNUX1NUVURFTlQiLCJXaHRuIjoiMzIwKjI0MCozKjMiLCJVc2VyVHlwZSI6IjMiLCJDbGllbnRpcCI6IjEyNy4wLjAuMSIsIkNsaWVuVGFyZWEiOiLmnKrnn6UiLCJMYW5ndWFnZSI6IlpILUNOIiwiQ291cnNlSUQiOiIxMTA0IiwiU3lzSUQiOiIxIiwiUG9ydCI6ZmFsc2UsIk1vZGUiOiIyIn0=/",
+    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODM4Ni9wcmVmaXgiLCJTdHVkZW50SUQiOiJURVNUX1NUVURFTlQiLCJXaHRuIjoiMzIwKjI0MCozKjMiLCJVc2VyVHlwZSI6IjMiLCJDbGllbnRpcCI6IjEyNy4wLjAuMSIsIkNsaWVuVGFyZWEiOiLmnKrnn6UiLCJMYW5ndWFnZSI6IlpILUNOIiwiQ291cnNlSUQiOiIwMDAwIiwiU3lzSUQiOiIxIiwiUG9ydCI6ZmFsc2UsIk1vZGUiOiIyIn0=/",
     "fail": false,
     "service": "http://localhost:8386/prefix/BizService.svc",
     "expect": {
@@ -92,7 +92,7 @@
   },
   {
     "name": "non-port-undefined",
-    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODM4Ni9wcmVmaXgiLCJTdHVkZW50SUQiOiJURVNUX1NUVURFTlQiLCJXaHRuIjoiMzIwKjI0MCozKjMiLCJVc2VyVHlwZSI6IjMiLCJDbGllbnRpcCI6IjEyNy4wLjAuMSIsIkNsaWVuVGFyZWEiOiLmnKrnn6UiLCJMYW5ndWFnZSI6IlpILUNOIiwiQ291cnNlSUQiOiIxMTA0IiwiU3lzSUQiOiIxIiwiUG9ydCI6InVuZGVmaW5lZCIsIk1vZGUiOiIyIn0=/",
+    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODM4Ni9wcmVmaXgiLCJTdHVkZW50SUQiOiJURVNUX1NUVURFTlQiLCJXaHRuIjoiMzIwKjI0MCozKjMiLCJVc2VyVHlwZSI6IjMiLCJDbGllbnRpcCI6IjEyNy4wLjAuMSIsIkNsaWVuVGFyZWEiOiLmnKrnn6UiLCJMYW5ndWFnZSI6IlpILUNOIiwiQ291cnNlSUQiOiIwMDAwIiwiU3lzSUQiOiIxIiwiUG9ydCI6InVuZGVmaW5lZCIsIk1vZGUiOiIyIn0=/",
     "fail": false,
     "service": "http://localhost:8386/prefix/BizService.svc",
     "expect": {
@@ -105,7 +105,7 @@
   },
   {
     "name": "non-port-null",
-    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODM4Ni9wcmVmaXgiLCJTdHVkZW50SUQiOiJURVNUX1NUVURFTlQiLCJXaHRuIjoiMzIwKjI0MCozKjMiLCJVc2VyVHlwZSI6IjMiLCJDbGllbnRpcCI6IjEyNy4wLjAuMSIsIkNsaWVuVGFyZWEiOiLmnKrnn6UiLCJMYW5ndWFnZSI6IlpILUNOIiwiQ291cnNlSUQiOiIxMTA0IiwiU3lzSUQiOiIxIiwiUG9ydCI6Im51bGwiLCJNb2RlIjoiMiJ9/",
+    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODM4Ni9wcmVmaXgiLCJTdHVkZW50SUQiOiJURVNUX1NUVURFTlQiLCJXaHRuIjoiMzIwKjI0MCozKjMiLCJVc2VyVHlwZSI6IjMiLCJDbGllbnRpcCI6IjEyNy4wLjAuMSIsIkNsaWVuVGFyZWEiOiLmnKrnn6UiLCJMYW5ndWFnZSI6IlpILUNOIiwiQ291cnNlSUQiOiIwMDAwIiwiU3lzSUQiOiIxIiwiUG9ydCI6Im51bGwiLCJNb2RlIjoiMiJ9/",
     "fail": false,
     "service": "http://localhost:8386/prefix/BizService.svc",
     "expect": {
@@ -118,7 +118,7 @@
   },
   {
     "name": "non-port-",
-    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODM4Ni9wcmVmaXgiLCJTdHVkZW50SUQiOiJURVNUX1NUVURFTlQiLCJXaHRuIjoiMzIwKjI0MCozKjMiLCJVc2VyVHlwZSI6IjMiLCJDbGllbnRpcCI6IjEyNy4wLjAuMSIsIkNsaWVuVGFyZWEiOiLmnKrnn6UiLCJMYW5ndWFnZSI6IlpILUNOIiwiQ291cnNlSUQiOiIxMTA0IiwiU3lzSUQiOiIxIiwiUG9ydCI6IiIsIk1vZGUiOiIyIn0=/",
+    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODM4Ni9wcmVmaXgiLCJTdHVkZW50SUQiOiJURVNUX1NUVURFTlQiLCJXaHRuIjoiMzIwKjI0MCozKjMiLCJVc2VyVHlwZSI6IjMiLCJDbGllbnRpcCI6IjEyNy4wLjAuMSIsIkNsaWVuVGFyZWEiOiLmnKrnn6UiLCJMYW5ndWFnZSI6IlpILUNOIiwiQ291cnNlSUQiOiIwMDAwIiwiU3lzSUQiOiIxIiwiUG9ydCI6IiIsIk1vZGUiOiIyIn0=/",
     "fail": false,
     "service": "http://localhost:8386/prefix/BizService.svc",
     "expect": {
@@ -131,7 +131,7 @@
   },
   {
     "name": "non-port-None",
-    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODM4Ni9wcmVmaXgiLCJTdHVkZW50SUQiOiJURVNUX1NUVURFTlQiLCJXaHRuIjoiMzIwKjI0MCozKjMiLCJVc2VyVHlwZSI6IjMiLCJDbGllbnRpcCI6IjEyNy4wLjAuMSIsIkNsaWVuVGFyZWEiOiLmnKrnn6UiLCJMYW5ndWFnZSI6IlpILUNOIiwiQ291cnNlSUQiOiIxMTA0IiwiU3lzSUQiOiIxIiwiUG9ydCI6bnVsbCwiTW9kZSI6IjIifQ==/",
+    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODM4Ni9wcmVmaXgiLCJTdHVkZW50SUQiOiJURVNUX1NUVURFTlQiLCJXaHRuIjoiMzIwKjI0MCozKjMiLCJVc2VyVHlwZSI6IjMiLCJDbGllbnRpcCI6IjEyNy4wLjAuMSIsIkNsaWVuVGFyZWEiOiLmnKrnn6UiLCJMYW5ndWFnZSI6IlpILUNOIiwiQ291cnNlSUQiOiIwMDAwIiwiU3lzSUQiOiIxIiwiUG9ydCI6bnVsbCwiTW9kZSI6IjIifQ==/",
     "fail": false,
     "service": "http://localhost:8386/prefix/BizService.svc",
     "expect": {
@@ -144,26 +144,26 @@
   },
   {
     "name": "missing-port",
-    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly8xOTIuMTY4LjEyLjYxIiwiU3R1ZGVudElEIjoiVEVTVF9TVFVERU5UIiwiV2h0biI6IjMyMCoyNDAqMyozIiwiVXNlclR5cGUiOiIzIiwiQ2xpZW50aXAiOiIxMjcuMC4wLjEiLCJDbGllblRhcmVhIjoi5pyq55+lIiwiTGFuZ3VhZ2UiOiJaSC1DTiIsIkNvdXJzZUlEIjoiMTEwNCIsIlN5c0lEIjoiMSIsIk1vZGUiOiIyIn0=/",
+    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCIsIlN0dWRlbnRJRCI6IlRFU1RfU1RVREVOVCIsIldodG4iOiIzMjAqMjQwKjMqMyIsIlVzZXJUeXBlIjoiMyIsIkNsaWVudGlwIjoiMTI3LjAuMC4xIiwiQ2xpZW5UYXJlYSI6IuacquefpSIsIkxhbmd1YWdlIjoiWkgtQ04iLCJDb3Vyc2VJRCI6IjAwMDAiLCJTeXNJRCI6IjEiLCJNb2RlIjoiMiJ9/",
     "fail": false,
-    "service": "http://<SERVER_HOST>/BizService.svc",
+    "service": "http://127.0.0.1:8000/BizService.svc",
     "expect": {
       "LabId": "2",
       "StudentId": "TEST_STUDENT",
-      "SiteBaseUri": "http://<SERVER_HOST>/",
+      "SiteBaseUri": "http://127.0.0.1:8000/",
       "UseNewHall": true,
       "IsJson": true
     }
   },
   {
     "name": "json-without-new-hall-fields",
-    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly8xOTIuMTY4LjEyLjYxIiwiU3R1ZGVudElEIjoiVEVTVF9TVFVERU5UIiwiV2h0biI6IjMyMCoyNDAqMyozIiwiVXNlclR5cGUiOiIzIiwiQ2xpZW50aXAiOiIxMjcuMC4wLjEiLCJDbGllblRhcmVhIjoi5pyq55+lIiwiU3lzSUQiOiIxIiwiUG9ydCI6ImZhbHNlIiwiTW9kZSI6IjIifQ==/",
+    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCIsIlN0dWRlbnRJRCI6IlRFU1RfU1RVREVOVCIsIldodG4iOiIzMjAqMjQwKjMqMyIsIlVzZXJUeXBlIjoiMyIsIkNsaWVudGlwIjoiMTI3LjAuMC4xIiwiQ2xpZW5UYXJlYSI6IuacquefpSIsIlN5c0lEIjoiMSIsIlBvcnQiOiJmYWxzZSIsIk1vZGUiOiIyIn0=/",
     "fail": false,
-    "service": "http://<SERVER_HOST>/BizService.svc",
+    "service": "http://127.0.0.1:8000/BizService.svc",
     "expect": {
       "LabId": "2",
       "StudentId": "TEST_STUDENT",
-      "SiteBaseUri": "http://<SERVER_HOST>/",
+      "SiteBaseUri": "http://127.0.0.1:8000/",
       "UseNewHall": false,
       "IsJson": true
     }
@@ -183,7 +183,7 @@
   },
   {
     "name": "legacy-twelve",
-    "link": "labori://LzIvMTI3LjAuMC4xLzgzODYvVEVTVF9TVFVERU5ULy0vLS8zLzEyNy4wLjAuMS9hcmVhL1pILUNOLzExMDQ=/",
+    "link": "labori://LzIvMTI3LjAuMC4xLzgzODYvVEVTVF9TVFVERU5ULy0vLS8zLzEyNy4wLjAuMS9hcmVhL1pILUNOLzAwMDA=/",
     "fail": false,
     "service": "http://127.0.0.1:8386/BizService.svc",
     "expect": {
@@ -196,81 +196,81 @@
   },
   {
     "name": "base64-plus-preserved",
-    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly8xOTIuMTY4LjEyLjYxIiwiU3R1ZGVudElEIjoiVEVTVF9TVFVERU5UIiwiV2h0biI6IjMyMCoyNDAqMyozIiwiVXNlclR5cGUiOiIzIiwiQ2xpZW50aXAiOiIxMjcuMC4wLjEiLCJDbGllblRhcmVhIjoi5Li+IiwiTGFuZ3VhZ2UiOiJaSC1DTiIsIkNvdXJzZUlEIjoiMTEwNCIsIlN5c0lEIjoiMSIsIlBvcnQiOiJmYWxzZSIsIk1vZGUiOiIyIn0=/",
+    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCIsIlN0dWRlbnRJRCI6IlRFU1RfU1RVREVOVCIsIldodG4iOiIzMjAqMjQwKjMqMyIsIlVzZXJUeXBlIjoiMyIsIkNsaWVudGlwIjoiMTI3LjAuMC4xIiwiQ2xpZW5UYXJlYSI6IuS+gCIsIkxhbmd1YWdlIjoiWkgtQ04iLCJDb3Vyc2VJRCI6IjAwMDAiLCJTeXNJRCI6IjEiLCJQb3J0IjoiZmFsc2UiLCJNb2RlIjoiMiJ9/",
     "fail": false,
-    "service": "http://<SERVER_HOST>/BizService.svc",
+    "service": "http://127.0.0.1:8000/BizService.svc",
     "expect": {
       "LabId": "2",
       "StudentId": "TEST_STUDENT",
-      "SiteBaseUri": "http://<SERVER_HOST>/",
+      "SiteBaseUri": "http://127.0.0.1:8000/",
       "UseNewHall": true,
       "IsJson": true
     }
   },
   {
     "name": "percent-encoded-base64",
-    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly8xOTIuMTY4LjEyLjYxIiwiU3R1ZGVudElEIjoiVEVTVF9TVFVERU5UIiwiV2h0biI6IjMyMCoyNDAqMyozIiwiVXNlclR5cGUiOiIzIiwiQ2xpZW50aXAiOiIxMjcuMC4wLjEiLCJDbGllblRhcmVhIjoi5Li%2BIiwiTGFuZ3VhZ2UiOiJaSC1DTiIsIkNvdXJzZUlEIjoiMTEwNCIsIlN5c0lEIjoiMSIsIlBvcnQiOiJmYWxzZSIsIk1vZGUiOiIyIn0%3D/",
+    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCIsIlN0dWRlbnRJRCI6IlRFU1RfU1RVREVOVCIsIldodG4iOiIzMjAqMjQwKjMqMyIsIlVzZXJUeXBlIjoiMyIsIkNsaWVudGlwIjoiMTI3LjAuMC4xIiwiQ2xpZW5UYXJlYSI6IuS%2BgCIsIkxhbmd1YWdlIjoiWkgtQ04iLCJDb3Vyc2VJRCI6IjAwMDAiLCJTeXNJRCI6IjEiLCJQb3J0IjoiZmFsc2UiLCJNb2RlIjoiMiJ9/",
     "fail": false,
-    "service": "http://<SERVER_HOST>/BizService.svc",
+    "service": "http://127.0.0.1:8000/BizService.svc",
     "expect": {
       "LabId": "2",
       "StudentId": "TEST_STUDENT",
-      "SiteBaseUri": "http://<SERVER_HOST>/",
+      "SiteBaseUri": "http://127.0.0.1:8000/",
       "UseNewHall": true,
       "IsJson": true
     }
   },
   {
     "name": "matching-address-aliases",
-    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly8xOTIuMTY4LjEyLjYxIiwiU3R1ZGVudElEIjoiVEVTVF9TVFVERU5UIiwiV2h0biI6IjMyMCoyNDAqMyozIiwiVXNlclR5cGUiOiIzIiwiQ2xpZW50aXAiOiIxMjcuMC4wLjEiLCJDbGllblRhcmVhIjoi5pyq55+lIiwiTGFuZ3VhZ2UiOiJaSC1DTiIsIkNvdXJzZUlEIjoiMTEwNCIsIlN5c0lEIjoiMSIsIlBvcnQiOiJmYWxzZSIsIk1vZGUiOiIyIiwiU2l0ZUFkZHJlc3MiOiJodHRwOi8vMTkyLjE2OC4xMi42MSJ9/",
+    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCIsIlN0dWRlbnRJRCI6IlRFU1RfU1RVREVOVCIsIldodG4iOiIzMjAqMjQwKjMqMyIsIlVzZXJUeXBlIjoiMyIsIkNsaWVudGlwIjoiMTI3LjAuMC4xIiwiQ2xpZW5UYXJlYSI6IuacquefpSIsIkxhbmd1YWdlIjoiWkgtQ04iLCJDb3Vyc2VJRCI6IjAwMDAiLCJTeXNJRCI6IjEiLCJQb3J0IjoiZmFsc2UiLCJNb2RlIjoiMiIsIlNpdGVBZGRyZXNzIjoiaHR0cDovLzEyNy4wLjAuMTo4MDAwIn0=/",
     "fail": false,
-    "service": "http://<SERVER_HOST>/BizService.svc",
+    "service": "http://127.0.0.1:8000/BizService.svc",
     "expect": {
       "LabId": "2",
       "StudentId": "TEST_STUDENT",
-      "SiteBaseUri": "http://<SERVER_HOST>/",
+      "SiteBaseUri": "http://127.0.0.1:8000/",
       "UseNewHall": true,
       "IsJson": true
     }
   },
   {
     "name": "conflicting-address-aliases",
-    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly8xOTIuMTY4LjEyLjYxIiwiU3R1ZGVudElEIjoiVEVTVF9TVFVERU5UIiwiV2h0biI6IjMyMCoyNDAqMyozIiwiVXNlclR5cGUiOiIzIiwiQ2xpZW50aXAiOiIxMjcuMC4wLjEiLCJDbGllblRhcmVhIjoi5pyq55+lIiwiTGFuZ3VhZ2UiOiJaSC1DTiIsIkNvdXJzZUlEIjoiMTEwNCIsIlN5c0lEIjoiMSIsIlBvcnQiOiJmYWxzZSIsIk1vZGUiOiIyIiwiU2l0ZUFkZHJlc3MiOiJodHRwOi8vbG9jYWxob3N0In0=/",
+    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCIsIlN0dWRlbnRJRCI6IlRFU1RfU1RVREVOVCIsIldodG4iOiIzMjAqMjQwKjMqMyIsIlVzZXJUeXBlIjoiMyIsIkNsaWVudGlwIjoiMTI3LjAuMC4xIiwiQ2xpZW5UYXJlYSI6IuacquefpSIsIkxhbmd1YWdlIjoiWkgtQ04iLCJDb3Vyc2VJRCI6IjAwMDAiLCJTeXNJRCI6IjEiLCJQb3J0IjoiZmFsc2UiLCJNb2RlIjoiMiIsIlNpdGVBZGRyZXNzIjoiaHR0cDovL2xvY2FsaG9zdCJ9/",
     "fail": true
   },
   {
     "name": "missing-ExamOrLabID",
-    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly8xOTIuMTY4LjEyLjYxIiwiU3R1ZGVudElEIjoiVEVTVF9TVFVERU5UIiwiV2h0biI6IjMyMCoyNDAqMyozIiwiVXNlclR5cGUiOiIzIiwiQ2xpZW50aXAiOiIxMjcuMC4wLjEiLCJDbGllblRhcmVhIjoi5pyq55+lIiwiTGFuZ3VhZ2UiOiJaSC1DTiIsIkNvdXJzZUlEIjoiMTEwNCIsIlN5c0lEIjoiMSIsIlBvcnQiOiJmYWxzZSIsIk1vZGUiOiIyIn0=/",
+    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCIsIlN0dWRlbnRJRCI6IlRFU1RfU1RVREVOVCIsIldodG4iOiIzMjAqMjQwKjMqMyIsIlVzZXJUeXBlIjoiMyIsIkNsaWVudGlwIjoiMTI3LjAuMC4xIiwiQ2xpZW5UYXJlYSI6IuacquefpSIsIkxhbmd1YWdlIjoiWkgtQ04iLCJDb3Vyc2VJRCI6IjAwMDAiLCJTeXNJRCI6IjEiLCJQb3J0IjoiZmFsc2UiLCJNb2RlIjoiMiJ9/",
     "fail": true
   },
   {
     "name": "missing-StudentID",
-    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly8xOTIuMTY4LjEyLjYxIiwiV2h0biI6IjMyMCoyNDAqMyozIiwiVXNlclR5cGUiOiIzIiwiQ2xpZW50aXAiOiIxMjcuMC4wLjEiLCJDbGllblRhcmVhIjoi5pyq55+lIiwiTGFuZ3VhZ2UiOiJaSC1DTiIsIkNvdXJzZUlEIjoiMTEwNCIsIlN5c0lEIjoiMSIsIlBvcnQiOiJmYWxzZSIsIk1vZGUiOiIyIn0=/",
+    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCIsIldodG4iOiIzMjAqMjQwKjMqMyIsIlVzZXJUeXBlIjoiMyIsIkNsaWVudGlwIjoiMTI3LjAuMC4xIiwiQ2xpZW5UYXJlYSI6IuacquefpSIsIkxhbmd1YWdlIjoiWkgtQ04iLCJDb3Vyc2VJRCI6IjAwMDAiLCJTeXNJRCI6IjEiLCJQb3J0IjoiZmFsc2UiLCJNb2RlIjoiMiJ9/",
     "fail": true
   },
   {
     "name": "missing-SiteAdress",
-    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU3R1ZGVudElEIjoiVEVTVF9TVFVERU5UIiwiV2h0biI6IjMyMCoyNDAqMyozIiwiVXNlclR5cGUiOiIzIiwiQ2xpZW50aXAiOiIxMjcuMC4wLjEiLCJDbGllblRhcmVhIjoi5pyq55+lIiwiTGFuZ3VhZ2UiOiJaSC1DTiIsIkNvdXJzZUlEIjoiMTEwNCIsIlN5c0lEIjoiMSIsIlBvcnQiOiJmYWxzZSIsIk1vZGUiOiIyIn0=/",
+    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU3R1ZGVudElEIjoiVEVTVF9TVFVERU5UIiwiV2h0biI6IjMyMCoyNDAqMyozIiwiVXNlclR5cGUiOiIzIiwiQ2xpZW50aXAiOiIxMjcuMC4wLjEiLCJDbGllblRhcmVhIjoi5pyq55+lIiwiTGFuZ3VhZ2UiOiJaSC1DTiIsIkNvdXJzZUlEIjoiMDAwMCIsIlN5c0lEIjoiMSIsIlBvcnQiOiJmYWxzZSIsIk1vZGUiOiIyIn0=/",
     "fail": true
   },
   {
     "name": "invalid-port",
-    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly8xOTIuMTY4LjEyLjYxIiwiU3R1ZGVudElEIjoiVEVTVF9TVFVERU5UIiwiV2h0biI6IjMyMCoyNDAqMyozIiwiVXNlclR5cGUiOiIzIiwiQ2xpZW50aXAiOiIxMjcuMC4wLjEiLCJDbGllblRhcmVhIjoi5pyq55+lIiwiTGFuZ3VhZ2UiOiJaSC1DTiIsIkNvdXJzZUlEIjoiMTEwNCIsIlN5c0lEIjoiMSIsIlBvcnQiOiJub3QtYS1wb3J0IiwiTW9kZSI6IjIifQ==/",
+    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCIsIlN0dWRlbnRJRCI6IlRFU1RfU1RVREVOVCIsIldodG4iOiIzMjAqMjQwKjMqMyIsIlVzZXJUeXBlIjoiMyIsIkNsaWVudGlwIjoiMTI3LjAuMC4xIiwiQ2xpZW5UYXJlYSI6IuacquefpSIsIkxhbmd1YWdlIjoiWkgtQ04iLCJDb3Vyc2VJRCI6IjAwMDAiLCJTeXNJRCI6IjEiLCJQb3J0Ijoibm90LWEtcG9ydCIsIk1vZGUiOiIyIn0=/",
     "fail": true
   },
   {
     "name": "out-of-range-port",
-    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly8xOTIuMTY4LjEyLjYxIiwiU3R1ZGVudElEIjoiVEVTVF9TVFVERU5UIiwiV2h0biI6IjMyMCoyNDAqMyozIiwiVXNlclR5cGUiOiIzIiwiQ2xpZW50aXAiOiIxMjcuMC4wLjEiLCJDbGllblRhcmVhIjoi5pyq55+lIiwiTGFuZ3VhZ2UiOiJaSC1DTiIsIkNvdXJzZUlEIjoiMTEwNCIsIlN5c0lEIjoiMSIsIlBvcnQiOiI2NTUzNiIsIk1vZGUiOiIyIn0=/",
+    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCIsIlN0dWRlbnRJRCI6IlRFU1RfU1RVREVOVCIsIldodG4iOiIzMjAqMjQwKjMqMyIsIlVzZXJUeXBlIjoiMyIsIkNsaWVudGlwIjoiMTI3LjAuMC4xIiwiQ2xpZW5UYXJlYSI6IuacquefpSIsIkxhbmd1YWdlIjoiWkgtQ04iLCJDb3Vyc2VJRCI6IjAwMDAiLCJTeXNJRCI6IjEiLCJQb3J0IjoiNjU1MzYiLCJNb2RlIjoiMiJ9/",
     "fail": true
   },
   {
     "name": "non-http-site",
-    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6ImZpbGU6Ly8vdG1wIiwiU3R1ZGVudElEIjoiVEVTVF9TVFVERU5UIiwiV2h0biI6IjMyMCoyNDAqMyozIiwiVXNlclR5cGUiOiIzIiwiQ2xpZW50aXAiOiIxMjcuMC4wLjEiLCJDbGllblRhcmVhIjoi5pyq55+lIiwiTGFuZ3VhZ2UiOiJaSC1DTiIsIkNvdXJzZUlEIjoiMTEwNCIsIlN5c0lEIjoiMSIsIlBvcnQiOiJmYWxzZSIsIk1vZGUiOiIyIn0=/",
+    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6ImZpbGU6Ly8vdG1wIiwiU3R1ZGVudElEIjoiVEVTVF9TVFVERU5UIiwiV2h0biI6IjMyMCoyNDAqMyozIiwiVXNlclR5cGUiOiIzIiwiQ2xpZW50aXAiOiIxMjcuMC4wLjEiLCJDbGllblRhcmVhIjoi5pyq55+lIiwiTGFuZ3VhZ2UiOiJaSC1DTiIsIkNvdXJzZUlEIjoiMDAwMCIsIlN5c0lEIjoiMSIsIlBvcnQiOiJmYWxzZSIsIk1vZGUiOiIyIn0=/",
     "fail": true
   },
   {
     "name": "site-query",
-    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly9sb2NhbGhvc3QvP3g9MSIsIlN0dWRlbnRJRCI6IlRFU1RfU1RVREVOVCIsIldodG4iOiIzMjAqMjQwKjMqMyIsIlVzZXJUeXBlIjoiMyIsIkNsaWVudGlwIjoiMTI3LjAuMC4xIiwiQ2xpZW5UYXJlYSI6IuacquefpSIsIkxhbmd1YWdlIjoiWkgtQ04iLCJDb3Vyc2VJRCI6IjExMDQiLCJTeXNJRCI6IjEiLCJQb3J0IjoiZmFsc2UiLCJNb2RlIjoiMiJ9/",
+    "link": "labori://eyJEaWZmIjoiTGFib3JpOi8vIiwiRXhhbU9yTGFiSUQiOiIyIiwiU2l0ZUFkcmVzcyI6Imh0dHA6Ly9sb2NhbGhvc3QvP3g9MSIsIlN0dWRlbnRJRCI6IlRFU1RfU1RVREVOVCIsIldodG4iOiIzMjAqMjQwKjMqMyIsIlVzZXJUeXBlIjoiMyIsIkNsaWVudGlwIjoiMTI3LjAuMC4xIiwiQ2xpZW5UYXJlYSI6IuacquefpSIsIkxhbmd1YWdlIjoiWkgtQ04iLCJDb3Vyc2VJRCI6IjAwMDAiLCJTeXNJRCI6IjEiLCJQb3J0IjoiZmFsc2UiLCJNb2RlIjoiMiJ9/",
     "fail": true
   },
   {
@@ -280,7 +280,7 @@
   },
   {
     "name": "homepage-input",
-    "link": "http://<SERVER_HOST>/",
+    "link": "http://127.0.0.1:8000/",
     "fail": true
   },
   {

@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""把满分求解版 ustcori_crack 打包并部署到实际运行目录。
+"""旧版三文件增量部署工具（仅适用于已具备完整匹配依赖的目录）。
+
+完整独立运行包请使用 build/package-runtime.py。此脚本生成的是 patch.zip，
+不含运行依赖，不能作为首次安装包；部署成功不等价于完整运行验收。
 
 安全性约定：
   · 只写 ustcori_crack.exe / 两个 .config，其余文件（官方 DLL）只做哈希核对，不动；
@@ -83,17 +86,20 @@ def main():
         else:
             before = None
 
-        if before == exe_sha:
-            results.append({'target': str(target), 'status': 'already-current', 'sha256': before})
-            continue
-
-        # 官方依赖必须原样存在，否则说明这不是运行目录
-        missing = [n for n in ('WebLabClient.exe', 'PackageLibrary.dll',
-                               'USTCORi.SimExp.Instruments.Component.dll')
-                   if not (target / n).is_file()]
-        if missing:
+        # Even an unchanged EXE still needs matching dependencies and configs.
+        provenance = json.loads((ROOT / 'ustocri_crack/lib/dependency-provenance.json').read_text(encoding='utf-8-sig'))
+        required = [f for f in provenance['files'] if f['name'].endswith(('.dll', '.exe'))]
+        mismatched = [f['name'] for f in required
+                      if not (target / f['name']).is_file()
+                      or file_digest(target / f['name']) != f['sha256']]
+        if len(required) != 9 or mismatched:
             results.append({'target': str(target), 'status': 'skip',
-                            'reason': '缺少官方依赖，疑似不是运行目录：' + ', '.join(missing)})
+                            'reason': '完整配套依赖尚未通过校验：' + ', '.join(mismatched)})
+            continue
+        if all((target / name).is_file() and file_digest(target / name) == digest(data)
+               for name, data in payload.items()):
+            results.append({'target': str(target), 'status': 'already-current', 'sha256': before,
+                            'dependencyHashesChecked': 9, 'configsChecked': True})
             continue
 
         backup = target / ('.dsh-backup-fullscore-' + stamp)
@@ -118,15 +124,12 @@ def main():
                         'after': exe_sha, 'backup': str(backup), 'updated': CHANGED})
 
     # ---- 打包 ----
-    package = ROOT / 'ustcori_crack-fullscore.zip'
+    package = ROOT / 'ustcori_crack-patch.zip'
     if package.exists():
         package.unlink()
-    files = {'ustcori_crack.exe': exe_bytes,
-             'ustcori_crack.exe.config': cfg_bytes,
-             'WebLabClient.exe.config': cfg_bytes,
-             'solved-exam.xml': report_path.read_bytes() if report_path.is_file() else b'',
-             'BUILD-NOTES.md': (SRC / 'BUILD-NOTES.md').read_bytes() if (SRC / 'BUILD-NOTES.md').is_file() else b'',
-             'build-manifest.local.json': (SRC / 'build-manifest.local.json').read_bytes()}
+    # Patch packages never include solved answers, logs or local build paths.
+    files = dict(payload)
+    files['PATCH-README.txt'] = b'Incremental overlay only. Requires all nine matching runtime dependencies. Use the complete runtime ZIP for a fresh installation.\n'
     manifest = {name: {'bytes': len(data), 'sha256': digest(data)}
                 for name, data in sorted(files.items()) if data}
     files['package-file-manifest.json'] = (json.dumps({'files': manifest}, ensure_ascii=False, indent=2) + '\n').encode()

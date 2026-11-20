@@ -61,3 +61,14 @@
 #*.PDF   diff=astextplain
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
+
+# Runtime manifest hashes are byte-exact: preserve published root file bytes.
+/ustcori_crack.exe -text
+/WebLabClient.exe -text
+/*.dll -text
+/ustcori_crack.exe.config -text
+/WebLabClient.exe.config -text
+/check-runtime.cmd -text
+/check-runtime.ps1 -text
+/runtime-manifest.json -text
+/README-RUNTIME.md -text
