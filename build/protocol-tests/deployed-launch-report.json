@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "exitCode": 0,
+  "output": "输入链接：\r\n启动格式：JSON；流程：新版\r\n目标服务：http://<SERVER_HOST>/BizService.svc\r\n启动参数解析通过；未连接服务。\r\n",
+  "target": "C:\\Users/<USER>\\Downloads\\Compressed\\Updata\\ustcori_crack.exe",
+  "sha256": "01461a8a8556cae136c454d97972ddab0680124c9b1f7d2324add6ad2f9400e6",
+  "networkContacted": false
+}

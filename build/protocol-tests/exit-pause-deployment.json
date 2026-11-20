@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "package": "C:\\Users/<USER>\\Documents\\deepseek-harness\\default-workspace\\ustcoriCrack\\ustcori_crack-json-error-pause-fixed.zip",
+  "packageBytes": 2489745,
+  "packageSha256": "d1659c59c23e08ef20079f4cd5baf1d1311ab1d8d1047eaba5437a006b5dd0d6",
+  "packageFiles": 19,
+  "sourceHashesVerified": 11,
+  "userTarget": "C:\\Users/<USER>\\Downloads\\Compressed\\Updata",
+  "runtimeFilesVerified": 12,
+  "updated": [
+    "ustcori_crack.exe"
+  ],
+  "configurationsRetained": {
+    "WebLabClient.exe.config": "ea8c50b0c58557cd56b8ad0f9b45d2629892ca947d84412463b89dadf690066c",
+    "ustcori_crack.exe.config": "ea8c50b0c58557cd56b8ad0f9b45d2629892ca947d84412463b89dadf690066c"
+  },
+  "backup": "C:\\Users/<USER>\\Downloads\\Compressed\\Updata\\.dsh-backup-error-pause-20261120-1454",
+  "exeBytes": 73728,
+  "exeSha256": "2b26c4bb1e1b376a629d82b487e40fc0a1e830d740bbd448b850411d1565e9c6",
+  "localRelease": "C:\\Users/<USER>\\Documents\\deepseek-harness\\default-workspace\\ustcoriCrack\\ustocri_crack\\bin\\Release-error-pause-fixed"
+}

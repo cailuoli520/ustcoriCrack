@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "exitCode": 0,
+  "output": "输入链接：\r\n启动格式：JSON；流程：新版\r\n目标服务：http://<SERVER_HOST>/ServiceAPI/FindByLABID\r\n获取实验项目……\r\n实验名称：<LAB_NAME>\r\n",
+  "exeSha256": "b3438e14b26d8b6cb05812960dacaa8fb85111c42e0ca1a10f1a0a5df7a903fb",
+  "target": "C:\\Users/<USER>\\Downloads\\Compressed\\Updata\\ustcori_crack.exe",
+  "runtimeFilesVerified": 12,
+  "configurationsRetained": true,
+  "linkShapeMatchesUserJSON": true,
+  "StudentIDSent": false,
+  "experimentStarted": false,
+  "recordSubmitted": false
+}

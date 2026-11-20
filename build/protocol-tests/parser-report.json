@@ -1,0 +1,171 @@
+﻿{
+    "parserCases":  30,
+    "passed":  true,
+    "framework":  "4.0.30319.42000",
+    "results":  [
+                    {
+                        "name":  "user-json-shape",
+                        "passed":  true,
+                        "service":  "http://<SERVER_HOST>/BizService.svc"
+                    },
+                    {
+                        "name":  "no-trailing-delimiter",
+                        "passed":  true,
+                        "service":  "http://<SERVER_HOST>/BizService.svc"
+                    },
+                    {
+                        "name":  "correct-address-spelling",
+                        "passed":  true,
+                        "service":  "http://<SERVER_HOST>/BizService.svc"
+                    },
+                    {
+                        "name":  "case-insensitive-address",
+                        "passed":  true,
+                        "service":  "http://<SERVER_HOST>/BizService.svc"
+                    },
+                    {
+                        "name":  "https-port-prefix",
+                        "passed":  true,
+                        "service":  "https://localhost:8443/labroot/BizService.svc"
+                    },
+                    {
+                        "name":  "explicit-port-override",
+                        "passed":  true,
+                        "service":  "https://localhost:5001/labroot/BizService.svc"
+                    },
+                    {
+                        "name":  "non-port-False",
+                        "passed":  true,
+                        "service":  "http://localhost:8386/prefix/BizService.svc"
+                    },
+                    {
+                        "name":  "non-port-undefined",
+                        "passed":  true,
+                        "service":  "http://localhost:8386/prefix/BizService.svc"
+                    },
+                    {
+                        "name":  "non-port-null",
+                        "passed":  true,
+                        "service":  "http://localhost:8386/prefix/BizService.svc"
+                    },
+                    {
+                        "name":  "non-port-",
+                        "passed":  true,
+                        "service":  "http://localhost:8386/prefix/BizService.svc"
+                    },
+                    {
+                        "name":  "non-port-None",
+                        "passed":  true,
+                        "service":  "http://localhost:8386/prefix/BizService.svc"
+                    },
+                    {
+                        "name":  "missing-port",
+                        "passed":  true,
+                        "service":  "http://<SERVER_HOST>/BizService.svc"
+                    },
+                    {
+                        "name":  "json-without-new-hall-fields",
+                        "passed":  true,
+                        "service":  "http://<SERVER_HOST>/BizService.svc"
+                    },
+                    {
+                        "name":  "legacy-five",
+                        "passed":  true,
+                        "service":  "http://127.0.0.1:8386/BizService.svc"
+                    },
+                    {
+                        "name":  "legacy-twelve",
+                        "passed":  true,
+                        "service":  "http://127.0.0.1:8386/BizService.svc"
+                    },
+                    {
+                        "name":  "base64-plus-preserved",
+                        "passed":  true,
+                        "service":  "http://<SERVER_HOST>/BizService.svc"
+                    },
+                    {
+                        "name":  "percent-encoded-base64",
+                        "passed":  true,
+                        "service":  "http://<SERVER_HOST>/BizService.svc"
+                    },
+                    {
+                        "name":  "matching-address-aliases",
+                        "passed":  true,
+                        "service":  "http://<SERVER_HOST>/BizService.svc"
+                    },
+                    {
+                        "name":  "conflicting-address-aliases",
+                        "passed":  true,
+                        "expectedFormatError":  true
+                    },
+                    {
+                        "name":  "missing-ExamOrLabID",
+                        "passed":  true,
+                        "expectedFormatError":  true
+                    },
+                    {
+                        "name":  "missing-StudentID",
+                        "passed":  true,
+                        "expectedFormatError":  true
+                    },
+                    {
+                        "name":  "missing-SiteAdress",
+                        "passed":  true,
+                        "expectedFormatError":  true
+                    },
+                    {
+                        "name":  "invalid-port",
+                        "passed":  true,
+                        "expectedFormatError":  true
+                    },
+                    {
+                        "name":  "out-of-range-port",
+                        "passed":  true,
+                        "expectedFormatError":  true
+                    },
+                    {
+                        "name":  "non-http-site",
+                        "passed":  true,
+                        "expectedFormatError":  true
+                    },
+                    {
+                        "name":  "site-query",
+                        "passed":  true,
+                        "expectedFormatError":  true
+                    },
+                    {
+                        "name":  "empty-input",
+                        "passed":  true,
+                        "expectedFormatError":  true
+                    },
+                    {
+                        "name":  "homepage-input",
+                        "passed":  true,
+                        "expectedFormatError":  true
+                    },
+                    {
+                        "name":  "bad-base64",
+                        "passed":  true,
+                        "expectedFormatError":  true
+                    },
+                    {
+                        "name":  "legacy-too-short",
+                        "passed":  true,
+                        "expectedFormatError":  true
+                    }
+                ],
+    "configChecks":  [
+                         {
+                             "name":  "https-port-prefix",
+                             "passed":  true,
+                             "bindingMode":  "Transport",
+                             "dualConfigEqual":  true
+                         },
+                         {
+                             "name":  "legacy-five",
+                             "passed":  true,
+                             "bindingMode":  "None",
+                             "dualConfigEqual":  true
+                         }
+                     ]
+}

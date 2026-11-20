@@ -1,0 +1,269 @@
+ASSEMBLY USTCORi.WebLabClient.Model 1.0.0.1
+TYPE USTCORi.WebLabClient.DataModel.LABINFO : USTCORi.WebLabClient.DataModel.BaseEntity
+FIELD USTCORi.WebLabClient.DataModel.LABINFO.m_lABID : Int32
+FIELD USTCORi.WebLabClient.DataModel.LABINFO.m_lABNAME : String
+FIELD USTCORi.WebLabClient.DataModel.LABINFO.m_lABTYPE : Int32
+FIELD USTCORi.WebLabClient.DataModel.LABINFO.m_iNTRODUTION : String
+FIELD USTCORi.WebLabClient.DataModel.LABINFO.m_cONTENT : String
+FIELD USTCORi.WebLabClient.DataModel.LABINFO.m_tHEORY : String
+FIELD USTCORi.WebLabClient.DataModel.LABINFO.m_iNSTRUMENT : String
+FIELD USTCORi.WebLabClient.DataModel.LABINFO.m_qualifiedTime : Int32
+FIELD USTCORi.WebLabClient.DataModel.LABINFO.m_labWeight : Double
+FIELD USTCORi.WebLabClient.DataModel.LABINFO.m_reportWeight : Double
+FIELD USTCORi.WebLabClient.DataModel.LABINFO.PropertyChanged : System.ComponentModel.PropertyChangedEventHandler
+FIELD USTCORi.WebLabClient.DataModel.LABINFO.<LABTYPENAME>k__BackingField : String
+FIELD USTCORi.WebLabClient.DataModel.LABINFO.<LabFileUrl>k__BackingField : String
+FIELD USTCORi.WebLabClient.DataModel.LABINFO.<LabUpTime>k__BackingField : String
+FIELD USTCORi.WebLabClient.DataModel.LABINFO.<SourceFileUrl>k__BackingField : String
+FIELD USTCORi.WebLabClient.DataModel.LABINFO.<SourceUpTime>k__BackingField : String
+FIELD USTCORi.WebLabClient.DataModel.LABINFO.<ReportFileUrl>k__BackingField : String
+FIELD USTCORi.WebLabClient.DataModel.LABINFO.<ReportUpTime>k__BackingField : String
+FIELD USTCORi.WebLabClient.DataModel.LABINFO.<UpTime>k__BackingField : System.DateTime
+FIELD USTCORi.WebLabClient.DataModel.LABINFO.<UPUSER>k__BackingField : String
+PROPERTY LabID() -> Int32
+PROPERTY LABNAME() -> String
+PROPERTY LABTYPEID() -> Int32
+PROPERTY LABTYPENAME() -> String
+PROPERTY INTRODUTION() -> String
+PROPERTY CONTENT() -> String
+PROPERTY THEORY() -> String
+PROPERTY INSTRUMENT() -> String
+PROPERTY QualifiedTime() -> Int32
+PROPERTY LabWeight() -> Double
+PROPERTY ReportWeight() -> Double
+PROPERTY LabFileUrl() -> String
+PROPERTY LabUpTime() -> String
+PROPERTY SourceFileUrl() -> String
+PROPERTY SourceUpTime() -> String
+PROPERTY ReportFileUrl() -> String
+PROPERTY ReportUpTime() -> String
+PROPERTY UpTime() -> System.DateTime
+PROPERTY UPUSER() -> String
+METHOD 0x0600006F RVA=9765 USTCORi.WebLabClient.DataModel.LABINFO.get_LabID() -> Int32
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000032 USTCORi.WebLabClient.DataModel.LABINFO.m_lABID : Int32
+IL_0006: ret 
+METHOD 0x06000070 RVA=9773 USTCORi.WebLabClient.DataModel.LABINFO.set_LabID(Int32) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x04000032 USTCORi.WebLabClient.DataModel.LABINFO.m_lABID : Int32
+IL_0007: ret 
+METHOD 0x06000071 RVA=9782 USTCORi.WebLabClient.DataModel.LABINFO.get_LABNAME() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000033 USTCORi.WebLabClient.DataModel.LABINFO.m_lABNAME : String
+IL_0006: ret 
+METHOD 0x06000072 RVA=9790 USTCORi.WebLabClient.DataModel.LABINFO.set_LABNAME(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x04000033 USTCORi.WebLabClient.DataModel.LABINFO.m_lABNAME : String
+IL_0007: ret 
+METHOD 0x06000073 RVA=9799 USTCORi.WebLabClient.DataModel.LABINFO.get_LABTYPEID() -> Int32
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000034 USTCORi.WebLabClient.DataModel.LABINFO.m_lABTYPE : Int32
+IL_0006: ret 
+METHOD 0x06000074 RVA=9807 USTCORi.WebLabClient.DataModel.LABINFO.set_LABTYPEID(Int32) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x04000034 USTCORi.WebLabClient.DataModel.LABINFO.m_lABTYPE : Int32
+IL_0007: ret 
+METHOD 0x06000075 RVA=9816 USTCORi.WebLabClient.DataModel.LABINFO.get_LABTYPENAME() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x0400003D USTCORi.WebLabClient.DataModel.LABINFO.<LABTYPENAME>k__BackingField : String
+IL_0006: ret 
+METHOD 0x06000076 RVA=9824 USTCORi.WebLabClient.DataModel.LABINFO.set_LABTYPENAME(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x0400003D USTCORi.WebLabClient.DataModel.LABINFO.<LABTYPENAME>k__BackingField : String
+IL_0007: ret 
+METHOD 0x06000077 RVA=9833 USTCORi.WebLabClient.DataModel.LABINFO.get_INTRODUTION() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000035 USTCORi.WebLabClient.DataModel.LABINFO.m_iNTRODUTION : String
+IL_0006: ret 
+METHOD 0x06000078 RVA=9841 USTCORi.WebLabClient.DataModel.LABINFO.set_INTRODUTION(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x04000035 USTCORi.WebLabClient.DataModel.LABINFO.m_iNTRODUTION : String
+IL_0007: ret 
+METHOD 0x06000079 RVA=9850 USTCORi.WebLabClient.DataModel.LABINFO.get_CONTENT() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000036 USTCORi.WebLabClient.DataModel.LABINFO.m_cONTENT : String
+IL_0006: ret 
+METHOD 0x0600007A RVA=9858 USTCORi.WebLabClient.DataModel.LABINFO.set_CONTENT(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x04000036 USTCORi.WebLabClient.DataModel.LABINFO.m_cONTENT : String
+IL_0007: ret 
+METHOD 0x0600007B RVA=9867 USTCORi.WebLabClient.DataModel.LABINFO.get_THEORY() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000037 USTCORi.WebLabClient.DataModel.LABINFO.m_tHEORY : String
+IL_0006: ret 
+METHOD 0x0600007C RVA=9875 USTCORi.WebLabClient.DataModel.LABINFO.set_THEORY(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x04000037 USTCORi.WebLabClient.DataModel.LABINFO.m_tHEORY : String
+IL_0007: ret 
+METHOD 0x0600007D RVA=9884 USTCORi.WebLabClient.DataModel.LABINFO.get_INSTRUMENT() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000038 USTCORi.WebLabClient.DataModel.LABINFO.m_iNSTRUMENT : String
+IL_0006: ret 
+METHOD 0x0600007E RVA=9892 USTCORi.WebLabClient.DataModel.LABINFO.set_INSTRUMENT(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x04000038 USTCORi.WebLabClient.DataModel.LABINFO.m_iNSTRUMENT : String
+IL_0007: ret 
+METHOD 0x0600007F RVA=9901 USTCORi.WebLabClient.DataModel.LABINFO.get_QualifiedTime() -> Int32
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000039 USTCORi.WebLabClient.DataModel.LABINFO.m_qualifiedTime : Int32
+IL_0006: ret 
+METHOD 0x06000080 RVA=9909 USTCORi.WebLabClient.DataModel.LABINFO.set_QualifiedTime(Int32) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x04000039 USTCORi.WebLabClient.DataModel.LABINFO.m_qualifiedTime : Int32
+IL_0007: ret 
+METHOD 0x06000081 RVA=9918 USTCORi.WebLabClient.DataModel.LABINFO.get_LabWeight() -> Double
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x0400003A USTCORi.WebLabClient.DataModel.LABINFO.m_labWeight : Double
+IL_0006: ret 
+METHOD 0x06000082 RVA=9926 USTCORi.WebLabClient.DataModel.LABINFO.set_LabWeight(Double) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x0400003A USTCORi.WebLabClient.DataModel.LABINFO.m_labWeight : Double
+IL_0007: ret 
+METHOD 0x06000083 RVA=9935 USTCORi.WebLabClient.DataModel.LABINFO.get_ReportWeight() -> Double
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x0400003B USTCORi.WebLabClient.DataModel.LABINFO.m_reportWeight : Double
+IL_0006: ret 
+METHOD 0x06000084 RVA=9943 USTCORi.WebLabClient.DataModel.LABINFO.set_ReportWeight(Double) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x0400003B USTCORi.WebLabClient.DataModel.LABINFO.m_reportWeight : Double
+IL_0007: ret 
+METHOD 0x06000085 RVA=9952 USTCORi.WebLabClient.DataModel.LABINFO.get_LabFileUrl() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x0400003E USTCORi.WebLabClient.DataModel.LABINFO.<LabFileUrl>k__BackingField : String
+IL_0006: ret 
+METHOD 0x06000086 RVA=9960 USTCORi.WebLabClient.DataModel.LABINFO.set_LabFileUrl(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x0400003E USTCORi.WebLabClient.DataModel.LABINFO.<LabFileUrl>k__BackingField : String
+IL_0007: ret 
+METHOD 0x06000087 RVA=9969 USTCORi.WebLabClient.DataModel.LABINFO.get_LabUpTime() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x0400003F USTCORi.WebLabClient.DataModel.LABINFO.<LabUpTime>k__BackingField : String
+IL_0006: ret 
+METHOD 0x06000088 RVA=9977 USTCORi.WebLabClient.DataModel.LABINFO.set_LabUpTime(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x0400003F USTCORi.WebLabClient.DataModel.LABINFO.<LabUpTime>k__BackingField : String
+IL_0007: ret 
+METHOD 0x06000089 RVA=9986 USTCORi.WebLabClient.DataModel.LABINFO.get_SourceFileUrl() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000040 USTCORi.WebLabClient.DataModel.LABINFO.<SourceFileUrl>k__BackingField : String
+IL_0006: ret 
+METHOD 0x0600008A RVA=9994 USTCORi.WebLabClient.DataModel.LABINFO.set_SourceFileUrl(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x04000040 USTCORi.WebLabClient.DataModel.LABINFO.<SourceFileUrl>k__BackingField : String
+IL_0007: ret 
+METHOD 0x0600008B RVA=10003 USTCORi.WebLabClient.DataModel.LABINFO.get_SourceUpTime() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000041 USTCORi.WebLabClient.DataModel.LABINFO.<SourceUpTime>k__BackingField : String
+IL_0006: ret 
+METHOD 0x0600008C RVA=10011 USTCORi.WebLabClient.DataModel.LABINFO.set_SourceUpTime(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x04000041 USTCORi.WebLabClient.DataModel.LABINFO.<SourceUpTime>k__BackingField : String
+IL_0007: ret 
+METHOD 0x0600008D RVA=10020 USTCORi.WebLabClient.DataModel.LABINFO.get_ReportFileUrl() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000042 USTCORi.WebLabClient.DataModel.LABINFO.<ReportFileUrl>k__BackingField : String
+IL_0006: ret 
+METHOD 0x0600008E RVA=10028 USTCORi.WebLabClient.DataModel.LABINFO.set_ReportFileUrl(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x04000042 USTCORi.WebLabClient.DataModel.LABINFO.<ReportFileUrl>k__BackingField : String
+IL_0007: ret 
+METHOD 0x0600008F RVA=10037 USTCORi.WebLabClient.DataModel.LABINFO.get_ReportUpTime() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000043 USTCORi.WebLabClient.DataModel.LABINFO.<ReportUpTime>k__BackingField : String
+IL_0006: ret 
+METHOD 0x06000090 RVA=10045 USTCORi.WebLabClient.DataModel.LABINFO.set_ReportUpTime(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x04000043 USTCORi.WebLabClient.DataModel.LABINFO.<ReportUpTime>k__BackingField : String
+IL_0007: ret 
+METHOD 0x06000091 RVA=10054 USTCORi.WebLabClient.DataModel.LABINFO.get_UpTime() -> System.DateTime
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000044 USTCORi.WebLabClient.DataModel.LABINFO.<UpTime>k__BackingField : System.DateTime
+IL_0006: ret 
+METHOD 0x06000092 RVA=10062 USTCORi.WebLabClient.DataModel.LABINFO.set_UpTime(System.DateTime) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x04000044 USTCORi.WebLabClient.DataModel.LABINFO.<UpTime>k__BackingField : System.DateTime
+IL_0007: ret 
+METHOD 0x06000093 RVA=10071 USTCORi.WebLabClient.DataModel.LABINFO.get_UPUSER() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000045 USTCORi.WebLabClient.DataModel.LABINFO.<UPUSER>k__BackingField : String
+IL_0006: ret 
+METHOD 0x06000094 RVA=10079 USTCORi.WebLabClient.DataModel.LABINFO.set_UPUSER(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x04000045 USTCORi.WebLabClient.DataModel.LABINFO.<UPUSER>k__BackingField : String
+IL_0007: ret 
+METHOD 0x06000095 RVA=10088 USTCORi.WebLabClient.DataModel.LABINFO.add_PropertyChanged(System.ComponentModel.PropertyChangedEventHandler) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x0400003C USTCORi.WebLabClient.DataModel.LABINFO.PropertyChanged : System.ComponentModel.PropertyChangedEventHandler
+IL_0006: stloc.0 
+IL_0007: ldloc.0 
+IL_0008: stloc.1 
+IL_0009: ldloc.1 
+IL_000A: ldarg.1 
+IL_000B: call 0x0A000013 System.Delegate.Combine(System.Delegate, System.Delegate) -> System.Delegate
+IL_0010: castclass 0x01000003 System.ComponentModel.PropertyChangedEventHandler
+IL_0015: stloc.2 
+IL_0016: ldarg.0 
+IL_0017: ldflda 0x0400003C USTCORi.WebLabClient.DataModel.LABINFO.PropertyChanged : System.ComponentModel.PropertyChangedEventHandler
+IL_001C: ldloc.2 
+IL_001D: ldloc.1 
+IL_001E: call 0x2B000001 System.Threading.Interlocked.CompareExchange(!!0&, !!0, !!0) -> !!0<System.ComponentModel.PropertyChangedEventHandler>
+IL_0023: stloc.0 
+IL_0024: ldloc.0 
+IL_0025: ldloc.1 
+IL_0026: bne.un.s IL_0007
+IL_0028: ret 
+METHOD 0x06000096 RVA=10144 USTCORi.WebLabClient.DataModel.LABINFO.remove_PropertyChanged(System.ComponentModel.PropertyChangedEventHandler) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x0400003C USTCORi.WebLabClient.DataModel.LABINFO.PropertyChanged : System.ComponentModel.PropertyChangedEventHandler
+IL_0006: stloc.0 
+IL_0007: ldloc.0 
+IL_0008: stloc.1 
+IL_0009: ldloc.1 
+IL_000A: ldarg.1 
+IL_000B: call 0x0A000015 System.Delegate.Remove(System.Delegate, System.Delegate) -> System.Delegate
+IL_0010: castclass 0x01000003 System.ComponentModel.PropertyChangedEventHandler
+IL_0015: stloc.2 
+IL_0016: ldarg.0 
+IL_0017: ldflda 0x0400003C USTCORi.WebLabClient.DataModel.LABINFO.PropertyChanged : System.ComponentModel.PropertyChangedEventHandler
+IL_001C: ldloc.2 
+IL_001D: ldloc.1 
+IL_001E: call 0x2B000001 System.Threading.Interlocked.CompareExchange(!!0&, !!0, !!0) -> !!0<System.ComponentModel.PropertyChangedEventHandler>
+IL_0023: stloc.0 
+IL_0024: ldloc.0 
+IL_0025: ldloc.1 
+IL_0026: bne.un.s IL_0007
+IL_0028: ret 
+METHOD 0x06000097 RVA=10197 USTCORi.WebLabClient.DataModel.LABINFO.NotifyPropertyChanged(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x0400003C USTCORi.WebLabClient.DataModel.LABINFO.PropertyChanged : System.ComponentModel.PropertyChangedEventHandler
+IL_0006: brfalse.s IL_001A
+IL_0008: ldarg.0 
+IL_0009: ldfld 0x0400003C USTCORi.WebLabClient.DataModel.LABINFO.PropertyChanged : System.ComponentModel.PropertyChangedEventHandler
+IL_000E: ldarg.0 
+IL_000F: ldarg.1 
+IL_0010: newobj 0x0A000016 System.ComponentModel.PropertyChangedEventArgs..ctor(String) -> Void
+IL_0015: callvirt 0x0A000017 System.ComponentModel.PropertyChangedEventHandler.Invoke(Object, System.ComponentModel.PropertyChangedEventArgs) -> Void
+IL_001A: ret 
+METHOD 0x06000098 RVA=10225 USTCORi.WebLabClient.DataModel.LABINFO..ctor() -> Void
+IL_0000: ldarg.0 
+IL_0001: call 0x06000001 USTCORi.WebLabClient.DataModel.BaseEntity..ctor() -> Void
+IL_0006: ret 

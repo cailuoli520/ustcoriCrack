@@ -1,0 +1,11 @@
+{
+  "url": "http://<SERVER_HOST>/ServiceAPI/FindByLABID",
+  "method": "POST",
+  "form": {
+    "LabID": "2"
+  },
+  "status": 200,
+  "contentType": "application/json; charset=utf-8",
+  "location": null,
+  "bytes": 456
+}

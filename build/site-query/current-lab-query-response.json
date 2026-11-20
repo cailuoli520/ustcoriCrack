@@ -1,0 +1,21 @@
+{
+  "LabID": 2,
+  "LabName": "<LAB_NAME>",
+  "UpdateTime": "/Date(1585793981000)/",
+  "CreateTime": null,
+  "SyllabusID": null,
+  "CourseID": null,
+  "Introduction": 0,
+  "CourseName": null,
+  "SyllabusName": null,
+  "LabUpdateTime": null,
+  "ConfigUpdateTime": null,
+  "VideoUpdateTime": null,
+  "CourseAdminID": null,
+  "LabFileUrl": "<LAB_NAME>.lab",
+  "LabUpTime": null,
+  "SourceFileUrl": null,
+  "SourceUpTime": null,
+  "ReportFileUrl": null,
+  "ReportUpTime": null
+}

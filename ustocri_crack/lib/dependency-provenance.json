@@ -1,0 +1,93 @@
+{
+  "source": "http://aryun.ustcori.com:5014/Upload/LabRoom/%E8%99%9A%E6%8B%9F%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83.exe",
+  "installer_sha256": "db50a2972c80fb81241caae4e4f0571a33cd53eaccb88ce238f7a9e8c178b94b",
+  "msi_sha256": "97572e4db29ec0799a147097717ede0b401d81918999bdb5b8bff6ccefb5878e",
+  "selected_directory": "net4.0/Download/Updata",
+  "files": [
+    {
+      "name": "ICSharpCode.SharpZipLib.dll",
+      "bytes": 200704,
+      "sha256": "40b3d590f95191f3e33e5d00e534fa40f823d9b1bb2a9afe05f139c4e0a3af8d",
+      "original": "/SourceDir/虚拟实验环境/net4.0/Download/Updata/ICSharpCode.SharpZipLib.dll",
+      "cab_id": "_789D14E64C894266B0E9EC08CB21F6D0",
+      "source_kind": "official_website_installer"
+    },
+    {
+      "name": "Newtonsoft.Json.dll",
+      "bytes": 147456,
+      "sha256": "12de7b006a6ff3fa8a7428e99f86ff60650101e29f34c2a3f8249acbcff7df95",
+      "original": "/SourceDir/虚拟实验环境/net4.0/Download/Updata/Newtonsoft.Json.dll",
+      "cab_id": "_AFD0633719364982B31D0A6000F4DA50",
+      "source_kind": "official_website_installer"
+    },
+    {
+      "name": "PackageLibrary.dll",
+      "bytes": 10752,
+      "sha256": "8f4e74e78ab967bf2e1ac1dc99bf6f0fb61765424a28841087d7b398bde582c9",
+      "original": "/SourceDir/虚拟实验环境/net4.0/Download/Updata/PackageLibrary.dll",
+      "cab_id": "_314BCB9B622E406CB60937BEFBE802C7",
+      "source_kind": "official_website_installer"
+    },
+    {
+      "name": "Unity3DWPFConnection.dll",
+      "bytes": 10752,
+      "sha256": "ca324b11422ae52d761eb687284f1f822ee1ebf8bb38237c73aa90eb443aa0d5",
+      "original": "/SourceDir/虚拟实验环境/net4.0/Download/Updata/Unity3DWPFConnection.dll",
+      "cab_id": "_D1FC30F5907B49058ABF06DDE5B7910E",
+      "source_kind": "official_website_installer"
+    },
+    {
+      "name": "USTCORI.CommonLib.Security.dll",
+      "bytes": 6144,
+      "sha256": "ea7509147a40da0052fe88e04dc9dcbf3a73f8babd170766140384ded688d855",
+      "original": "/SourceDir/虚拟实验环境/net4.0/Download/Updata/USTCORI.CommonLib.Security.dll",
+      "cab_id": "_BDB943E59AFC4AB5BA6857E142D59FF3",
+      "source_kind": "official_website_installer"
+    },
+    {
+      "name": "USTCORi.WebLabClient.Model.dll",
+      "bytes": 20480,
+      "sha256": "dd16fdfbbbfb69c16c9fa4ab5b52afb7c3960d86f3ab7907696fd4e0b1056b41",
+      "original": "/SourceDir/虚拟实验环境/net4.0/Download/Updata/USTCORi.WebLabClient.Model.dll",
+      "cab_id": "_B86958AF14FF4BE787997A88C2F52145",
+      "source_kind": "official_website_installer"
+    },
+    {
+      "name": "WebLabClient.exe",
+      "bytes": 2344960,
+      "sha256": "cd345bfeef9df235e0603ac00fdfe39ba6ddc24dd21ed89110bbde2df7a72f9d",
+      "original": "/SourceDir/虚拟实验环境/net4.0/Download/Updata/WebLabClient.exe",
+      "cab_id": "_262ACB471386459C9CD92A85F6F9FD5A",
+      "source_kind": "official_website_installer"
+    },
+    {
+      "name": "WebLabClient.exe.config",
+      "bytes": 4588,
+      "sha256": "81dd0c66be3ce9c244c60ec202be53ec170060fd9d446570c36798a2d4af881f",
+      "original": "/SourceDir/虚拟实验环境/net4.0/Download/Updata/WebLabClient.exe.config",
+      "cab_id": "_E9B37AA37D344C80BA4B0C5ACEBC9750",
+      "source_kind": "official_website_installer"
+    },
+    {
+      "name": "WpfAnimatedGif.dll",
+      "bytes": 44544,
+      "sha256": "169ece1b7e48275257bfd80a8e99bbac930b40a5ed35f1281d0bdaeed3e07a75",
+      "original": "/SourceDir/虚拟实验环境/net4.0/Download/Updata/WpfAnimatedGif.dll",
+      "cab_id": "_9ECDDEFE5E904B3FB961C3A489A26E97",
+      "source_kind": "official_website_installer"
+    },
+    {
+      "name": "USTCORi.SimExp.Instruments.Component.dll",
+      "bytes": 2798080,
+      "sha256": "0d89e35b6383223999ced9047ae1837f2eb560a7de015f8f5a9d970e4259c7ca",
+      "source_kind": "third_party_github_client_assembly_redistribution",
+      "source": "https://raw.githubusercontent.com/NaBr406/weblab-toolkit/678de300feb244c8eecafa0b1237afb551d52145/tools/USTCORi.SimExp.Instruments.Component.dll",
+      "commit": "678de300feb244c8eecafa0b1237afb551d52145",
+      "git_blob_sha1": "39b21d072bd4283cefc5ce13ade79606c4e15154",
+      "assembly_version": "1.0.0.0",
+      "target_framework": ".NETFramework,Version=v4.0",
+      "official_signature_verified": false
+    }
+  ],
+  "source_note": "Top-level source identifies the official installer entries. USTCORi.SimExp.Instruments.Component.dll has its own pinned third-party GitHub redistribution source; official signature was not verified."
+}

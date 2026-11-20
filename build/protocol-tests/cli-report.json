@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "parserCases": 30,
+  "exeSha256": "b5be0ad1661433eeb8647c5d7476835f4769dca9479f485936cc65a43028debf",
+  "checks": [
+    {
+      "name": "check-launch-no-network",
+      "exitCode": 0,
+      "passed": true,
+      "output": "输入链接：\r\n启动格式：JSON；流程：新版\r\n目标服务：http://127.0.0.1:59504/fixture/ServiceAPI/FindByLABID\r\n启动参数解析通过；未连接服务。\r\n"
+    },
+    {
+      "name": "service-failure-clean-exit",
+      "exitCode": 2,
+      "passed": true,
+      "output": "输入链接：\r\n启动格式：JSON；流程：新版\r\n目标服务：http://127.0.0.1:59504/fixture/ServiceAPI/FindByLABID\r\n获取实验项目……\r\n获取实验项目失败：实验信息接口返回 HTTP 503。\r\n实验初始化未完成，已停止后续操作。\r\n错误详情已保存：C:\\Users/<USER>\\Documents\\deepseek-harness\\default-workspace\\ustcoriCrack\\build\\protocol-tests\\runtime\\startup-error.log\r\n",
+      "requests": [
+        {
+          "path": "/fixture/ServiceAPI/FindByLABID",
+          "soapAction": null,
+          "bodyBytes": 7,
+          "hasReadMethod": true,
+          "hasWriteMethod": false
+        }
+      ]
+    },
+    {
+      "name": "invalid-link-clean-exit",
+      "exitCode": 1,
+      "passed": true,
+      "output": "输入链接：\r\n启动参数错误：启动参数的 Base64/UTF-8 格式错误。\r\n错误详情已保存：C:\\Users/<USER>\\Documents\\deepseek-harness\\default-workspace\\ustcoriCrack\\build\\protocol-tests\\runtime\\startup-error.log\r\n"
+    }
+  ],
+  "livePlatformContacted": false,
+  "experimentStarted": false,
+  "recordSubmitted": false
+}

@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "package": "C:\\Users/<USER>\\Documents\\deepseek-harness\\default-workspace\\ustcoriCrack\\ustcori_crack-http-query-fixed.zip",
+  "packageBytes": 2497621,
+  "packageSha256": "0b38ae66bf9d9ab9cd0bab4a5d5f3e1f479152ad956225d40274c7a32237fb43",
+  "packageFiles": 24,
+  "sourceHashesVerified": 12,
+  "userTarget": "C:\\Users/<USER>\\Downloads\\Compressed\\Updata",
+  "runtimeFilesVerified": 12,
+  "updated": [
+    "ustcori_crack.exe"
+  ],
+  "configurationsRetained": {
+    "WebLabClient.exe.config": "e2af23c6e8ed6e774e08bd75ba3c4d13e39c673aa5c16d6a5a41384231754fa6",
+    "ustcori_crack.exe.config": "e2af23c6e8ed6e774e08bd75ba3c4d13e39c673aa5c16d6a5a41384231754fa6"
+  },
+  "backup": "C:\\Users/<USER>\\Downloads\\Compressed\\Updata\\.dsh-backup-http-query-20261120-152854",
+  "exeBytes": 76800,
+  "exeSha256": "b3438e14b26d8b6cb05812960dacaa8fb85111c42e0ca1a10f1a0a5df7a903fb",
+  "localRelease": "C:\\Users/<USER>\\Documents\\deepseek-harness\\default-workspace\\ustcoriCrack\\ustocri_crack\\bin\\Release-http-query-fixed",
+  "localRegressionCount": 64,
+  "buildWarningCount": 21
+}

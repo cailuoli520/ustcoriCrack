@@ -1,0 +1,353 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "current-server-json-object",
+      "passed": true,
+      "exitCode": 0,
+      "output": "输入链接：\r\n启动格式：JSON；流程：新版\r\n目标服务：http://127.0.0.1:57058/query-root/ServiceAPI/FindByLABID\r\n获取实验项目……\r\n实验名称：<LAB_NAME>\r\n",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/query-root/ServiceAPI/FindByLABID",
+          "body": "LabID=2",
+          "form": {
+            "LabID": [
+              "2"
+            ]
+          },
+          "soapAction": null,
+          "contentType": "application/x-www-form-urlencoded; charset=utf-8",
+          "accept": "text/json,*/*;q=0.5"
+        }
+      ]
+    },
+    {
+      "name": "legacy-labname-case-alias",
+      "passed": true,
+      "exitCode": 0,
+      "output": "输入链接：\r\n启动格式：JSON；流程：新版\r\n目标服务：http://127.0.0.1:57058/query-root/ServiceAPI/FindByLABID\r\n获取实验项目……\r\n实验名称：<LAB_NAME>\r\n",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/query-root/ServiceAPI/FindByLABID",
+          "body": "LabID=2",
+          "form": {
+            "LabID": [
+              "2"
+            ]
+          },
+          "soapAction": null,
+          "contentType": "application/x-www-form-urlencoded; charset=utf-8",
+          "accept": "text/json,*/*;q=0.5"
+        }
+      ]
+    },
+    {
+      "name": "null-lab-response",
+      "passed": true,
+      "exitCode": 2,
+      "output": "输入链接：\r\n启动格式：JSON；流程：新版\r\n目标服务：http://127.0.0.1:57058/query-root/ServiceAPI/FindByLABID\r\n获取实验项目……\r\n获取实验项目失败：未找到相应的实验项目。\r\n实验初始化未完成，已停止后续操作。\r\n错误详情已保存：C:\\Users/<USER>\\Documents\\deepseek-harness\\default-workspace\\ustcoriCrack\\build\\protocol-tests\\runtime\\startup-error.log\r\n",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/query-root/ServiceAPI/FindByLABID",
+          "body": "LabID=2",
+          "form": {
+            "LabID": [
+              "2"
+            ]
+          },
+          "soapAction": null,
+          "contentType": "application/x-www-form-urlencoded; charset=utf-8",
+          "accept": "text/json,*/*;q=0.5"
+        }
+      ]
+    },
+    {
+      "name": "empty-response",
+      "passed": true,
+      "exitCode": 2,
+      "output": "输入链接：\r\n启动格式：JSON；流程：新版\r\n目标服务：http://127.0.0.1:57058/query-root/ServiceAPI/FindByLABID\r\n获取实验项目……\r\n获取实验项目失败：未找到相应的实验项目。\r\n实验初始化未完成，已停止后续操作。\r\n错误详情已保存：C:\\Users/<USER>\\Documents\\deepseek-harness\\default-workspace\\ustcoriCrack\\build\\protocol-tests\\runtime\\startup-error.log\r\n",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/query-root/ServiceAPI/FindByLABID",
+          "body": "LabID=2",
+          "form": {
+            "LabID": [
+              "2"
+            ]
+          },
+          "soapAction": null,
+          "contentType": "application/x-www-form-urlencoded; charset=utf-8",
+          "accept": "text/json,*/*;q=0.5"
+        }
+      ]
+    },
+    {
+      "name": "empty-json-object",
+      "passed": true,
+      "exitCode": 2,
+      "output": "输入链接：\r\n启动格式：JSON；流程：新版\r\n目标服务：http://127.0.0.1:57058/query-root/ServiceAPI/FindByLABID\r\n获取实验项目……\r\n获取实验项目失败：实验信息接口缺少有效的 LabID、LabName 或 LabFileUrl。\r\n实验初始化未完成，已停止后续操作。\r\n错误详情已保存：C:\\Users/<USER>\\Documents\\deepseek-harness\\default-workspace\\ustcoriCrack\\build\\protocol-tests\\runtime\\startup-error.log\r\n",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/query-root/ServiceAPI/FindByLABID",
+          "body": "LabID=2",
+          "form": {
+            "LabID": [
+              "2"
+            ]
+          },
+          "soapAction": null,
+          "contentType": "application/x-www-form-urlencoded; charset=utf-8",
+          "accept": "text/json,*/*;q=0.5"
+        }
+      ]
+    },
+    {
+      "name": "unexpected-wrapper",
+      "passed": true,
+      "exitCode": 2,
+      "output": "输入链接：\r\n启动格式：JSON；流程：新版\r\n目标服务：http://127.0.0.1:57058/query-root/ServiceAPI/FindByLABID\r\n获取实验项目……\r\n获取实验项目失败：实验信息接口缺少有效的 LabID、LabName 或 LabFileUrl。\r\n实验初始化未完成，已停止后续操作。\r\n错误详情已保存：C:\\Users/<USER>\\Documents\\deepseek-harness\\default-workspace\\ustcoriCrack\\build\\protocol-tests\\runtime\\startup-error.log\r\n",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/query-root/ServiceAPI/FindByLABID",
+          "body": "LabID=2",
+          "form": {
+            "LabID": [
+              "2"
+            ]
+          },
+          "soapAction": null,
+          "contentType": "application/x-www-form-urlencoded; charset=utf-8",
+          "accept": "text/json,*/*;q=0.5"
+        }
+      ]
+    },
+    {
+      "name": "unexpected-json-array",
+      "passed": true,
+      "exitCode": 2,
+      "output": "输入链接：\r\n启动格式：JSON；流程：新版\r\n目标服务：http://127.0.0.1:57058/query-root/ServiceAPI/FindByLABID\r\n获取实验项目……\r\n获取实验项目失败：实验信息接口的 JSON 数据格式错误。\r\n实验初始化未完成，已停止后续操作。\r\n错误详情已保存：C:\\Users/<USER>\\Documents\\deepseek-harness\\default-workspace\\ustcoriCrack\\build\\protocol-tests\\runtime\\startup-error.log\r\n",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/query-root/ServiceAPI/FindByLABID",
+          "body": "LabID=2",
+          "form": {
+            "LabID": [
+              "2"
+            ]
+          },
+          "soapAction": null,
+          "contentType": "application/x-www-form-urlencoded; charset=utf-8",
+          "accept": "text/json,*/*;q=0.5"
+        }
+      ]
+    },
+    {
+      "name": "malformed-json",
+      "passed": true,
+      "exitCode": 2,
+      "output": "输入链接：\r\n启动格式：JSON；流程：新版\r\n目标服务：http://127.0.0.1:57058/query-root/ServiceAPI/FindByLABID\r\n获取实验项目……\r\n获取实验项目失败：实验信息接口缺少有效的 LabID、LabName 或 LabFileUrl。\r\n实验初始化未完成，已停止后续操作。\r\n错误详情已保存：C:\\Users/<USER>\\Documents\\deepseek-harness\\default-workspace\\ustcoriCrack\\build\\protocol-tests\\runtime\\startup-error.log\r\n",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/query-root/ServiceAPI/FindByLABID",
+          "body": "LabID=2",
+          "form": {
+            "LabID": [
+              "2"
+            ]
+          },
+          "soapAction": null,
+          "contentType": "application/x-www-form-urlencoded; charset=utf-8",
+          "accept": "text/json,*/*;q=0.5"
+        }
+      ]
+    },
+    {
+      "name": "html-error-page",
+      "passed": true,
+      "exitCode": 2,
+      "output": "输入链接：\r\n启动格式：JSON；流程：新版\r\n目标服务：http://127.0.0.1:57058/query-root/ServiceAPI/FindByLABID\r\n获取实验项目……\r\n获取实验项目失败：实验信息接口返回 HTML 页面，而不是 JSON。Content-Type=text/html\r\n实验初始化未完成，已停止后续操作。\r\n错误详情已保存：C:\\Users/<USER>\\Documents\\deepseek-harness\\default-workspace\\ustcoriCrack\\build\\protocol-tests\\runtime\\startup-error.log\r\n",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/query-root/ServiceAPI/FindByLABID",
+          "body": "LabID=2",
+          "form": {
+            "LabID": [
+              "2"
+            ]
+          },
+          "soapAction": null,
+          "contentType": "application/x-www-form-urlencoded; charset=utf-8",
+          "accept": "text/json,*/*;q=0.5"
+        }
+      ]
+    },
+    {
+      "name": "wrong-lab-id",
+      "passed": true,
+      "exitCode": 2,
+      "output": "输入链接：\r\n启动格式：JSON；流程：新版\r\n目标服务：http://127.0.0.1:57058/query-root/ServiceAPI/FindByLABID\r\n获取实验项目……\r\n获取实验项目失败：实验信息接口返回的 LabID 与当前启动链接不一致。\r\n实验初始化未完成，已停止后续操作。\r\n错误详情已保存：C:\\Users/<USER>\\Documents\\deepseek-harness\\default-workspace\\ustcoriCrack\\build\\protocol-tests\\runtime\\startup-error.log\r\n",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/query-root/ServiceAPI/FindByLABID",
+          "body": "LabID=2",
+          "form": {
+            "LabID": [
+              "2"
+            ]
+          },
+          "soapAction": null,
+          "contentType": "application/x-www-form-urlencoded; charset=utf-8",
+          "accept": "text/json,*/*;q=0.5"
+        }
+      ]
+    },
+    {
+      "name": "missing-file-url",
+      "passed": true,
+      "exitCode": 2,
+      "output": "输入链接：\r\n启动格式：JSON；流程：新版\r\n目标服务：http://127.0.0.1:57058/query-root/ServiceAPI/FindByLABID\r\n获取实验项目……\r\n获取实验项目失败：实验信息接口缺少有效的 LabID、LabName 或 LabFileUrl。\r\n实验初始化未完成，已停止后续操作。\r\n错误详情已保存：C:\\Users/<USER>\\Documents\\deepseek-harness\\default-workspace\\ustcoriCrack\\build\\protocol-tests\\runtime\\startup-error.log\r\n",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/query-root/ServiceAPI/FindByLABID",
+          "body": "LabID=2",
+          "form": {
+            "LabID": [
+              "2"
+            ]
+          },
+          "soapAction": null,
+          "contentType": "application/x-www-form-urlencoded; charset=utf-8",
+          "accept": "text/json,*/*;q=0.5"
+        }
+      ]
+    },
+    {
+      "name": "http404",
+      "passed": true,
+      "exitCode": 2,
+      "output": "输入链接：\r\n启动格式：JSON；流程：新版\r\n目标服务：http://127.0.0.1:57058/query-root/ServiceAPI/FindByLABID\r\n获取实验项目……\r\n获取实验项目失败：实验信息接口返回 HTTP 404。\r\n实验初始化未完成，已停止后续操作。\r\n错误详情已保存：C:\\Users/<USER>\\Documents\\deepseek-harness\\default-workspace\\ustcoriCrack\\build\\protocol-tests\\runtime\\startup-error.log\r\n",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/query-root/ServiceAPI/FindByLABID",
+          "body": "LabID=2",
+          "form": {
+            "LabID": [
+              "2"
+            ]
+          },
+          "soapAction": null,
+          "contentType": "application/x-www-form-urlencoded; charset=utf-8",
+          "accept": "text/json,*/*;q=0.5"
+        }
+      ]
+    },
+    {
+      "name": "redirect-not-followed",
+      "passed": true,
+      "exitCode": 2,
+      "output": "输入链接：\r\n启动格式：JSON；流程：新版\r\n目标服务：http://127.0.0.1:57058/query-root/ServiceAPI/FindByLABID\r\n获取实验项目……\r\n获取实验项目失败：实验信息接口返回 HTTP 302，重定向地址：/Login/Error\r\n实验初始化未完成，已停止后续操作。\r\n错误详情已保存：C:\\Users/<USER>\\Documents\\deepseek-harness\\default-workspace\\ustcoriCrack\\build\\protocol-tests\\runtime\\startup-error.log\r\n",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/query-root/ServiceAPI/FindByLABID",
+          "body": "LabID=2",
+          "form": {
+            "LabID": [
+              "2"
+            ]
+          },
+          "soapAction": null,
+          "contentType": "application/x-www-form-urlencoded; charset=utf-8",
+          "accept": "text/json,*/*;q=0.5"
+        }
+      ]
+    },
+    {
+      "name": "form-value-is-percent-encoded",
+      "passed": true,
+      "exitCode": 0,
+      "output": "输入链接：\r\n启动格式：JSON；流程：新版\r\n目标服务：http://127.0.0.1:57058/query-root/ServiceAPI/FindByLABID\r\n获取实验项目……\r\n实验名称：<LAB_NAME>\r\n",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/query-root/ServiceAPI/FindByLABID",
+          "body": "LabID=2%2B%26%3D%20%2F%E6%9C%AA%E7%9F%A5",
+          "form": {
+            "LabID": [
+              "2+&= /未知"
+            ]
+          },
+          "soapAction": null,
+          "contentType": "application/x-www-form-urlencoded; charset=utf-8",
+          "accept": "text/json,*/*;q=0.5"
+        }
+      ]
+    },
+    {
+      "name": "response-size-limit",
+      "passed": true,
+      "exitCode": 2,
+      "output": "输入链接：\r\n启动格式：JSON；流程：新版\r\n目标服务：http://127.0.0.1:57058/query-root/ServiceAPI/FindByLABID\r\n获取实验项目……\r\n获取实验项目失败：实验信息响应超过读取上限。\r\n实验初始化未完成，已停止后续操作。\r\n错误详情已保存：C:\\Users/<USER>\\Documents\\deepseek-harness\\default-workspace\\ustcoriCrack\\build\\protocol-tests\\runtime\\startup-error.log\r\n",
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/query-root/ServiceAPI/FindByLABID",
+          "body": "LabID=2",
+          "form": {
+            "LabID": [
+              "2"
+            ]
+          },
+          "soapAction": null,
+          "contentType": "application/x-www-form-urlencoded; charset=utf-8",
+          "accept": "text/json,*/*;q=0.5"
+        }
+      ]
+    },
+    {
+      "name": "other-system-does-not-query-lab",
+      "passed": true,
+      "exitCode": 2,
+      "requests": []
+    },
+    {
+      "name": "legacy-link-still-uses-wcf",
+      "passed": true,
+      "exitCode": 2,
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/BizService.svc",
+          "body": "<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\"><s:Body><DoService xmlns=\"http://www.ustcori.com/2009/10\"><request xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\"><BizCode>UstcOri.BLL.BLLLabClent</BizCode><EnableCache>false</EnableCache><MethodName>FindByLABID</MethodName><Parameters xmlns:a=\"http://schemas.microsoft.com/2003/10/Serialization/Arrays\"><a:KeyValueOfstringanyType><a:Key>LabID</a:Key><a:Value i:type=\"b:string\" xmlns:b=\"http://www.w3.org/2001/XMLSchema\">\"2\"</a:Value></a:KeyValueOfstringanyType></Parameters></request></DoService></s:Body></s:Envelope>",
+          "form": {
+            "<s:Envelope xmlns:s": [
+              "\"http://schemas.xmlsoap.org/soap/envelope/\"><s:Body><DoService xmlns=\"http://www.ustcori.com/2009/10\"><request xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\"><BizCode>UstcOri.BLL.BLLLabClent</BizCode><EnableCache>false</EnableCache><MethodName>FindByLABID</MethodName><Parameters xmlns:a=\"http://schemas.microsoft.com/2003/10/Serialization/Arrays\"><a:KeyValueOfstringanyType><a:Key>LabID</a:Key><a:Value i:type=\"b:string\" xmlns:b=\"http://www.w3.org/2001/XMLSchema\">\"2\"</a:Value></a:KeyValueOfstringanyType></Parameters></request></DoService></s:Body></s:Envelope>"
+            ]
+          },
+          "soapAction": "\"http://www.ustcori.com/2009/10/IBizService/DoService\"",
+          "contentType": "text/xml; charset=utf-8",
+          "accept": null
+        }
+      ],
+      "output": "输入链接：\r\n启动格式：旧版位置参数；流程：旧版\r\n目标服务：http://127.0.0.1:57058/BizService.svc\r\n获取实验项目……\r\n获取实验项目失败：位于 http://127.0.0.1:57058/BizService.svc 的 HTTP 服务不可用。这可能是因为该服务太忙，或是因为未找到侦听指定地址的终结点。请确保地址正确，并在稍后再次尝试访问该服务。\r\n实验初始化未完成，已停止后续操作。\r\n错误详情已保存：C:\\Users/<USER>\\Documents\\deepseek-harness\\default-workspace\\ustcoriCrack\\build\\protocol-tests\\runtime\\startup-error.log\r\n"
+    }
+  ],
+  "caseCount": 17,
+  "fixtureRequests": 16,
+  "exeSha256": "b3438e14b26d8b6cb05812960dacaa8fb85111c42e0ca1a10f1a0a5df7a903fb",
+  "livePlatformContacted": false,
+  "experimentStarted": false,
+  "recordSubmitted": false
+}

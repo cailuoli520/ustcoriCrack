@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "exeSha256": "b3438e14b26d8b6cb05812960dacaa8fb85111c42e0ca1a10f1a0a5df7a903fb",
+  "exeBytes": 76800,
+  "sourceCount": 12,
+  "testRuntime": "C:\\Users/<USER>\\Documents\\deepseek-harness\\default-workspace\\ustcoriCrack\\build\\protocol-tests\\runtime",
+  "previous": {
+    "ICSharpCode.SharpZipLib.dll": "40b3d590f95191f3e33e5d00e534fa40f823d9b1bb2a9afe05f139c4e0a3af8d",
+    "Newtonsoft.Json.dll": "12de7b006a6ff3fa8a7428e99f86ff60650101e29f34c2a3f8249acbcff7df95",
+    "PackageLibrary.dll": "8f4e74e78ab967bf2e1ac1dc99bf6f0fb61765424a28841087d7b398bde582c9",
+    "USTCORI.CommonLib.Security.dll": "ea7509147a40da0052fe88e04dc9dcbf3a73f8babd170766140384ded688d855",
+    "USTCORi.SimExp.Instruments.Component.dll": "0d89e35b6383223999ced9047ae1837f2eb560a7de015f8f5a9d970e4259c7ca",
+    "USTCORi.WebLabClient.Model.dll": "dd16fdfbbbfb69c16c9fa4ab5b52afb7c3960d86f3ab7907696fd4e0b1056b41",
+    "Unity3DWPFConnection.dll": "ca324b11422ae52d761eb687284f1f822ee1ebf8bb38237c73aa90eb443aa0d5",
+    "WebLabClient.exe": "cd345bfeef9df235e0603ac00fdfe39ba6ddc24dd21ed89110bbde2df7a72f9d",
+    "WebLabClient.exe.config": "ebc18e09975b87ee3852cf6561ce238350969c9d38b201f046f9714f77c020be",
+    "WpfAnimatedGif.dll": "169ece1b7e48275257bfd80a8e99bbac930b40a5ed35f1281d0bdaeed3e07a75",
+    "build-manifest.json": "db88829568b823837371a982c93dbd8ac4d8941df5fa699c469085b165ec6671",
+    "ustcori_crack.exe": "09f7eb66ff810238663f84105648f76b9f24bc1d268c9695eda88477aa8d51cc",
+    "ustcori_crack.exe.config": "ebc18e09975b87ee3852cf6561ce238350969c9d38b201f046f9714f77c020be",
+    "build.log": "fbb716ed0625dde0556fe6e1f5ca394464061ad0051ce6d8316ee9227dc030cf"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "exeSha256": "b5be0ad1661433eeb8647c5d7476835f4769dca9479f485936cc65a43028debf",
+  "exeBytes": 110080,
+  "package": "C:\\Users/<USER>\\Documents\\deepseek-harness\\default-workspace\\ustcoriCrack\\ustcori_crack-fullscore.zip",
+  "packageSha256": "51428dbbb38c574063e31033c95f65d69333b9ddcaef5edfd6e55241e313659d",
+  "targets": [
+    {
+      "target": "C:\\Ustcori\\Updata",
+      "status": "skip",
+      "reason": "缺少官方依赖，疑似不是运行目录：WebLabClient.exe, PackageLibrary.dll, USTCORi.SimExp.Instruments.Component.dll"
+    },
+    {
+      "target": "C:\\Users/<USER>\\Downloads\\Compressed\\Updata",
+      "status": "deployed",
+      "before": "d2bb0d76b6f1f7081c221c1acd444db78ccdc9391126d6acf94a09aab35a72be",
+      "after": "b5be0ad1661433eeb8647c5d7476835f4769dca9479f485936cc65a43028debf",
+      "backup": "C:\\Users/<USER>\\Downloads\\Compressed\\Updata\\.dsh-backup-fullscore-20261120-1658",
+      "updated": [
+        "ustcori_crack.exe",
+        "ustcori_crack.exe.config",
+        "WebLabClient.exe.config"
+      ]
+    }
+  ]
+}

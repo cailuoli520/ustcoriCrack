@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "exeSha256": "b3438e14b26d8b6cb05812960dacaa8fb85111c42e0ca1a10f1a0a5df7a903fb",
+  "interactiveChecks": [
+    {
+      "name": "invalid-link-interactive-holds",
+      "passed": true,
+      "stayedOpenUntilKey": true,
+      "exitCodeAfterKey": 1,
+      "consoleText": "输入链接：                                                                                                              /                                                                                                                       启动参数错误：启动链接缺少协议头。                                                                                      错误详情已保存：C:\\Users/<USER>\\Documents\\deepseek-harness\\default-workspace\\ustcoriCrack\\build\\protocol-tests\\runtime\\startup-error.log                                                                                                         程序已停止后续操作，按任意键关闭窗口……"
+    },
+    {
+      "name": "service-error-interactive-holds",
+      "passed": true,
+      "stayedOpenUntilKey": true,
+      "exitCodeAfterKey": 2,
+      "consoleText": "输入链接：                                                                                                              启动格式：JSON；流程：新版                                                                                              目标服务：http://127.0.0.1:61595/pause-fixture/ServiceAPI/FindByLABID                                                   获取实验项目……                                                                                                        获取实验项目失败：实验信息接口返回 HTTP 503。                                                                           实验初始化未完成，已停止后续操作。                                                                                      错误详情已保存：C:\\Users/<USER>\\Documents\\deepseek-harness\\default-workspace\\ustcoriCrack\\build\\protocol-tests\\runtime\\startup-error.log                                                                                                         程序已停止后续操作，按任意键关闭窗口……"
+    }
+  ],
+  "redirectedStdinExitsWithoutWaiting": true,
+  "errorLogCreated": true,
+  "fixtureRequests": [
+    {
+      "path": "/pause-fixture/ServiceAPI/FindByLABID",
+      "hasReadMethod": true,
+      "hasWriteMethod": false
+    }
+  ],
+  "livePlatformContacted": false,
+  "experimentStarted": false,
+  "recordSubmitted": false
+}

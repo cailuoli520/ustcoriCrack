@@ -1,0 +1,35 @@
+[
+  {
+    "url": "http://<SERVER_HOST>/",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8",
+    "location": null,
+    "server": "Microsoft-IIS/8.5",
+    "bodyBytes": 12459,
+    "title": "仿真实验用户登录",
+    "visible": " 仿真实验用户登录 您已经90天没有修改过密码，请修改密码后在登录！ 原密码： 新密码： 确认密码： 保存 访问人次: 0 人次&nbsp;|&nbsp; English 用户登录 登&nbsp;录 专家入口 --> 技术支持：科大奥锐 （浏览器兼容性:火狐 Firefox-55.0以上,谷歌Chrome 60.0 以上,搜狗浏览器(高速模式)等。） ",
+    "saved": "ustcoriCrack/build/site-query/response-0.html"
+  },
+  {
+    "url": "http://<SERVER_HOST>/BizService.svc?wsdl",
+    "status": 302,
+    "contentType": "text/html; charset=utf-8",
+    "location": "/Login/Error",
+    "server": "Microsoft-IIS/8.5",
+    "bodyBytes": 129,
+    "title": "Object moved",
+    "visible": " Object moved Object moved to here . ",
+    "saved": "ustcoriCrack/build/site-query/response-1.html"
+  },
+  {
+    "url": "http://<SERVER_HOST>/BizService.svc",
+    "status": 302,
+    "contentType": "text/html; charset=utf-8",
+    "location": "/Login/Error",
+    "server": "Microsoft-IIS/8.5",
+    "bodyBytes": 129,
+    "title": "Object moved",
+    "visible": " Object moved Object moved to here . ",
+    "saved": "ustcoriCrack/build/site-query/response-2.html"
+  }
+]

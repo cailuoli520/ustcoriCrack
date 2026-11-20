@@ -1,0 +1,47 @@
+{
+    "passed":  true,
+    "caseCount":  9,
+    "exeSha256":  "b3438e14b26d8b6cb05812960dacaa8fb85111c42e0ca1a10f1a0a5df7a903fb",
+    "checks":  [
+                   {
+                       "name":  "current-response-name-id-file-and-time",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "new-unknown-object-field-is-ignored",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "uppercase-legacy-name",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "optional-download-and-report-fields-preserved",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "same-scalar-name-alias-accepted",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "conflicting-string-name-alias-rejected",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "review-counterexample-object-vs-string-alias-rejected",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "same-text-different-scalar-type-alias-rejected",
+                       "passed":  true
+                   },
+                   {
+                       "name":  "conflicting-update-time-alias-rejected",
+                       "passed":  true
+                   }
+               ],
+    "networkContacted":  false,
+    "clientApplicationConstructed":  false,
+    "experimentStarted":  false,
+    "recordSubmitted":  false
+}

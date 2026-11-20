@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "package": "C:\\Users/<USER>\\Documents\\deepseek-harness\\default-workspace\\ustcoriCrack\\ustcori_crack-json-startup-fixed.zip",
+  "packageBytes": 2489226,
+  "packageSha256": "82fadb20a355aa873f3ab26d707a766fd4042402864a2e33b31d142b085472a4",
+  "packageFiles": 18,
+  "sourceHashesVerified": 11,
+  "userTarget": "C:\\Users/<USER>\\Downloads\\Compressed\\Updata",
+  "runtimeFilesVerified": 12,
+  "updated": [
+    "ustcori_crack.exe",
+    "ustcori_crack.exe.config",
+    "WebLabClient.exe.config"
+  ],
+  "backup": "C:\\Users/<USER>\\Downloads\\Compressed\\Updata\\.dsh-backup-json-startup-20261120-1430",
+  "exeBytes": 73216,
+  "exeSha256": "01461a8a8556cae136c454d97972ddab0680124c9b1f7d2324add6ad2f9400e6",
+  "localRelease": "C:\\Users/<USER>\\Documents\\deepseek-harness\\default-workspace\\ustcoriCrack\\ustocri_crack\\bin\\Release-json-startup-fixed"
+}

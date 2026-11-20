@@ -1,0 +1,5 @@
+ASSEMBLY WebLabClient 1.1.7507.17612
+METHOD 0x06000146 RVA=37322 USTCORi.WebLabClient.RuningInfo.RunningInfoGlobalVariable.get_RunningExperiment() -> USTCORi.WebLabClient.DataModel.LABINFO
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x040000DD USTCORi.WebLabClient.RuningInfo.RunningInfoGlobalVariable.runningExperiment : USTCORi.WebLabClient.DataModel.LABINFO
+IL_0006: ret 

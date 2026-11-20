@@ -1,0 +1,226 @@
+{
+  "parser": {
+    "parserCases": 30,
+    "passed": true,
+    "framework": "4.0.30319.42000",
+    "results": [
+      {
+        "name": "user-json-shape",
+        "passed": true,
+        "service": "http://<SERVER_HOST>/BizService.svc"
+      },
+      {
+        "name": "no-trailing-delimiter",
+        "passed": true,
+        "service": "http://<SERVER_HOST>/BizService.svc"
+      },
+      {
+        "name": "correct-address-spelling",
+        "passed": true,
+        "service": "http://<SERVER_HOST>/BizService.svc"
+      },
+      {
+        "name": "case-insensitive-address",
+        "passed": true,
+        "service": "http://<SERVER_HOST>/BizService.svc"
+      },
+      {
+        "name": "https-port-prefix",
+        "passed": true,
+        "service": "https://localhost:8443/labroot/BizService.svc"
+      },
+      {
+        "name": "explicit-port-override",
+        "passed": true,
+        "service": "https://localhost:5001/labroot/BizService.svc"
+      },
+      {
+        "name": "non-port-False",
+        "passed": true,
+        "service": "http://localhost:8386/prefix/BizService.svc"
+      },
+      {
+        "name": "non-port-undefined",
+        "passed": true,
+        "service": "http://localhost:8386/prefix/BizService.svc"
+      },
+      {
+        "name": "non-port-null",
+        "passed": true,
+        "service": "http://localhost:8386/prefix/BizService.svc"
+      },
+      {
+        "name": "non-port-",
+        "passed": true,
+        "service": "http://localhost:8386/prefix/BizService.svc"
+      },
+      {
+        "name": "non-port-None",
+        "passed": true,
+        "service": "http://localhost:8386/prefix/BizService.svc"
+      },
+      {
+        "name": "missing-port",
+        "passed": true,
+        "service": "http://<SERVER_HOST>/BizService.svc"
+      },
+      {
+        "name": "json-without-new-hall-fields",
+        "passed": true,
+        "service": "http://<SERVER_HOST>/BizService.svc"
+      },
+      {
+        "name": "legacy-five",
+        "passed": true,
+        "service": "http://127.0.0.1:8386/BizService.svc"
+      },
+      {
+        "name": "legacy-twelve",
+        "passed": true,
+        "service": "http://127.0.0.1:8386/BizService.svc"
+      },
+      {
+        "name": "base64-plus-preserved",
+        "passed": true,
+        "service": "http://<SERVER_HOST>/BizService.svc"
+      },
+      {
+        "name": "percent-encoded-base64",
+        "passed": true,
+        "service": "http://<SERVER_HOST>/BizService.svc"
+      },
+      {
+        "name": "matching-address-aliases",
+        "passed": true,
+        "service": "http://<SERVER_HOST>/BizService.svc"
+      },
+      {
+        "name": "conflicting-address-aliases",
+        "passed": true,
+        "expectedFormatError": true
+      },
+      {
+        "name": "missing-ExamOrLabID",
+        "passed": true,
+        "expectedFormatError": true
+      },
+      {
+        "name": "missing-StudentID",
+        "passed": true,
+        "expectedFormatError": true
+      },
+      {
+        "name": "missing-SiteAdress",
+        "passed": true,
+        "expectedFormatError": true
+      },
+      {
+        "name": "invalid-port",
+        "passed": true,
+        "expectedFormatError": true
+      },
+      {
+        "name": "out-of-range-port",
+        "passed": true,
+        "expectedFormatError": true
+      },
+      {
+        "name": "non-http-site",
+        "passed": true,
+        "expectedFormatError": true
+      },
+      {
+        "name": "site-query",
+        "passed": true,
+        "expectedFormatError": true
+      },
+      {
+        "name": "empty-input",
+        "passed": true,
+        "expectedFormatError": true
+      },
+      {
+        "name": "homepage-input",
+        "passed": true,
+        "expectedFormatError": true
+      },
+      {
+        "name": "bad-base64",
+        "passed": true,
+        "expectedFormatError": true
+      },
+      {
+        "name": "legacy-too-short",
+        "passed": true,
+        "expectedFormatError": true
+      }
+    ],
+    "configChecks": [
+      {
+        "name": "https-port-prefix",
+        "passed": true,
+        "bindingMode": "Transport",
+        "dualConfigEqual": true
+      },
+      {
+        "name": "legacy-five",
+        "passed": true,
+        "bindingMode": "None",
+        "dualConfigEqual": true
+      }
+    ]
+  },
+  "cli": {
+    "passed": true,
+    "parserCases": 30,
+    "exeSha256": "01461a8a8556cae136c454d97972ddab0680124c9b1f7d2324add6ad2f9400e6",
+    "checks": [
+      {
+        "name": "check-launch-no-network",
+        "exitCode": 0,
+        "passed": true,
+        "output": "输入链接：\r\n启动格式：JSON；流程：新版\r\n目标服务：http://127.0.0.1:53757/fixture/BizService.svc\r\n启动参数解析通过；未连接服务。\r\n"
+      },
+      {
+        "name": "service-failure-clean-exit",
+        "exitCode": 2,
+        "passed": true,
+        "output": "输入链接：\r\n启动格式：JSON；流程：新版\r\n目标服务：http://127.0.0.1:53757/fixture/BizService.svc\r\n获取实验项目……\r\n获取实验项目失败：位于 http://127.0.0.1:53757/fixture/BizService.svc 的 HTTP 服务不可用。这可能是因为该服务太忙，或是因为未找到侦听指定地址的终结点。请确保地址正确，并在稍后再次尝试访问该服务。\r\n实验初始化未完成，已停止后续操作。\r\n",
+        "requests": [
+          {
+            "path": "/fixture/BizService.svc",
+            "soapAction": "\"http://www.ustcori.com/2009/10/IBizService/DoService\"",
+            "bodyBytes": 588,
+            "hasReadMethod": true,
+            "hasWriteMethod": false
+          }
+        ]
+      },
+      {
+        "name": "invalid-link-clean-exit",
+        "exitCode": 1,
+        "passed": true,
+        "output": "输入链接：\r\n启动参数错误：启动参数的 Base64/UTF-8 格式错误。\r\n"
+      }
+    ],
+    "livePlatformContacted": false,
+    "experimentStarted": false,
+    "recordSubmitted": false
+  },
+  "liveMetadata": {
+    "exitCode": 2,
+    "output": "输入链接：\r\n启动格式：JSON；流程：新版\r\n目标服务：http://<SERVER_HOST>/BizService.svc\r\n获取实验项目……\r\n获取实验项目失败：响应消息的内容类型 text/html; charset=utf-8 与绑定(text/xml; charset=utf-8)的内容类型不匹配。如果使用自定义编码器，请确保正确实现 IsContentTypeSupported 方法。响应的前 1024 个字节为:“<!DOCTYPE html>\r\n<html>\r\n<head>\r\n    <meta charset=\"utf-8\" />\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <title>Error</title>\r\n    <link href=\"/Content/bootstrap.min.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n    <link href=\"/Content/bootstrapValidator.min.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n    <link href=\"/Scripts/Editor/wysiwyg-editor.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n    <link href=\"/Content/bootstrap-datetimepicker.min.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n    <link href=\"/Scripts/Editor/css/font-awesome.min.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n    <link href=\"/Content/Site.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n    <link href=\"/Content/zTree.min.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n    <link href=\"/Content/pager.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n    <link href=\"/Content/APP/BacicInfo/login.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n\r\n    <script src=\"/Scripts/jquery.min.js\" type=\"text/javascript\"></script>\r\n    <script src=\"/Scripts/bootstrap.min”。\r\n实验初始化未完成，已停止后续操作。\r\n",
+    "endpoint": "http://<SERVER_HOST>/BizService.svc",
+    "operation": "FindByLABID",
+    "labId": "2",
+    "studentIdRedacted": true,
+    "experimentStarted": false,
+    "recordSubmitted": false,
+    "exeSha256": "01461a8a8556cae136c454d97972ddab0680124c9b1f7d2324add6ad2f9400e6"
+  },
+  "staticReview": {
+    "completed": true,
+    "remainingStartupPatchBlockers": [],
+    "scope": "startup parser, explicit endpoints, config consistency, initialization and metadata-only guard"
+  }
+}

@@ -1,0 +1,2178 @@
+ASSEMBLY USTCORi.WebLabClient 1.1.8462.26936
+TYPE USTCORi.WebLabClient.App : System.Windows.Application
+FIELD USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+FIELD USTCORi.WebLabClient.App.downxmlpath : String
+FIELD USTCORi.WebLabClient.App.downXml : System.Xml.Linq.XElement
+FIELD USTCORi.WebLabClient.App._contentLoaded : Boolean
+METHOD 0x06000017 RVA=9440 USTCORi.WebLabClient.App.Application_Startup(Object, System.Windows.StartupEventArgs) -> Void
+IL_0000: ldarg.2 
+IL_0001: callvirt 0x0A000042 System.Windows.StartupEventArgs.get_Args() -> String[]
+IL_0006: ldlen 
+IL_0007: brfalse IL_0228
+IL_000C: ldarg.2 
+IL_000D: callvirt 0x0A000042 System.Windows.StartupEventArgs.get_Args() -> String[]
+IL_0012: ldc.i4.0 
+IL_0013: ldelem.ref 
+IL_0014: stloc.0 
+IL_0015: ldstr ""
+IL_001A: stloc.1 
+IL_001B: ldloc.0 
+IL_001C: ldc.i4.1 
+IL_001D: newarr 0x01000071 System.Char
+IL_0022: dup 
+IL_0023: ldc.i4.0 
+IL_0024: ldc.i4.s 58
+IL_0026: stelem.i2 
+IL_0027: callvirt 0x0A000043 System.String.Split(Char[]) -> String[]
+IL_002C: ldloc.0 
+IL_002D: ldc.i4.1 
+IL_002E: newarr 0x01000071 System.Char
+IL_0033: dup 
+IL_0034: ldc.i4.0 
+IL_0035: ldc.i4.s 58
+IL_0037: stelem.i2 
+IL_0038: callvirt 0x0A000043 System.String.Split(Char[]) -> String[]
+IL_003D: ldlen 
+IL_003E: conv.i4 
+IL_003F: ldc.i4.1 
+IL_0040: sub 
+IL_0041: ldelem.ref 
+IL_0042: stloc.s 6
+IL_0044: ldloc.s 6
+IL_0046: ldc.i4.2 
+IL_0047: ldloc.s 6
+IL_0049: callvirt 0x0A000044 System.String.get_Length() -> Int32
+IL_004E: ldc.i4.3 
+IL_004F: sub 
+IL_0050: callvirt 0x0A000045 System.String.Substring(Int32, Int32) -> String
+IL_0055: call 0x0A000046 System.Convert.FromBase64String(String) -> Byte[]
+IL_005A: stloc.s 7
+IL_005C: call 0x0A000047 System.Text.Encoding.get_UTF8() -> System.Text.Encoding
+IL_0061: ldloc.s 7
+IL_0063: callvirt 0x0A000048 System.Text.Encoding.GetString(Byte[]) -> String
+IL_0068: stloc.1 
+IL_0069: leave.s IL_008C
+IL_006B: stloc.s 8
+IL_006D: ldstr "\u5B9E\u9A8C\u73AF\u5883\u542F\u52A8\u5931\u8D25\uFF0C\u53C2\u6570\u89E3\u6790\u51FA\u9519\uFF0C\u8BF7\u5C1D\u8BD5\u91CD\u65B0\u5B89\u88C5\u73AF\u5883\uFF01"
+IL_0072: ldloc.s 8
+IL_0074: callvirt 0x0A000049 System.Exception.get_Message() -> String
+IL_0079: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_007E: call 0x0A00004A System.Windows.MessageBox.Show(String) -> System.Windows.MessageBoxResult
+IL_0083: pop 
+IL_0084: ldarg.0 
+IL_0085: call 0x0600001A USTCORi.WebLabClient.App.ExitApp() -> Void
+IL_008A: leave.s IL_008C
+IL_008C: ldloc.1 
+IL_008D: call 0x0A00004B Newtonsoft.Json.Linq.JObject.Parse(String) -> Newtonsoft.Json.Linq.JObject
+IL_0092: callvirt 0x0A00004C Newtonsoft.Json.Linq.JObject.Properties() -> System.Collections.Generic.IEnumerable`1<Newtonsoft.Json.Linq.JProperty>
+IL_0097: ldsfld 0x0400007E .<>c.<>9__3_0 : System.Func`2<Newtonsoft.Json.Linq.JProperty,.<>f__AnonymousType0`2<String,Newtonsoft.Json.Linq.JToken>>
+IL_009C: dup 
+IL_009D: brtrue.s IL_00B6
+IL_009F: pop 
+IL_00A0: ldsfld 0x0400007D .<>c.<>9 : .<>c
+IL_00A5: ldftn 0x060000D2 .<>c.<Application_Startup>b__3_0(Newtonsoft.Json.Linq.JProperty) -> .<>f__AnonymousType0`2<String,Newtonsoft.Json.Linq.JToken>
+IL_00AB: newobj 0x0A00004D System.Func`2<Newtonsoft.Json.Linq.JProperty,.<>f__AnonymousType0`2<String,Newtonsoft.Json.Linq.JToken>>..ctor(Object, IntPtr) -> Void
+IL_00B0: dup 
+IL_00B1: stsfld 0x0400007E .<>c.<>9__3_0 : System.Func`2<Newtonsoft.Json.Linq.JProperty,.<>f__AnonymousType0`2<String,Newtonsoft.Json.Linq.JToken>>
+IL_00B6: call 0x2B000002 System.Linq.Enumerable.Select(System.Collections.Generic.IEnumerable`1<!!0>, System.Func`2<!!0,!!1>) -> System.Collections.Generic.IEnumerable`1<!!1><Newtonsoft.Json.Linq.JProperty,.<>f__AnonymousType0`2<String,Newtonsoft.Json.Linq.JToken>>
+IL_00BB: call 0x2B000003 System.Linq.Enumerable.ToList(System.Collections.Generic.IEnumerable`1<!!0>) -> System.Collections.Generic.List`1<!!0><.<>f__AnonymousType0`2<String,Newtonsoft.Json.Linq.JToken>>
+IL_00C0: ldsfld 0x0A000050 System.String.Empty : String
+IL_00C5: pop 
+IL_00C6: ldsfld 0x0A000050 System.String.Empty : String
+IL_00CB: pop 
+IL_00CC: ldsfld 0x0A000050 System.String.Empty : String
+IL_00D1: stloc.2 
+IL_00D2: ldsfld 0x0A000050 System.String.Empty : String
+IL_00D7: stloc.3 
+IL_00D8: ldsfld 0x0A000050 System.String.Empty : String
+IL_00DD: pop 
+IL_00DE: ldsfld 0x0A000050 System.String.Empty : String
+IL_00E3: stloc.s 4
+IL_00E5: ldstr "ZH-CN"
+IL_00EA: stloc.s 5
+IL_00EC: callvirt 0x0A000051 System.Collections.Generic.List`1<.<>f__AnonymousType0`2<String,Newtonsoft.Json.Linq.JToken>>.GetEnumerator() -> .Enumerator<!0>
+IL_00F1: stloc.s 9
+IL_00F3: br IL_01BF
+IL_00F8: ldloca.s 9
+IL_00FA: call 0x0A000052 .Enumerator<.<>f__AnonymousType0`2<String,Newtonsoft.Json.Linq.JToken>>.get_Current() -> !0
+IL_00FF: stloc.s 10
+IL_0101: ldloc.s 10
+IL_0103: callvirt 0x0A000053 .<>f__AnonymousType0`2<String,Newtonsoft.Json.Linq.JToken>.get_Name() -> !0
+IL_0108: callvirt 0x0A000022 System.Object.ToString() -> String
+IL_010D: stloc.s 11
+IL_010F: ldloc.s 11
+IL_0111: ldstr "Diff"
+IL_0116: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_011B: brfalse.s IL_012F
+IL_011D: ldloc.s 10
+IL_011F: callvirt 0x0A000055 .<>f__AnonymousType0`2<String,Newtonsoft.Json.Linq.JToken>.get_Value() -> !1
+IL_0124: call 0x2B000004 Newtonsoft.Json.Linq.Extensions.Value(System.Collections.Generic.IEnumerable`1<Newtonsoft.Json.Linq.JToken>) -> !!0<String>
+IL_0129: pop 
+IL_012A: br IL_01BF
+IL_012F: ldloc.s 11
+IL_0131: ldstr "ExamID"
+IL_0136: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_013B: brfalse.s IL_014C
+IL_013D: ldloc.s 10
+IL_013F: callvirt 0x0A000055 .<>f__AnonymousType0`2<String,Newtonsoft.Json.Linq.JToken>.get_Value() -> !1
+IL_0144: call 0x2B000004 Newtonsoft.Json.Linq.Extensions.Value(System.Collections.Generic.IEnumerable`1<Newtonsoft.Json.Linq.JToken>) -> !!0<String>
+IL_0149: pop 
+IL_014A: br.s IL_01BF
+IL_014C: ldloc.s 11
+IL_014E: ldstr "SiteAdress"
+IL_0153: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_0158: brfalse.s IL_0169
+IL_015A: ldloc.s 10
+IL_015C: callvirt 0x0A000055 .<>f__AnonymousType0`2<String,Newtonsoft.Json.Linq.JToken>.get_Value() -> !1
+IL_0161: call 0x2B000004 Newtonsoft.Json.Linq.Extensions.Value(System.Collections.Generic.IEnumerable`1<Newtonsoft.Json.Linq.JToken>) -> !!0<String>
+IL_0166: stloc.2 
+IL_0167: br.s IL_01BF
+IL_0169: ldloc.s 11
+IL_016B: ldstr "StudentID"
+IL_0170: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_0175: brfalse.s IL_0186
+IL_0177: ldloc.s 10
+IL_0179: callvirt 0x0A000055 .<>f__AnonymousType0`2<String,Newtonsoft.Json.Linq.JToken>.get_Value() -> !1
+IL_017E: call 0x2B000004 Newtonsoft.Json.Linq.Extensions.Value(System.Collections.Generic.IEnumerable`1<Newtonsoft.Json.Linq.JToken>) -> !!0<String>
+IL_0183: stloc.3 
+IL_0184: br.s IL_01BF
+IL_0186: ldloc.s 11
+IL_0188: ldstr "Whtn"
+IL_018D: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_0192: brfalse.s IL_01A3
+IL_0194: ldloc.s 10
+IL_0196: callvirt 0x0A000055 .<>f__AnonymousType0`2<String,Newtonsoft.Json.Linq.JToken>.get_Value() -> !1
+IL_019B: call 0x2B000004 Newtonsoft.Json.Linq.Extensions.Value(System.Collections.Generic.IEnumerable`1<Newtonsoft.Json.Linq.JToken>) -> !!0<String>
+IL_01A0: pop 
+IL_01A1: br.s IL_01BF
+IL_01A3: ldloc.s 11
+IL_01A5: ldstr "SysID"
+IL_01AA: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_01AF: brfalse.s IL_01BF
+IL_01B1: ldloc.s 10
+IL_01B3: callvirt 0x0A000055 .<>f__AnonymousType0`2<String,Newtonsoft.Json.Linq.JToken>.get_Value() -> !1
+IL_01B8: call 0x2B000004 Newtonsoft.Json.Linq.Extensions.Value(System.Collections.Generic.IEnumerable`1<Newtonsoft.Json.Linq.JToken>) -> !!0<String>
+IL_01BD: stloc.s 4
+IL_01BF: ldloca.s 9
+IL_01C1: call 0x0A000057 .Enumerator<.<>f__AnonymousType0`2<String,Newtonsoft.Json.Linq.JToken>>.MoveNext() -> Boolean
+IL_01C6: brtrue IL_00F8
+IL_01CB: leave.s IL_01DB
+IL_01CD: ldloca.s 9
+IL_01CF: constrained. 0x1B000008 .Enumerator<.<>f__AnonymousType0`2<String,Newtonsoft.Json.Linq.JToken>>
+IL_01D5: callvirt 0x0A000058 System.IDisposable.Dispose() -> Void
+IL_01DA: endfinally 
+IL_01DB: ldarg.0 
+IL_01DC: call 0x0A000059 System.AppDomain.get_CurrentDomain() -> System.AppDomain
+IL_01E1: callvirt 0x0A00005A System.AppDomain.get_BaseDirectory() -> String
+IL_01E6: ldloc.s 4
+IL_01E8: call 0x0600001B USTCORi.WebLabClient.App.InitInfo(String, String) -> Void
+IL_01ED: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_01F2: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_01F7: ldloc.3 
+IL_01F8: callvirt 0x0600003A USTCORi.WebLabClient.RuningInfo.RuningInfoConst.SetUserName(String) -> Void
+IL_01FD: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_0202: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_0207: ldloc.s 5
+IL_0209: callvirt 0x06000036 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.SetLanguage(String) -> Void
+IL_020E: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_0213: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_0218: ldloc.2 
+IL_0219: callvirt 0x06000035 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.SetServerIP(String) -> Void
+IL_021E: ldarg.0 
+IL_021F: ldloc.0 
+IL_0220: ldloc.s 4
+IL_0222: call 0x06000018 USTCORi.WebLabClient.App.CheckDown(String, String) -> Void
+IL_0227: ret 
+IL_0228: ldarg.0 
+IL_0229: call 0x0600001A USTCORi.WebLabClient.App.ExitApp() -> Void
+IL_022E: ret 
+EXCEPTION Catch try=27+80 handler=107+33 catch=System.Exception
+EXCEPTION Finally try=243+218 handler=461+14 catch=ModuleDefinition#0
+METHOD 0x06000018 RVA=10040 USTCORi.WebLabClient.App.CheckDown(String, String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_0006: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_000B: callvirt 0x06000032 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadExperimentXmlPath() -> String
+IL_0010: stfld 0x0400000E USTCORi.WebLabClient.App.downxmlpath : String
+IL_0015: ldstr "SysID="
+IL_001A: ldarg.2 
+IL_001B: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_0020: stloc.0 
+IL_0021: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_0026: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_002B: callvirt 0x06000034 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_ServerIP() -> String
+IL_0030: ldstr "/Utils/FindNewExamRoom"
+IL_0035: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_003A: ldloc.0 
+IL_003B: call 0x0600009A USTCORi.WebLabClient.Common.HttpHelper.HttpPost(String, String) -> String
+IL_0040: call 0x2B000005 Newtonsoft.Json.JavaScriptConvert.DeserializeObject(String) -> !!0<USTCORi.WebLabClient.Common.LABROOM>
+IL_0045: stloc.1 
+IL_0046: ldloc.1 
+IL_0047: brfalse IL_014B
+IL_004C: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_0051: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_0056: callvirt 0x06000031 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadExperimentPath() -> String
+IL_005B: ldstr "LabDownLoad"
+IL_0060: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_0065: stloc.2 
+IL_0066: ldloc.2 
+IL_0067: call 0x0A00005C System.IO.Directory.Exists(String) -> Boolean
+IL_006C: brtrue.s IL_0075
+IL_006E: ldloc.2 
+IL_006F: call 0x0A00005D System.IO.Directory.CreateDirectory(String) -> System.IO.DirectoryInfo
+IL_0074: pop 
+IL_0075: ldarg.0 
+IL_0076: ldfld 0x0400000E USTCORi.WebLabClient.App.downxmlpath : String
+IL_007B: call 0x0A00005E System.IO.File.Exists(String) -> Boolean
+IL_0080: brtrue.s IL_00AA
+IL_0082: ldarg.0 
+IL_0083: ldstr "root"
+IL_0088: call 0x0A00005F System.Xml.Linq.XName.op_Implicit(String) -> System.Xml.Linq.XName
+IL_008D: newobj 0x0A000060 System.Xml.Linq.XElement..ctor(System.Xml.Linq.XName) -> Void
+IL_0092: stfld 0x0400000F USTCORi.WebLabClient.App.downXml : System.Xml.Linq.XElement
+IL_0097: ldarg.0 
+IL_0098: ldfld 0x0400000F USTCORi.WebLabClient.App.downXml : System.Xml.Linq.XElement
+IL_009D: ldarg.0 
+IL_009E: ldfld 0x0400000E USTCORi.WebLabClient.App.downxmlpath : String
+IL_00A3: callvirt 0x0A000061 System.Xml.Linq.XElement.Save(String) -> Void
+IL_00A8: br.s IL_00BB
+IL_00AA: ldarg.0 
+IL_00AB: ldarg.0 
+IL_00AC: ldfld 0x0400000E USTCORi.WebLabClient.App.downxmlpath : String
+IL_00B1: call 0x0A000062 System.Xml.Linq.XElement.Load(String) -> System.Xml.Linq.XElement
+IL_00B6: stfld 0x0400000F USTCORi.WebLabClient.App.downXml : System.Xml.Linq.XElement
+IL_00BB: ldnull 
+IL_00BC: stloc.3 
+IL_00BD: ldarg.0 
+IL_00BE: ldfld 0x0400000F USTCORi.WebLabClient.App.downXml : System.Xml.Linq.XElement
+IL_00C3: ldstr "LabRoom"
+IL_00C8: call 0x0A00005F System.Xml.Linq.XName.op_Implicit(String) -> System.Xml.Linq.XName
+IL_00CD: callvirt 0x0A000063 System.Xml.Linq.XContainer.Elements(System.Xml.Linq.XName) -> System.Collections.Generic.IEnumerable`1<System.Xml.Linq.XElement>
+IL_00D2: callvirt 0x0A000064 System.Collections.Generic.IEnumerable`1<System.Xml.Linq.XElement>.GetEnumerator() -> System.Collections.Generic.IEnumerator`1<!0>
+IL_00D7: stloc.s 4
+IL_00D9: br.s IL_010A
+IL_00DB: ldloc.s 4
+IL_00DD: callvirt 0x0A000065 System.Collections.Generic.IEnumerator`1<System.Xml.Linq.XElement>.get_Current() -> !0
+IL_00E2: stloc.s 5
+IL_00E4: ldloc.s 5
+IL_00E6: ldstr "UpTime"
+IL_00EB: call 0x0A00005F System.Xml.Linq.XName.op_Implicit(String) -> System.Xml.Linq.XName
+IL_00F0: callvirt 0x0A000066 System.Xml.Linq.XElement.Attribute(System.Xml.Linq.XName) -> System.Xml.Linq.XAttribute
+IL_00F5: call 0x0A000067 System.Xml.Linq.XAttribute.op_Explicit(System.Xml.Linq.XAttribute) -> System.DateTime
+IL_00FA: ldloc.1 
+IL_00FB: callvirt 0x060000A1 USTCORi.WebLabClient.Common.LABROOM.get_UPTIME() -> System.DateTime
+IL_0100: call 0x0A000068 System.DateTime.op_Equality(System.DateTime, System.DateTime) -> Boolean
+IL_0105: brfalse.s IL_010A
+IL_0107: ldloc.s 5
+IL_0109: stloc.3 
+IL_010A: ldloc.s 4
+IL_010C: callvirt 0x0A000069 System.Collections.IEnumerator.MoveNext() -> Boolean
+IL_0111: brtrue.s IL_00DB
+IL_0113: leave.s IL_0121
+IL_0115: ldloc.s 4
+IL_0117: brfalse.s IL_0120
+IL_0119: ldloc.s 4
+IL_011B: callvirt 0x0A000058 System.IDisposable.Dispose() -> Void
+IL_0120: endfinally 
+IL_0121: ldloc.3 
+IL_0122: brfalse.s IL_012E
+IL_0124: ldarg.0 
+IL_0125: ldarg.1 
+IL_0126: ldarg.2 
+IL_0127: call 0x06000019 USTCORi.WebLabClient.App.Start(String, String) -> Void
+IL_012C: br.s IL_0184
+IL_012E: ldarg.1 
+IL_012F: ldarg.2 
+IL_0130: newobj 0x0600001F USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow..ctor(String, String) -> Void
+IL_0135: dup 
+IL_0136: ldc.i4.1 
+IL_0137: callvirt 0x0A00006A System.Windows.Window.set_Topmost(Boolean) -> Void
+IL_013C: dup 
+IL_013D: ldloc.1 
+IL_013E: callvirt 0x06000020 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.SetExperiment(USTCORi.WebLabClient.Common.LABROOM) -> Void
+IL_0143: callvirt 0x0A00006B System.Windows.Window.ShowDialog() -> System.Nullable`1<Boolean>
+IL_0148: pop 
+IL_0149: br.s IL_0184
+IL_014B: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_0150: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_0155: callvirt 0x0600002A USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_Language() -> String
+IL_015A: ldstr "ZH-EN"
+IL_015F: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_0164: brfalse.s IL_0173
+IL_0166: ldstr "The running environment has not been uploaded. Please contact the administrator\uFF01"
+IL_016B: call 0x0A00004A System.Windows.MessageBox.Show(String) -> System.Windows.MessageBoxResult
+IL_0170: pop 
+IL_0171: br.s IL_017E
+IL_0173: ldstr "\u8FD0\u884C\u73AF\u5883\u66F4\u65B0\u51FA\u9519\uFF0C\u8BF7\u8054\u7CFB\u7BA1\u7406\u5458\uFF01"
+IL_0178: call 0x0A00004A System.Windows.MessageBox.Show(String) -> System.Windows.MessageBoxResult
+IL_017D: pop 
+IL_017E: ldarg.0 
+IL_017F: call 0x0600001A USTCORi.WebLabClient.App.ExitApp() -> Void
+IL_0184: leave.s IL_01AF
+IL_0186: stloc.s 6
+IL_0188: ldstr "\u8FD0\u884C\u73AF\u5883\u66F4\u65B0\u51FA\u9519\uFF0C\u8BF7\u8054\u7CFB\u7BA1\u7406\u5458\uFF01\u9519\u8BEF\u8BE6\u7EC6\u4FE1\u606F\uFF1A"
+IL_018D: ldloc.s 6
+IL_018F: callvirt 0x0A000049 System.Exception.get_Message() -> String
+IL_0194: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_0199: ldstr "Error"
+IL_019E: ldc.i4.0 
+IL_019F: ldc.i4.s 16
+IL_01A1: call 0x0A00006C System.Windows.MessageBox.Show(String, String, System.Windows.MessageBoxButton, System.Windows.MessageBoxImage) -> System.Windows.MessageBoxResult
+IL_01A6: pop 
+IL_01A7: ldarg.0 
+IL_01A8: call 0x0600001A USTCORi.WebLabClient.App.ExitApp() -> Void
+IL_01AD: leave.s IL_01AF
+IL_01AF: ret 
+EXCEPTION Finally try=217+60 handler=277+12 catch=ModuleDefinition#0
+EXCEPTION Catch try=21+369 handler=390+41 catch=System.Exception
+METHOD 0x06000019 RVA=10536 USTCORi.WebLabClient.App.Start(String, String) -> Void
+IL_0000: ldarg.2 
+IL_0001: ldstr "1"
+IL_0006: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_000B: brtrue.s IL_002A
+IL_000D: ldarg.2 
+IL_000E: ldstr "2"
+IL_0013: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_0018: brtrue.s IL_002A
+IL_001A: ldarg.2 
+IL_001B: ldstr "4"
+IL_0020: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_0025: brfalse IL_0255
+IL_002A: call 0x0A00006D System.Diagnostics.Process.GetProcesses() -> System.Diagnostics.Process[]
+IL_002F: stloc.0 
+IL_0030: ldc.i4.0 
+IL_0031: stloc.1 
+IL_0032: br IL_0104
+IL_0037: ldloc.0 
+IL_0038: ldloc.1 
+IL_0039: ldelem.ref 
+IL_003A: stloc.2 
+IL_003B: ldloc.2 
+IL_003C: callvirt 0x0A00006E System.Diagnostics.Process.get_ProcessName() -> String
+IL_0041: callvirt 0x0A00006F System.String.Trim() -> String
+IL_0046: ldstr "USTCORi.ExamSystem.Client"
+IL_004B: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_0050: brfalse IL_0100
+IL_0055: ldsfld 0x0A000050 System.String.Empty : String
+IL_005A: stloc.3 
+IL_005B: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_0060: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_0065: callvirt 0x0600002A USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_Language() -> String
+IL_006A: ldstr "ZH-EN"
+IL_006F: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_0074: brfalse.s IL_009A
+IL_0076: ldstr "A program is already running. To restart, please end the currently running program first"
+IL_007B: ldstr "Warning"
+IL_0080: ldc.i4.0 
+IL_0081: ldc.i4.s 48
+IL_0083: call 0x0A00006C System.Windows.MessageBox.Show(String, String, System.Windows.MessageBoxButton, System.Windows.MessageBoxImage) -> System.Windows.MessageBoxResult
+IL_0088: stloc.s 4
+IL_008A: ldloca.s 4
+IL_008C: constrained. 0x01000030 System.Windows.MessageBoxResult
+IL_0092: callvirt 0x0A000022 System.Object.ToString() -> String
+IL_0097: stloc.3 
+IL_0098: br.s IL_00BC
+IL_009A: ldstr "\u5DF2\u7ECF\u6709\u4E00\u4E2A\u7A0B\u5E8F\u6B63\u5728\u8FD0\u884C,\u5982\u8981\u91CD\u65B0\u5F00\u59CB,\u8BF7\u5148\u7ED3\u675F\u5F53\u524D\u8FD0\u884C\u7A0B\u5E8F\uFF1F"
+IL_009F: ldstr "Info"
+IL_00A4: ldc.i4.1 
+IL_00A5: ldc.i4.s 64
+IL_00A7: call 0x0A00006C System.Windows.MessageBox.Show(String, String, System.Windows.MessageBoxButton, System.Windows.MessageBoxImage) -> System.Windows.MessageBoxResult
+IL_00AC: stloc.s 4
+IL_00AE: ldloca.s 4
+IL_00B0: constrained. 0x01000030 System.Windows.MessageBoxResult
+IL_00B6: callvirt 0x0A000022 System.Object.ToString() -> String
+IL_00BB: stloc.3 
+IL_00BC: ldloc.3 
+IL_00BD: callvirt 0x0A000022 System.Object.ToString() -> String
+IL_00C2: ldstr "OK"
+IL_00C7: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_00CC: brfalse.s IL_00E0
+IL_00CE: ldloc.2 
+IL_00CF: callvirt 0x0A000070 System.Diagnostics.Process.Kill() -> Void
+IL_00D4: ldc.i4 2000
+IL_00D9: call 0x0A00003B System.Threading.Thread.Sleep(Int32) -> Void
+IL_00DE: br.s IL_00E5
+IL_00E0: leave IL_0607
+IL_00E5: leave.s IL_010D
+IL_00E7: pop 
+IL_00E8: ldstr "\u65E0\u6CD5\u5173\u95ED\u5B9E\u9A8C\u8FDB\u7A0B\uFF0C\u9700\u8981\u81F3\u4EFB\u52A1\u7BA1\u7406\u5668\u4E2D\u624B\u52A8\u5173\u95ED\uFF01"
+IL_00ED: ldstr "Warning"
+IL_00F2: ldc.i4.0 
+IL_00F3: ldc.i4.s 48
+IL_00F5: call 0x0A00006C System.Windows.MessageBox.Show(String, String, System.Windows.MessageBoxButton, System.Windows.MessageBoxImage) -> System.Windows.MessageBoxResult
+IL_00FA: pop 
+IL_00FB: leave IL_0607
+IL_0100: ldloc.1 
+IL_0101: ldc.i4.1 
+IL_0102: add 
+IL_0103: stloc.1 
+IL_0104: ldloc.1 
+IL_0105: ldloc.0 
+IL_0106: ldlen 
+IL_0107: conv.i4 
+IL_0108: blt IL_0037
+IL_010D: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_0112: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_0117: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_011C: ldstr "USTCORi.ExamSystem.Client.exe"
+IL_0121: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_0126: newobj 0x0A000071 System.IO.FileInfo..ctor(String) -> Void
+IL_012B: callvirt 0x0A000072 System.IO.FileSystemInfo.get_Exists() -> Boolean
+IL_0130: brfalse IL_01C0
+IL_0135: newobj 0x0A000073 System.Diagnostics.Process..ctor() -> Void
+IL_013A: stloc.s 5
+IL_013C: ldloc.s 5
+IL_013E: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_0143: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_0148: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_014D: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_0152: ldstr "USTCORi.ExamSystem.Client.exe"
+IL_0157: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_015C: callvirt 0x0A000075 System.Diagnostics.ProcessStartInfo.set_FileName(String) -> Void
+IL_0161: ldloc.s 5
+IL_0163: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_0168: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_016D: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_0172: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_0177: callvirt 0x0A000076 System.Diagnostics.ProcessStartInfo.set_WorkingDirectory(String) -> Void
+IL_017C: ldloc.s 5
+IL_017E: ldc.i4.1 
+IL_017F: callvirt 0x0A000077 System.Diagnostics.Process.set_EnableRaisingEvents(Boolean) -> Void
+IL_0184: ldloc.s 5
+IL_0186: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_018B: ldarg.1 
+IL_018C: callvirt 0x0A000078 System.Diagnostics.ProcessStartInfo.set_Arguments(String) -> Void
+IL_0191: ldloc.s 5
+IL_0193: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_0198: ldstr "runas"
+IL_019D: callvirt 0x0A000079 System.Diagnostics.ProcessStartInfo.set_Verb(String) -> Void
+IL_01A2: ldloc.s 5
+IL_01A4: callvirt 0x0A00007A System.Diagnostics.Process.Start() -> Boolean
+IL_01A9: pop 
+IL_01AA: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_01AF: callvirt 0x06000041 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Global() -> USTCORi.WebLabClient.RuningInfo.RunningInfoGlobalVariable
+IL_01B4: ldloc.s 5
+IL_01B6: callvirt 0x06000046 USTCORi.WebLabClient.RuningInfo.RunningInfoGlobalVariable.set_RunningProcess(System.Diagnostics.Process) -> Void
+IL_01BB: br IL_0246
+IL_01C0: newobj 0x0A000073 System.Diagnostics.Process..ctor() -> Void
+IL_01C5: stloc.s 6
+IL_01C7: ldloc.s 6
+IL_01C9: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_01CE: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_01D3: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_01D8: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_01DD: ldstr "4\\USTCORi.ExamSystem.Client.exe"
+IL_01E2: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_01E7: callvirt 0x0A000075 System.Diagnostics.ProcessStartInfo.set_FileName(String) -> Void
+IL_01EC: ldloc.s 6
+IL_01EE: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_01F3: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_01F8: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_01FD: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_0202: callvirt 0x0A000076 System.Diagnostics.ProcessStartInfo.set_WorkingDirectory(String) -> Void
+IL_0207: ldloc.s 6
+IL_0209: ldc.i4.1 
+IL_020A: callvirt 0x0A000077 System.Diagnostics.Process.set_EnableRaisingEvents(Boolean) -> Void
+IL_020F: ldloc.s 6
+IL_0211: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_0216: ldarg.1 
+IL_0217: callvirt 0x0A000078 System.Diagnostics.ProcessStartInfo.set_Arguments(String) -> Void
+IL_021C: ldloc.s 6
+IL_021E: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_0223: ldstr "runas"
+IL_0228: callvirt 0x0A000079 System.Diagnostics.ProcessStartInfo.set_Verb(String) -> Void
+IL_022D: ldloc.s 6
+IL_022F: callvirt 0x0A00007A System.Diagnostics.Process.Start() -> Boolean
+IL_0234: pop 
+IL_0235: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_023A: callvirt 0x06000041 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Global() -> USTCORi.WebLabClient.RuningInfo.RunningInfoGlobalVariable
+IL_023F: ldloc.s 6
+IL_0241: callvirt 0x06000046 USTCORi.WebLabClient.RuningInfo.RunningInfoGlobalVariable.set_RunningProcess(System.Diagnostics.Process) -> Void
+IL_0246: call 0x0A00007B System.Windows.Application.get_Current() -> System.Windows.Application
+IL_024B: callvirt 0x0A00007C System.Windows.Application.Shutdown() -> Void
+IL_0250: br IL_05A6
+IL_0255: ldarg.2 
+IL_0256: ldstr "3"
+IL_025B: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_0260: brfalse IL_0400
+IL_0265: call 0x0A00006D System.Diagnostics.Process.GetProcesses() -> System.Diagnostics.Process[]
+IL_026A: stloc.0 
+IL_026B: ldc.i4.0 
+IL_026C: stloc.1 
+IL_026D: br.s IL_02DA
+IL_026F: ldloc.0 
+IL_0270: ldloc.1 
+IL_0271: ldelem.ref 
+IL_0272: callvirt 0x0A00006E System.Diagnostics.Process.get_ProcessName() -> String
+IL_0277: callvirt 0x0A00006F System.String.Trim() -> String
+IL_027C: ldstr "USTCORi.RecordingClient"
+IL_0281: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_0286: brfalse.s IL_02D6
+IL_0288: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_028D: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_0292: callvirt 0x0600002A USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_Language() -> String
+IL_0297: ldstr "ZH-EN"
+IL_029C: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_02A1: brfalse.s IL_02B8
+IL_02A3: ldstr "A program is already running. To restart, please end the currently running program first"
+IL_02A8: ldstr "Warning"
+IL_02AD: ldc.i4.0 
+IL_02AE: ldc.i4.s 48
+IL_02B0: call 0x0A00006C System.Windows.MessageBox.Show(String, String, System.Windows.MessageBoxButton, System.Windows.MessageBoxImage) -> System.Windows.MessageBoxResult
+IL_02B5: pop 
+IL_02B6: br.s IL_02CB
+IL_02B8: ldstr "\u5DF2\u7ECF\u6709\u4E00\u4E2A\u7A0B\u5E8F\u6B63\u5728\u8FD0\u884C,\u5982\u8981\u91CD\u65B0\u5F00\u59CB,\u8BF7\u5148\u7ED3\u675F\u5F53\u524D\u8FD0\u884C\u7A0B\u5E8F"
+IL_02BD: ldstr "Warning"
+IL_02C2: ldc.i4.0 
+IL_02C3: ldc.i4.s 48
+IL_02C5: call 0x0A00006C System.Windows.MessageBox.Show(String, String, System.Windows.MessageBoxButton, System.Windows.MessageBoxImage) -> System.Windows.MessageBoxResult
+IL_02CA: pop 
+IL_02CB: ldarg.0 
+IL_02CC: call 0x0600001A USTCORi.WebLabClient.App.ExitApp() -> Void
+IL_02D1: leave IL_0607
+IL_02D6: ldloc.1 
+IL_02D7: ldc.i4.1 
+IL_02D8: add 
+IL_02D9: stloc.1 
+IL_02DA: ldloc.1 
+IL_02DB: ldloc.0 
+IL_02DC: ldlen 
+IL_02DD: conv.i4 
+IL_02DE: blt.s IL_026F
+IL_02E0: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_02E5: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_02EA: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_02EF: ldstr "USTCORi.RecordingClient.exe"
+IL_02F4: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_02F9: newobj 0x0A000071 System.IO.FileInfo..ctor(String) -> Void
+IL_02FE: callvirt 0x0A000072 System.IO.FileSystemInfo.get_Exists() -> Boolean
+IL_0303: brfalse.s IL_037C
+IL_0305: newobj 0x0A000073 System.Diagnostics.Process..ctor() -> Void
+IL_030A: stloc.s 7
+IL_030C: ldloc.s 7
+IL_030E: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_0313: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_0318: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_031D: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_0322: ldstr "USTCORi.RecordingClient.exe"
+IL_0327: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_032C: callvirt 0x0A000075 System.Diagnostics.ProcessStartInfo.set_FileName(String) -> Void
+IL_0331: ldloc.s 7
+IL_0333: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_0338: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_033D: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_0342: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_0347: callvirt 0x0A000076 System.Diagnostics.ProcessStartInfo.set_WorkingDirectory(String) -> Void
+IL_034C: ldloc.s 7
+IL_034E: ldc.i4.1 
+IL_034F: callvirt 0x0A000077 System.Diagnostics.Process.set_EnableRaisingEvents(Boolean) -> Void
+IL_0354: ldloc.s 7
+IL_0356: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_035B: ldarg.1 
+IL_035C: callvirt 0x0A000078 System.Diagnostics.ProcessStartInfo.set_Arguments(String) -> Void
+IL_0361: ldloc.s 7
+IL_0363: callvirt 0x0A00007A System.Diagnostics.Process.Start() -> Boolean
+IL_0368: pop 
+IL_0369: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_036E: callvirt 0x06000041 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Global() -> USTCORi.WebLabClient.RuningInfo.RunningInfoGlobalVariable
+IL_0373: ldloc.s 7
+IL_0375: callvirt 0x06000046 USTCORi.WebLabClient.RuningInfo.RunningInfoGlobalVariable.set_RunningProcess(System.Diagnostics.Process) -> Void
+IL_037A: br.s IL_03F1
+IL_037C: newobj 0x0A000073 System.Diagnostics.Process..ctor() -> Void
+IL_0381: stloc.s 8
+IL_0383: ldloc.s 8
+IL_0385: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_038A: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_038F: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_0394: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_0399: ldstr "4\\USTCORi.RecordingClient.exe"
+IL_039E: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_03A3: callvirt 0x0A000075 System.Diagnostics.ProcessStartInfo.set_FileName(String) -> Void
+IL_03A8: ldloc.s 8
+IL_03AA: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_03AF: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_03B4: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_03B9: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_03BE: callvirt 0x0A000076 System.Diagnostics.ProcessStartInfo.set_WorkingDirectory(String) -> Void
+IL_03C3: ldloc.s 8
+IL_03C5: ldc.i4.1 
+IL_03C6: callvirt 0x0A000077 System.Diagnostics.Process.set_EnableRaisingEvents(Boolean) -> Void
+IL_03CB: ldloc.s 8
+IL_03CD: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_03D2: ldarg.1 
+IL_03D3: callvirt 0x0A000078 System.Diagnostics.ProcessStartInfo.set_Arguments(String) -> Void
+IL_03D8: ldloc.s 8
+IL_03DA: callvirt 0x0A00007A System.Diagnostics.Process.Start() -> Boolean
+IL_03DF: pop 
+IL_03E0: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_03E5: callvirt 0x06000041 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Global() -> USTCORi.WebLabClient.RuningInfo.RunningInfoGlobalVariable
+IL_03EA: ldloc.s 8
+IL_03EC: callvirt 0x06000046 USTCORi.WebLabClient.RuningInfo.RunningInfoGlobalVariable.set_RunningProcess(System.Diagnostics.Process) -> Void
+IL_03F1: call 0x0A00007B System.Windows.Application.get_Current() -> System.Windows.Application
+IL_03F6: callvirt 0x0A00007C System.Windows.Application.Shutdown() -> Void
+IL_03FB: br IL_05A6
+IL_0400: ldarg.2 
+IL_0401: ldstr "5"
+IL_0406: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_040B: brfalse IL_05A6
+IL_0410: call 0x0A00006D System.Diagnostics.Process.GetProcesses() -> System.Diagnostics.Process[]
+IL_0415: stloc.0 
+IL_0416: ldc.i4.0 
+IL_0417: stloc.1 
+IL_0418: br.s IL_0485
+IL_041A: ldloc.0 
+IL_041B: ldloc.1 
+IL_041C: ldelem.ref 
+IL_041D: callvirt 0x0A00006E System.Diagnostics.Process.get_ProcessName() -> String
+IL_0422: callvirt 0x0A00006F System.String.Trim() -> String
+IL_0427: ldstr "USTCORi.PlatWebLabClient"
+IL_042C: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_0431: brfalse.s IL_0481
+IL_0433: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_0438: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_043D: callvirt 0x0600002A USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_Language() -> String
+IL_0442: ldstr "ZH-EN"
+IL_0447: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_044C: brfalse.s IL_0463
+IL_044E: ldstr "An experimental platform is already running. If you want to start a new experiment, please end the current experimental platform first"
+IL_0453: ldstr "Warning"
+IL_0458: ldc.i4.0 
+IL_0459: ldc.i4.s 48
+IL_045B: call 0x0A00006C System.Windows.MessageBox.Show(String, String, System.Windows.MessageBoxButton, System.Windows.MessageBoxImage) -> System.Windows.MessageBoxResult
+IL_0460: pop 
+IL_0461: br.s IL_0476
+IL_0463: ldstr "\u5DF2\u7ECF\u6709\u4E00\u4E2A\u5B9E\u9A8C\u5E73\u53F0\u6B63\u5728\u8FD0\u884C,\u5982\u8981\u5F00\u59CB\u65B0\u5B9E\u9A8C,\u8BF7\u5148\u7ED3\u675F\u5F53\u524D\u5B9E\u9A8C\u5E73\u53F0"
+IL_0468: ldstr "Warning"
+IL_046D: ldc.i4.0 
+IL_046E: ldc.i4.s 48
+IL_0470: call 0x0A00006C System.Windows.MessageBox.Show(String, String, System.Windows.MessageBoxButton, System.Windows.MessageBoxImage) -> System.Windows.MessageBoxResult
+IL_0475: pop 
+IL_0476: ldarg.0 
+IL_0477: call 0x0600001A USTCORi.WebLabClient.App.ExitApp() -> Void
+IL_047C: leave IL_0607
+IL_0481: ldloc.1 
+IL_0482: ldc.i4.1 
+IL_0483: add 
+IL_0484: stloc.1 
+IL_0485: ldloc.1 
+IL_0486: ldloc.0 
+IL_0487: ldlen 
+IL_0488: conv.i4 
+IL_0489: blt.s IL_041A
+IL_048B: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_0490: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_0495: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_049A: ldstr "USTCORi.PlatWebLabClient.exe"
+IL_049F: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_04A4: newobj 0x0A000071 System.IO.FileInfo..ctor(String) -> Void
+IL_04A9: callvirt 0x0A000072 System.IO.FileSystemInfo.get_Exists() -> Boolean
+IL_04AE: brfalse.s IL_0527
+IL_04B0: newobj 0x0A000073 System.Diagnostics.Process..ctor() -> Void
+IL_04B5: stloc.s 9
+IL_04B7: ldloc.s 9
+IL_04B9: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_04BE: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_04C3: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_04C8: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_04CD: ldstr "USTCORi.PlatWebLabClient.exe"
+IL_04D2: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_04D7: callvirt 0x0A000075 System.Diagnostics.ProcessStartInfo.set_FileName(String) -> Void
+IL_04DC: ldloc.s 9
+IL_04DE: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_04E3: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_04E8: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_04ED: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_04F2: callvirt 0x0A000076 System.Diagnostics.ProcessStartInfo.set_WorkingDirectory(String) -> Void
+IL_04F7: ldloc.s 9
+IL_04F9: ldc.i4.1 
+IL_04FA: callvirt 0x0A000077 System.Diagnostics.Process.set_EnableRaisingEvents(Boolean) -> Void
+IL_04FF: ldloc.s 9
+IL_0501: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_0506: ldarg.1 
+IL_0507: callvirt 0x0A000078 System.Diagnostics.ProcessStartInfo.set_Arguments(String) -> Void
+IL_050C: ldloc.s 9
+IL_050E: callvirt 0x0A00007A System.Diagnostics.Process.Start() -> Boolean
+IL_0513: pop 
+IL_0514: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_0519: callvirt 0x06000041 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Global() -> USTCORi.WebLabClient.RuningInfo.RunningInfoGlobalVariable
+IL_051E: ldloc.s 9
+IL_0520: callvirt 0x06000046 USTCORi.WebLabClient.RuningInfo.RunningInfoGlobalVariable.set_RunningProcess(System.Diagnostics.Process) -> Void
+IL_0525: br.s IL_059C
+IL_0527: newobj 0x0A000073 System.Diagnostics.Process..ctor() -> Void
+IL_052C: stloc.s 10
+IL_052E: ldloc.s 10
+IL_0530: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_0535: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_053A: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_053F: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_0544: ldstr "4\\USTCORi.PlatWebLabClient.exe"
+IL_0549: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_054E: callvirt 0x0A000075 System.Diagnostics.ProcessStartInfo.set_FileName(String) -> Void
+IL_0553: ldloc.s 10
+IL_0555: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_055A: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_055F: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_0564: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_0569: callvirt 0x0A000076 System.Diagnostics.ProcessStartInfo.set_WorkingDirectory(String) -> Void
+IL_056E: ldloc.s 10
+IL_0570: ldc.i4.1 
+IL_0571: callvirt 0x0A000077 System.Diagnostics.Process.set_EnableRaisingEvents(Boolean) -> Void
+IL_0576: ldloc.s 10
+IL_0578: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_057D: ldarg.1 
+IL_057E: callvirt 0x0A000078 System.Diagnostics.ProcessStartInfo.set_Arguments(String) -> Void
+IL_0583: ldloc.s 10
+IL_0585: callvirt 0x0A00007A System.Diagnostics.Process.Start() -> Boolean
+IL_058A: pop 
+IL_058B: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_0590: callvirt 0x06000041 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Global() -> USTCORi.WebLabClient.RuningInfo.RunningInfoGlobalVariable
+IL_0595: ldloc.s 10
+IL_0597: callvirt 0x06000046 USTCORi.WebLabClient.RuningInfo.RunningInfoGlobalVariable.set_RunningProcess(System.Diagnostics.Process) -> Void
+IL_059C: call 0x0A00007B System.Windows.Application.get_Current() -> System.Windows.Application
+IL_05A1: callvirt 0x0A00007C System.Windows.Application.Shutdown() -> Void
+IL_05A6: leave.s IL_0607
+IL_05A8: stloc.s 11
+IL_05AA: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_05AF: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_05B4: callvirt 0x0600002A USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_Language() -> String
+IL_05B9: ldstr "ZH-EN"
+IL_05BE: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_05C3: brfalse.s IL_05E3
+IL_05C5: ldstr "The running environment failed to start\uFF01"
+IL_05CA: call 0x0A00007D System.Environment.get_NewLine() -> String
+IL_05CF: ldloc.s 11
+IL_05D1: callvirt 0x0A000049 System.Exception.get_Message() -> String
+IL_05D6: call 0x0A00007E System.String.Concat(String, String, String) -> String
+IL_05DB: call 0x0A00004A System.Windows.MessageBox.Show(String) -> System.Windows.MessageBoxResult
+IL_05E0: pop 
+IL_05E1: br.s IL_05FF
+IL_05E3: ldstr "\u8FD0\u884C\u73AF\u5883\u542F\u52A8\u5931\u8D25\uFF01"
+IL_05E8: call 0x0A00007D System.Environment.get_NewLine() -> String
+IL_05ED: ldloc.s 11
+IL_05EF: callvirt 0x0A000049 System.Exception.get_Message() -> String
+IL_05F4: call 0x0A00007E System.String.Concat(String, String, String) -> String
+IL_05F9: call 0x0A00004A System.Windows.MessageBox.Show(String) -> System.Windows.MessageBoxResult
+IL_05FE: pop 
+IL_05FF: ldarg.0 
+IL_0600: call 0x0600001A USTCORi.WebLabClient.App.ExitApp() -> Void
+IL_0605: leave.s IL_0607
+IL_0607: ret 
+EXCEPTION Catch try=85+146 handler=231+25 catch=System.Exception
+EXCEPTION Catch try=0+1448 handler=1448+95 catch=System.Exception
+METHOD 0x0600001A RVA=12144 USTCORi.WebLabClient.App.ExitApp() -> Void
+IL_0000: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_0005: brfalse.s IL_0016
+IL_0007: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_000C: callvirt 0x06000041 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Global() -> USTCORi.WebLabClient.RuningInfo.RunningInfoGlobalVariable
+IL_0011: callvirt 0x06000047 USTCORi.WebLabClient.RuningInfo.RunningInfoGlobalVariable.ShutdownProcess() -> Void
+IL_0016: ldc.i4.0 
+IL_0017: call 0x0A00007F System.Environment.Exit(Int32) -> Void
+IL_001C: call 0x0A00007B System.Windows.Application.get_Current() -> System.Windows.Application
+IL_0021: callvirt 0x0A00007C System.Windows.Application.Shutdown() -> Void
+IL_0026: ret 
+METHOD 0x0600001B RVA=12184 USTCORi.WebLabClient.App.InitInfo(String, String) -> Void
+IL_0000: newobj 0x06000040 USTCORi.WebLabClient.RuningInfo.RunningInfo..ctor() -> Void
+IL_0005: stsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_000A: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_000F: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_0014: ldstr "No School"
+IL_0019: callvirt 0x06000039 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.SetShoolUser(String) -> Void
+IL_001E: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_0023: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_0028: ldstr "V2.01.0914"
+IL_002D: callvirt 0x06000037 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.SetVersion(String) -> Void
+IL_0032: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_0037: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_003C: ldarg.1 
+IL_003D: ldstr "Download\\"
+IL_0042: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_0047: callvirt 0x0600003C USTCORi.WebLabClient.RuningInfo.RuningInfoConst.SetDownloadExperimentPath(String) -> Void
+IL_004C: ldarg.2 
+IL_004D: ldstr "1"
+IL_0052: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_0057: brtrue.s IL_0073
+IL_0059: ldarg.2 
+IL_005A: ldstr "2"
+IL_005F: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_0064: brtrue.s IL_0073
+IL_0066: ldarg.2 
+IL_0067: ldstr "4"
+IL_006C: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_0071: brfalse.s IL_00D1
+IL_0073: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_0078: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_007D: ldarg.1 
+IL_007E: ldstr "Download\\download.xml"
+IL_0083: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_0088: callvirt 0x0600003D USTCORi.WebLabClient.RuningInfo.RuningInfoConst.SetDownloadExperimentXmlPath(String) -> Void
+IL_008D: ldstr "C:\\Ustcori\\TurboSandbox\\roaming\\modified\\@APPDIR@"
+IL_0092: call 0x0A00005C System.IO.Directory.Exists(String) -> Boolean
+IL_0097: brfalse.s IL_00B2
+IL_0099: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_009E: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_00A3: ldstr "C:\\Ustcori\\TurboSandbox\\roaming\\modified\\@APPDIR@\\Download\\Updata\\"
+IL_00A8: callvirt 0x0600003E USTCORi.WebLabClient.RuningInfo.RuningInfoConst.SetDownloadUpdataPath(String) -> Void
+IL_00AD: br IL_0155
+IL_00B2: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_00B7: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_00BC: ldarg.1 
+IL_00BD: ldstr "Download\\Updata\\"
+IL_00C2: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_00C7: callvirt 0x0600003E USTCORi.WebLabClient.RuningInfo.RuningInfoConst.SetDownloadUpdataPath(String) -> Void
+IL_00CC: br IL_0155
+IL_00D1: ldarg.2 
+IL_00D2: ldstr "3"
+IL_00D7: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_00DC: brfalse.s IL_0114
+IL_00DE: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_00E3: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_00E8: ldarg.1 
+IL_00E9: ldstr "Download\\SimRecorddownload.xml"
+IL_00EE: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_00F3: callvirt 0x0600003D USTCORi.WebLabClient.RuningInfo.RuningInfoConst.SetDownloadExperimentXmlPath(String) -> Void
+IL_00F8: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_00FD: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_0102: ldarg.1 
+IL_0103: ldstr "Download\\SimRecordUpdata\\"
+IL_0108: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_010D: callvirt 0x0600003E USTCORi.WebLabClient.RuningInfo.RuningInfoConst.SetDownloadUpdataPath(String) -> Void
+IL_0112: br.s IL_0155
+IL_0114: ldarg.2 
+IL_0115: ldstr "5"
+IL_011A: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_011F: brfalse.s IL_0155
+IL_0121: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_0126: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_012B: ldarg.1 
+IL_012C: ldstr "Download\\Platdownload.xml"
+IL_0131: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_0136: callvirt 0x0600003D USTCORi.WebLabClient.RuningInfo.RuningInfoConst.SetDownloadExperimentXmlPath(String) -> Void
+IL_013B: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_0140: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_0145: ldarg.1 
+IL_0146: ldstr "Download\\PlatUpdata\\"
+IL_014B: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_0150: callvirt 0x0600003E USTCORi.WebLabClient.RuningInfo.RuningInfoConst.SetDownloadUpdataPath(String) -> Void
+IL_0155: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_015A: callvirt 0x06000041 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Global() -> USTCORi.WebLabClient.RuningInfo.RunningInfoGlobalVariable
+IL_015F: ldc.i4.1 
+IL_0160: callvirt 0x06000044 USTCORi.WebLabClient.RuningInfo.RunningInfoGlobalVariable.set_NeedConfirmShutdown(Boolean) -> Void
+IL_0165: ret 
+METHOD 0x0600001C RVA=12556 USTCORi.WebLabClient.App.InitializeComponent() -> Void
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000010 USTCORi.WebLabClient.App._contentLoaded : Boolean
+IL_0006: brfalse.s IL_0009
+IL_0008: ret 
+IL_0009: ldarg.0 
+IL_000A: ldc.i4.1 
+IL_000B: stfld 0x04000010 USTCORi.WebLabClient.App._contentLoaded : Boolean
+IL_0010: ldarg.0 
+IL_0011: ldarg.0 
+IL_0012: ldftn 0x06000017 USTCORi.WebLabClient.App.Application_Startup(Object, System.Windows.StartupEventArgs) -> Void
+IL_0018: newobj 0x0A000080 System.Windows.StartupEventHandler..ctor(Object, IntPtr) -> Void
+IL_001D: call 0x0A000081 System.Windows.Application.add_Startup(System.Windows.StartupEventHandler) -> Void
+IL_0022: ldstr "/USTCORi.WebLabClient;component/app.xaml"
+IL_0027: ldc.i4.2 
+IL_0028: newobj 0x0A000028 System.Uri..ctor(String, System.UriKind) -> Void
+IL_002D: stloc.0 
+IL_002E: ldarg.0 
+IL_002F: ldloc.0 
+IL_0030: call 0x0A00003D System.Windows.Application.LoadComponent(Object, System.Uri) -> Void
+IL_0035: ret 
+METHOD 0x0600001D RVA=12622 USTCORi.WebLabClient.App.Main() -> Void
+IL_0000: newobj 0x0600001E USTCORi.WebLabClient.App..ctor() -> Void
+IL_0005: dup 
+IL_0006: callvirt 0x0600001C USTCORi.WebLabClient.App.InitializeComponent() -> Void
+IL_000B: callvirt 0x0A000082 System.Windows.Application.Run() -> Int32
+IL_0010: pop 
+IL_0011: ret 
+METHOD 0x0600001E RVA=12641 USTCORi.WebLabClient.App..ctor() -> Void
+IL_0000: ldarg.0 
+IL_0001: call 0x0A000083 System.Windows.Application..ctor() -> Void
+IL_0006: ret 
+TYPE USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow : System.Windows.Window
+FIELD USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.labroom : USTCORi.WebLabClient.Common.LABROOM
+FIELD USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downloadClient : System.Net.WebClient
+FIELD USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downloadAddress : System.Uri
+FIELD USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downto : String
+FIELD USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downxmlpath : String
+FIELD USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downXml : System.Xml.Linq.XElement
+FIELD USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.arg : String
+FIELD USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.Sys : String
+FIELD USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.MainBorder : System.Windows.Controls.Border
+FIELD USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.DownloadView : System.Windows.Controls.Grid
+FIELD USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.DownloadProgressBar : System.Windows.Controls.ProgressBar
+FIELD USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.txt : System.Windows.Controls.TextBlock
+FIELD USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.percent : System.Windows.Controls.TextBlock
+FIELD USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.OkView : System.Windows.Controls.Grid
+FIELD USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.ProgressButton : System.Windows.Controls.Button
+FIELD USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow._contentLoaded : Boolean
+METHOD 0x0600001F RVA=12649 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow..ctor(String, String) -> Void
+IL_0000: ldarg.0 
+IL_0001: call 0x0A000084 System.Windows.Window..ctor() -> Void
+IL_0006: ldarg.0 
+IL_0007: call 0x06000028 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.InitializeComponent() -> Void
+IL_000C: ldarg.0 
+IL_000D: ldarg.1 
+IL_000E: stfld 0x04000017 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.arg : String
+IL_0013: ldarg.0 
+IL_0014: ldarg.2 
+IL_0015: stfld 0x04000018 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.Sys : String
+IL_001A: ldarg.0 
+IL_001B: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_0020: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_0025: callvirt 0x06000032 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadExperimentXmlPath() -> String
+IL_002A: stfld 0x04000015 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downxmlpath : String
+IL_002F: ret 
+METHOD 0x06000020 RVA=12700 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.SetExperiment(USTCORi.WebLabClient.Common.LABROOM) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_0006: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_000B: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_0010: stfld 0x04000014 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downto : String
+IL_0015: ldarg.0 
+IL_0016: ldfld 0x04000014 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downto : String
+IL_001B: call 0x0A00005D System.IO.Directory.CreateDirectory(String) -> System.IO.DirectoryInfo
+IL_0020: pop 
+IL_0021: ldarg.0 
+IL_0022: ldarg.1 
+IL_0023: stfld 0x04000011 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.labroom : USTCORi.WebLabClient.Common.LABROOM
+IL_0028: ldarg.1 
+IL_0029: callvirt 0x0600009F USTCORi.WebLabClient.Common.LABROOM.get_FILEURL() -> String
+IL_002E: callvirt 0x0A000085 System.String.ToLower() -> String
+IL_0033: ldstr "http"
+IL_0038: callvirt 0x0A000086 System.String.Contains(String) -> Boolean
+IL_003D: brfalse.s IL_0096
+IL_003F: ldarg.0 
+IL_0040: ldarg.1 
+IL_0041: callvirt 0x0600009F USTCORi.WebLabClient.Common.LABROOM.get_FILEURL() -> String
+IL_0046: newobj 0x0A000087 System.Uri..ctor(String) -> Void
+IL_004B: stfld 0x04000013 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downloadAddress : System.Uri
+IL_0050: ldarg.1 
+IL_0051: callvirt 0x0600009F USTCORi.WebLabClient.Common.LABROOM.get_FILEURL() -> String
+IL_0056: stloc.0 
+IL_0057: ldloc.0 
+IL_0058: ldc.i4.1 
+IL_0059: newarr 0x01000071 System.Char
+IL_005E: dup 
+IL_005F: ldc.i4.0 
+IL_0060: ldc.i4.s 47
+IL_0062: stelem.i2 
+IL_0063: callvirt 0x0A000043 System.String.Split(Char[]) -> String[]
+IL_0068: ldloc.0 
+IL_0069: ldc.i4.1 
+IL_006A: newarr 0x01000071 System.Char
+IL_006F: dup 
+IL_0070: ldc.i4.0 
+IL_0071: ldc.i4.s 47
+IL_0073: stelem.i2 
+IL_0074: callvirt 0x0A000043 System.String.Split(Char[]) -> String[]
+IL_0079: ldlen 
+IL_007A: conv.i4 
+IL_007B: ldc.i4.1 
+IL_007C: sub 
+IL_007D: ldelem.ref 
+IL_007E: stloc.0 
+IL_007F: ldarg.0 
+IL_0080: ldarg.0 
+IL_0081: ldfld 0x04000014 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downto : String
+IL_0086: ldloc.0 
+IL_0087: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_008C: stfld 0x04000014 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downto : String
+IL_0091: br IL_012C
+IL_0096: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_009B: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_00A0: callvirt 0x06000034 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_ServerIP() -> String
+IL_00A5: ldstr "/Upload/LabRoom/"
+IL_00AA: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_00AF: stloc.1 
+IL_00B0: ldarg.1 
+IL_00B1: callvirt 0x0600009F USTCORi.WebLabClient.Common.LABROOM.get_FILEURL() -> String
+IL_00B6: stloc.2 
+IL_00B7: ldarg.1 
+IL_00B8: callvirt 0x0600009F USTCORi.WebLabClient.Common.LABROOM.get_FILEURL() -> String
+IL_00BD: stloc.3 
+IL_00BE: ldarg.1 
+IL_00BF: callvirt 0x0600009F USTCORi.WebLabClient.Common.LABROOM.get_FILEURL() -> String
+IL_00C4: ldstr "profile"
+IL_00C9: callvirt 0x0A000086 System.String.Contains(String) -> Boolean
+IL_00CE: brfalse.s IL_0108
+IL_00D0: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_00D5: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_00DA: callvirt 0x06000034 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_ServerIP() -> String
+IL_00DF: stloc.1 
+IL_00E0: ldloc.2 
+IL_00E1: ldc.i4.1 
+IL_00E2: newarr 0x01000071 System.Char
+IL_00E7: dup 
+IL_00E8: ldc.i4.0 
+IL_00E9: ldc.i4.s 47
+IL_00EB: stelem.i2 
+IL_00EC: callvirt 0x0A000043 System.String.Split(Char[]) -> String[]
+IL_00F1: ldloc.2 
+IL_00F2: ldc.i4.1 
+IL_00F3: newarr 0x01000071 System.Char
+IL_00F8: dup 
+IL_00F9: ldc.i4.0 
+IL_00FA: ldc.i4.s 47
+IL_00FC: stelem.i2 
+IL_00FD: callvirt 0x0A000043 System.String.Split(Char[]) -> String[]
+IL_0102: ldlen 
+IL_0103: conv.i4 
+IL_0104: ldc.i4.1 
+IL_0105: sub 
+IL_0106: ldelem.ref 
+IL_0107: stloc.3 
+IL_0108: ldarg.0 
+IL_0109: ldloc.1 
+IL_010A: ldloc.2 
+IL_010B: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_0110: newobj 0x0A000087 System.Uri..ctor(String) -> Void
+IL_0115: stfld 0x04000013 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downloadAddress : System.Uri
+IL_011A: ldarg.0 
+IL_011B: ldarg.0 
+IL_011C: ldfld 0x04000014 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downto : String
+IL_0121: ldloc.3 
+IL_0122: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_0127: stfld 0x04000014 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downto : String
+IL_012C: ldarg.0 
+IL_012D: call 0x06000022 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.BeginDownload() -> Void
+IL_0132: ret 
+METHOD 0x06000021 RVA=13019 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.BtnOK_Click(Object, System.Windows.RoutedEventArgs) -> Void
+IL_0000: ldarg.0 
+IL_0001: call 0x06000022 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.BeginDownload() -> Void
+IL_0006: ret 
+METHOD 0x06000022 RVA=13028 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.BeginDownload() -> Void
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x0400001E USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.OkView : System.Windows.Controls.Grid
+IL_0006: ldc.i4.2 
+IL_0007: callvirt 0x0A000088 System.Windows.UIElement.set_Visibility(System.Windows.Visibility) -> Void
+IL_000C: ldarg.0 
+IL_000D: ldfld 0x0400001A USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.DownloadView : System.Windows.Controls.Grid
+IL_0012: ldc.i4.0 
+IL_0013: callvirt 0x0A000088 System.Windows.UIElement.set_Visibility(System.Windows.Visibility) -> Void
+IL_0018: ldarg.0 
+IL_0019: newobj 0x0A000089 System.Net.WebClient..ctor() -> Void
+IL_001E: stfld 0x04000012 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downloadClient : System.Net.WebClient
+IL_0023: ldarg.0 
+IL_0024: ldfld 0x04000012 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downloadClient : System.Net.WebClient
+IL_0029: ldarg.0 
+IL_002A: ldftn 0x06000023 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downloadClient_DownloadProgressChanged(Object, System.Net.DownloadProgressChangedEventArgs) -> Void
+IL_0030: newobj 0x0A00008A System.Net.DownloadProgressChangedEventHandler..ctor(Object, IntPtr) -> Void
+IL_0035: callvirt 0x0A00008B System.Net.WebClient.add_DownloadProgressChanged(System.Net.DownloadProgressChangedEventHandler) -> Void
+IL_003A: ldarg.0 
+IL_003B: ldfld 0x04000012 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downloadClient : System.Net.WebClient
+IL_0040: ldarg.0 
+IL_0041: ldftn 0x06000024 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downloadClient_DownloadFileCompleted(Object, System.ComponentModel.AsyncCompletedEventArgs) -> Void
+IL_0047: newobj 0x0A00008C System.ComponentModel.AsyncCompletedEventHandler..ctor(Object, IntPtr) -> Void
+IL_004C: callvirt 0x0A00008D System.Net.WebClient.add_DownloadFileCompleted(System.ComponentModel.AsyncCompletedEventHandler) -> Void
+IL_0051: ldarg.0 
+IL_0052: ldfld 0x04000012 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downloadClient : System.Net.WebClient
+IL_0057: ldarg.0 
+IL_0058: ldfld 0x04000013 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downloadAddress : System.Uri
+IL_005D: ldarg.0 
+IL_005E: ldfld 0x04000014 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downto : String
+IL_0063: callvirt 0x0A00008E System.Net.WebClient.DownloadFileAsync(System.Uri, String) -> Void
+IL_0068: leave.s IL_008D
+IL_006A: stloc.0 
+IL_006B: ldstr "\u8FD0\u884C\u73AF\u5883\u66F4\u65B0\u5931\u8D25\uFF0C\u9519\u8BEF\u8BE6\u7EC6\u4FE1\u606F\uFF1A"
+IL_0070: ldloc.0 
+IL_0071: callvirt 0x0A000022 System.Object.ToString() -> String
+IL_0076: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_007B: call 0x0A00004A System.Windows.MessageBox.Show(String) -> System.Windows.MessageBoxResult
+IL_0080: pop 
+IL_0081: call 0x0A00007B System.Windows.Application.get_Current() -> System.Windows.Application
+IL_0086: callvirt 0x0A00007C System.Windows.Application.Shutdown() -> Void
+IL_008B: leave.s IL_008D
+IL_008D: ret 
+EXCEPTION Catch try=35+71 handler=106+35 catch=System.Exception
+METHOD 0x06000023 RVA=13200 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downloadClient_DownloadProgressChanged(Object, System.Net.DownloadProgressChangedEventArgs) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x0400001B USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.DownloadProgressBar : System.Windows.Controls.ProgressBar
+IL_0006: ldarg.2 
+IL_0007: callvirt 0x0A00008F System.Net.DownloadProgressChangedEventArgs.get_BytesReceived() -> Int64
+IL_000C: ldc.i4.s 100
+IL_000E: conv.i8 
+IL_000F: mul 
+IL_0010: ldarg.2 
+IL_0011: callvirt 0x0A000090 System.Net.DownloadProgressChangedEventArgs.get_TotalBytesToReceive() -> Int64
+IL_0016: div 
+IL_0017: conv.r8 
+IL_0018: callvirt 0x0A000040 System.Windows.Controls.Primitives.RangeBase.set_Value(Double) -> Void
+IL_001D: ldarg.0 
+IL_001E: ldfld 0x0400001C USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.txt : System.Windows.Controls.TextBlock
+IL_0023: ldarg.2 
+IL_0024: callvirt 0x0A00008F System.Net.DownloadProgressChangedEventArgs.get_BytesReceived() -> Int64
+IL_0029: ldc.i4.s 100
+IL_002B: conv.i8 
+IL_002C: mul 
+IL_002D: ldarg.2 
+IL_002E: callvirt 0x0A000090 System.Net.DownloadProgressChangedEventArgs.get_TotalBytesToReceive() -> Int64
+IL_0033: div 
+IL_0034: stloc.0 
+IL_0035: ldloca.s 0
+IL_0037: call 0x0A000091 System.Int64.ToString() -> String
+IL_003C: callvirt 0x0A000092 System.Windows.Controls.TextBlock.set_Text(String) -> Void
+IL_0041: ret 
+METHOD 0x06000024 RVA=13280 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downloadClient_DownloadFileCompleted(Object, System.ComponentModel.AsyncCompletedEventArgs) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000014 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downto : String
+IL_0006: newobj 0x0A000071 System.IO.FileInfo..ctor(String) -> Void
+IL_000B: stloc.0 
+IL_000C: ldloc.0 
+IL_000D: callvirt 0x0A000093 System.IO.FileInfo.get_Length() -> Int64
+IL_0012: brtrue.s IL_0070
+IL_0014: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_0019: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_001E: callvirt 0x0600002A USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_Language() -> String
+IL_0023: ldstr "ZH-EN"
+IL_0028: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_002D: brfalse.s IL_003C
+IL_002F: ldstr "File download error"
+IL_0034: call 0x0A00004A System.Windows.MessageBox.Show(String) -> System.Windows.MessageBoxResult
+IL_0039: pop 
+IL_003A: br.s IL_0047
+IL_003C: ldstr "\u6587\u4EF6\u4E0B\u8F7D\u51FA\u9519"
+IL_0041: call 0x0A00004A System.Windows.MessageBox.Show(String) -> System.Windows.MessageBoxResult
+IL_0046: pop 
+IL_0047: nop 
+IL_0048: ldloc.0 
+IL_0049: callvirt 0x0A000094 System.IO.FileSystemInfo.Delete() -> Void
+IL_004E: leave.s IL_005D
+IL_0050: callvirt 0x0A000049 System.Exception.get_Message() -> String
+IL_0055: call 0x0A00004A System.Windows.MessageBox.Show(String) -> System.Windows.MessageBoxResult
+IL_005A: pop 
+IL_005B: leave.s IL_005D
+IL_005D: ldarg.0 
+IL_005E: ldc.i4.0 
+IL_005F: newobj 0x0A000095 System.Nullable`1<Boolean>..ctor(!0) -> Void
+IL_0064: call 0x0A000096 System.Windows.Window.set_DialogResult(System.Nullable`1<Boolean>) -> Void
+IL_0069: ldarg.0 
+IL_006A: call 0x0A000097 System.Windows.Window.Close() -> Void
+IL_006F: ret 
+IL_0070: ldarg.0 
+IL_0071: call 0x06000025 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.AddDownloadXElement() -> Void
+IL_0076: ret 
+EXCEPTION Catch try=72+8 handler=80+13 catch=System.Exception
+METHOD 0x06000025 RVA=13428 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.AddDownloadXElement() -> Void
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000015 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downxmlpath : String
+IL_0006: call 0x0A00005E System.IO.File.Exists(String) -> Boolean
+IL_000B: brtrue.s IL_0035
+IL_000D: ldarg.0 
+IL_000E: ldstr "root"
+IL_0013: call 0x0A00005F System.Xml.Linq.XName.op_Implicit(String) -> System.Xml.Linq.XName
+IL_0018: newobj 0x0A000060 System.Xml.Linq.XElement..ctor(System.Xml.Linq.XName) -> Void
+IL_001D: stfld 0x04000016 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downXml : System.Xml.Linq.XElement
+IL_0022: ldarg.0 
+IL_0023: ldfld 0x04000016 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downXml : System.Xml.Linq.XElement
+IL_0028: ldarg.0 
+IL_0029: ldfld 0x04000015 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downxmlpath : String
+IL_002E: callvirt 0x0A000061 System.Xml.Linq.XElement.Save(String) -> Void
+IL_0033: br.s IL_0046
+IL_0035: ldarg.0 
+IL_0036: ldarg.0 
+IL_0037: ldfld 0x04000015 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downxmlpath : String
+IL_003C: call 0x0A000062 System.Xml.Linq.XElement.Load(String) -> System.Xml.Linq.XElement
+IL_0041: stfld 0x04000016 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downXml : System.Xml.Linq.XElement
+IL_0046: ldarg.0 
+IL_0047: ldfld 0x04000016 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downXml : System.Xml.Linq.XElement
+IL_004C: ldstr "LabRoom"
+IL_0051: call 0x0A00005F System.Xml.Linq.XName.op_Implicit(String) -> System.Xml.Linq.XName
+IL_0056: callvirt 0x0A000063 System.Xml.Linq.XContainer.Elements(System.Xml.Linq.XName) -> System.Collections.Generic.IEnumerable`1<System.Xml.Linq.XElement>
+IL_005B: callvirt 0x0A000064 System.Collections.Generic.IEnumerable`1<System.Xml.Linq.XElement>.GetEnumerator() -> System.Collections.Generic.IEnumerator`1<!0>
+IL_0060: stloc.1 
+IL_0061: br.s IL_006E
+IL_0063: ldloc.1 
+IL_0064: callvirt 0x0A000065 System.Collections.Generic.IEnumerator`1<System.Xml.Linq.XElement>.get_Current() -> !0
+IL_0069: callvirt 0x0A000098 System.Xml.Linq.XNode.Remove() -> Void
+IL_006E: ldloc.1 
+IL_006F: callvirt 0x0A000069 System.Collections.IEnumerator.MoveNext() -> Boolean
+IL_0074: brtrue.s IL_0063
+IL_0076: leave.s IL_0082
+IL_0078: ldloc.1 
+IL_0079: brfalse.s IL_0081
+IL_007B: ldloc.1 
+IL_007C: callvirt 0x0A000058 System.IDisposable.Dispose() -> Void
+IL_0081: endfinally 
+IL_0082: ldarg.0 
+IL_0083: ldfld 0x04000016 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downXml : System.Xml.Linq.XElement
+IL_0088: ldstr "LabRoom"
+IL_008D: call 0x0A00005F System.Xml.Linq.XName.op_Implicit(String) -> System.Xml.Linq.XName
+IL_0092: ldc.i4.3 
+IL_0093: newarr 0x01000012 System.Object
+IL_0098: dup 
+IL_0099: ldc.i4.0 
+IL_009A: ldstr "Version"
+IL_009F: call 0x0A00005F System.Xml.Linq.XName.op_Implicit(String) -> System.Xml.Linq.XName
+IL_00A4: ldarg.0 
+IL_00A5: ldfld 0x04000011 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.labroom : USTCORi.WebLabClient.Common.LABROOM
+IL_00AA: callvirt 0x0600009D USTCORi.WebLabClient.Common.LABROOM.get_VERSION() -> String
+IL_00AF: newobj 0x0A000099 System.Xml.Linq.XAttribute..ctor(System.Xml.Linq.XName, Object) -> Void
+IL_00B4: stelem.ref 
+IL_00B5: dup 
+IL_00B6: ldc.i4.1 
+IL_00B7: ldstr "UpTime"
+IL_00BC: call 0x0A00005F System.Xml.Linq.XName.op_Implicit(String) -> System.Xml.Linq.XName
+IL_00C1: ldarg.0 
+IL_00C2: ldfld 0x04000011 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.labroom : USTCORi.WebLabClient.Common.LABROOM
+IL_00C7: callvirt 0x060000A1 USTCORi.WebLabClient.Common.LABROOM.get_UPTIME() -> System.DateTime
+IL_00CC: box 0x01000043 System.DateTime
+IL_00D1: newobj 0x0A000099 System.Xml.Linq.XAttribute..ctor(System.Xml.Linq.XName, Object) -> Void
+IL_00D6: stelem.ref 
+IL_00D7: dup 
+IL_00D8: ldc.i4.2 
+IL_00D9: ldstr "ID"
+IL_00DE: call 0x0A00005F System.Xml.Linq.XName.op_Implicit(String) -> System.Xml.Linq.XName
+IL_00E3: ldarg.0 
+IL_00E4: ldfld 0x04000011 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.labroom : USTCORi.WebLabClient.Common.LABROOM
+IL_00E9: callvirt 0x0600009B USTCORi.WebLabClient.Common.LABROOM.get_ROOMID() -> Int32
+IL_00EE: box 0x01000064 System.Int32
+IL_00F3: newobj 0x0A000099 System.Xml.Linq.XAttribute..ctor(System.Xml.Linq.XName, Object) -> Void
+IL_00F8: stelem.ref 
+IL_00F9: newobj 0x0A00009A System.Xml.Linq.XElement..ctor(System.Xml.Linq.XName, Object[]) -> Void
+IL_00FE: callvirt 0x0A00009B System.Xml.Linq.XContainer.Add(Object) -> Void
+IL_0103: ldarg.0 
+IL_0104: ldfld 0x04000016 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downXml : System.Xml.Linq.XElement
+IL_0109: ldarg.0 
+IL_010A: ldfld 0x04000015 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.downxmlpath : String
+IL_010F: callvirt 0x0A000061 System.Xml.Linq.XElement.Save(String) -> Void
+IL_0114: ldarg.0 
+IL_0115: ldfld 0x04000011 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.labroom : USTCORi.WebLabClient.Common.LABROOM
+IL_011A: callvirt 0x0600009F USTCORi.WebLabClient.Common.LABROOM.get_FILEURL() -> String
+IL_011F: stloc.0 
+IL_0120: ldarg.0 
+IL_0121: ldfld 0x04000011 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.labroom : USTCORi.WebLabClient.Common.LABROOM
+IL_0126: callvirt 0x060000A7 USTCORi.WebLabClient.Common.LABROOM.get_IsUseFileServer() -> Boolean
+IL_012B: brfalse.s IL_019B
+IL_012D: ldloc.0 
+IL_012E: ldc.i4.1 
+IL_012F: newarr 0x01000071 System.Char
+IL_0134: dup 
+IL_0135: ldc.i4.0 
+IL_0136: ldc.i4.s 47
+IL_0138: stelem.i2 
+IL_0139: callvirt 0x0A000043 System.String.Split(Char[]) -> String[]
+IL_013E: ldloc.0 
+IL_013F: ldc.i4.1 
+IL_0140: newarr 0x01000071 System.Char
+IL_0145: dup 
+IL_0146: ldc.i4.0 
+IL_0147: ldc.i4.s 47
+IL_0149: stelem.i2 
+IL_014A: callvirt 0x0A000043 System.String.Split(Char[]) -> String[]
+IL_014F: ldlen 
+IL_0150: conv.i4 
+IL_0151: ldc.i4.1 
+IL_0152: sub 
+IL_0153: ldelem.ref 
+IL_0154: stloc.0 
+IL_0155: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_015A: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_015F: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_0164: ldloc.0 
+IL_0165: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_016A: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_016F: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_0174: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_0179: call 0x060000C2 USTCORi.WebLabClient.Common.ZipHelp.UnZipFile(String, String) -> String
+IL_017E: pop 
+IL_017F: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_0184: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_0189: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_018E: ldloc.0 
+IL_018F: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_0194: call 0x0A00009C System.IO.File.Delete(String) -> Void
+IL_0199: br.s IL_020A
+IL_019B: ldarg.0 
+IL_019C: ldfld 0x04000011 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.labroom : USTCORi.WebLabClient.Common.LABROOM
+IL_01A1: callvirt 0x0600009F USTCORi.WebLabClient.Common.LABROOM.get_FILEURL() -> String
+IL_01A6: ldstr "profile"
+IL_01AB: callvirt 0x0A000086 System.String.Contains(String) -> Boolean
+IL_01B0: brfalse.s IL_01DA
+IL_01B2: ldloc.0 
+IL_01B3: ldc.i4.1 
+IL_01B4: newarr 0x01000071 System.Char
+IL_01B9: dup 
+IL_01BA: ldc.i4.0 
+IL_01BB: ldc.i4.s 47
+IL_01BD: stelem.i2 
+IL_01BE: callvirt 0x0A000043 System.String.Split(Char[]) -> String[]
+IL_01C3: ldloc.0 
+IL_01C4: ldc.i4.1 
+IL_01C5: newarr 0x01000071 System.Char
+IL_01CA: dup 
+IL_01CB: ldc.i4.0 
+IL_01CC: ldc.i4.s 47
+IL_01CE: stelem.i2 
+IL_01CF: callvirt 0x0A000043 System.String.Split(Char[]) -> String[]
+IL_01D4: ldlen 
+IL_01D5: conv.i4 
+IL_01D6: ldc.i4.1 
+IL_01D7: sub 
+IL_01D8: ldelem.ref 
+IL_01D9: stloc.0 
+IL_01DA: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_01DF: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_01E4: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_01E9: ldloc.0 
+IL_01EA: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_01EF: dup 
+IL_01F0: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_01F5: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_01FA: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_01FF: call 0x060000C2 USTCORi.WebLabClient.Common.ZipHelp.UnZipFile(String, String) -> String
+IL_0204: pop 
+IL_0205: call 0x0A00009C System.IO.File.Delete(String) -> Void
+IL_020A: ldarg.0 
+IL_020B: ldarg.0 
+IL_020C: ldfld 0x04000017 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.arg : String
+IL_0211: call 0x06000026 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.Start(String) -> Void
+IL_0216: leave.s IL_023B
+IL_0218: stloc.2 
+IL_0219: ldstr "\u8FD0\u884C\u73AF\u5883\u66F4\u65B0\u5931\u8D25\uFF0C\u9519\u8BEF\u4FE1\u606F\uFF1A"
+IL_021E: ldloc.2 
+IL_021F: callvirt 0x0A000022 System.Object.ToString() -> String
+IL_0224: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_0229: call 0x0A00004A System.Windows.MessageBox.Show(String) -> System.Windows.MessageBoxResult
+IL_022E: pop 
+IL_022F: call 0x0A00007B System.Windows.Application.get_Current() -> System.Windows.Application
+IL_0234: callvirt 0x0A00007C System.Windows.Application.Shutdown() -> Void
+IL_0239: leave.s IL_023B
+IL_023B: ret 
+EXCEPTION Finally try=97+23 handler=120+10 catch=ModuleDefinition#0
+EXCEPTION Catch try=0+536 handler=536+35 catch=System.Exception
+METHOD 0x06000026 RVA=14064 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.Start(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000018 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.Sys : String
+IL_0006: ldstr "1"
+IL_000B: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_0010: brtrue.s IL_0039
+IL_0012: ldarg.0 
+IL_0013: ldfld 0x04000018 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.Sys : String
+IL_0018: ldstr "2"
+IL_001D: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_0022: brtrue.s IL_0039
+IL_0024: ldarg.0 
+IL_0025: ldfld 0x04000018 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.Sys : String
+IL_002A: ldstr "4"
+IL_002F: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_0034: brfalse IL_0264
+IL_0039: call 0x0A00006D System.Diagnostics.Process.GetProcesses() -> System.Diagnostics.Process[]
+IL_003E: stloc.0 
+IL_003F: ldc.i4.0 
+IL_0040: stloc.1 
+IL_0041: br IL_0113
+IL_0046: ldloc.0 
+IL_0047: ldloc.1 
+IL_0048: ldelem.ref 
+IL_0049: stloc.2 
+IL_004A: ldloc.2 
+IL_004B: callvirt 0x0A00006E System.Diagnostics.Process.get_ProcessName() -> String
+IL_0050: callvirt 0x0A00006F System.String.Trim() -> String
+IL_0055: ldstr "USTCORi.ExamSystem.Client"
+IL_005A: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_005F: brfalse IL_010F
+IL_0064: ldsfld 0x0A000050 System.String.Empty : String
+IL_0069: stloc.3 
+IL_006A: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_006F: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_0074: callvirt 0x0600002A USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_Language() -> String
+IL_0079: ldstr "ZH-EN"
+IL_007E: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_0083: brfalse.s IL_00A9
+IL_0085: ldstr "A program is already running. To restart, please end the currently running program first"
+IL_008A: ldstr "Warning"
+IL_008F: ldc.i4.0 
+IL_0090: ldc.i4.s 48
+IL_0092: call 0x0A00006C System.Windows.MessageBox.Show(String, String, System.Windows.MessageBoxButton, System.Windows.MessageBoxImage) -> System.Windows.MessageBoxResult
+IL_0097: stloc.s 4
+IL_0099: ldloca.s 4
+IL_009B: constrained. 0x01000030 System.Windows.MessageBoxResult
+IL_00A1: callvirt 0x0A000022 System.Object.ToString() -> String
+IL_00A6: stloc.3 
+IL_00A7: br.s IL_00CB
+IL_00A9: ldstr "\u5DF2\u7ECF\u6709\u4E00\u4E2A\u7A0B\u5E8F\u6B63\u5728\u8FD0\u884C,\u5982\u8981\u91CD\u65B0\u5F00\u59CB,\u8BF7\u5148\u7ED3\u675F\u5F53\u524D\u8FD0\u884C\u7A0B\u5E8F\uFF1F"
+IL_00AE: ldstr "Info"
+IL_00B3: ldc.i4.1 
+IL_00B4: ldc.i4.s 64
+IL_00B6: call 0x0A00006C System.Windows.MessageBox.Show(String, String, System.Windows.MessageBoxButton, System.Windows.MessageBoxImage) -> System.Windows.MessageBoxResult
+IL_00BB: stloc.s 4
+IL_00BD: ldloca.s 4
+IL_00BF: constrained. 0x01000030 System.Windows.MessageBoxResult
+IL_00C5: callvirt 0x0A000022 System.Object.ToString() -> String
+IL_00CA: stloc.3 
+IL_00CB: ldloc.3 
+IL_00CC: callvirt 0x0A000022 System.Object.ToString() -> String
+IL_00D1: ldstr "OK"
+IL_00D6: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_00DB: brfalse.s IL_00EF
+IL_00DD: ldloc.2 
+IL_00DE: callvirt 0x0A000070 System.Diagnostics.Process.Kill() -> Void
+IL_00E3: ldc.i4 2000
+IL_00E8: call 0x0A00003B System.Threading.Thread.Sleep(Int32) -> Void
+IL_00ED: br.s IL_00F4
+IL_00EF: leave IL_0534
+IL_00F4: leave.s IL_011C
+IL_00F6: pop 
+IL_00F7: ldstr "\u65E0\u6CD5\u5173\u95ED\u5B9E\u9A8C\u8FDB\u7A0B\uFF0C\u9700\u8981\u81F3\u4EFB\u52A1\u7BA1\u7406\u5668\u4E2D\u624B\u52A8\u5173\u95ED\uFF01"
+IL_00FC: ldstr "Warning"
+IL_0101: ldc.i4.0 
+IL_0102: ldc.i4.s 48
+IL_0104: call 0x0A00006C System.Windows.MessageBox.Show(String, String, System.Windows.MessageBoxButton, System.Windows.MessageBoxImage) -> System.Windows.MessageBoxResult
+IL_0109: pop 
+IL_010A: leave IL_0534
+IL_010F: ldloc.1 
+IL_0110: ldc.i4.1 
+IL_0111: add 
+IL_0112: stloc.1 
+IL_0113: ldloc.1 
+IL_0114: ldloc.0 
+IL_0115: ldlen 
+IL_0116: conv.i4 
+IL_0117: blt IL_0046
+IL_011C: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_0121: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_0126: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_012B: ldstr "USTCORi.ExamSystem.Client.exe"
+IL_0130: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_0135: newobj 0x0A000071 System.IO.FileInfo..ctor(String) -> Void
+IL_013A: callvirt 0x0A000072 System.IO.FileSystemInfo.get_Exists() -> Boolean
+IL_013F: brfalse IL_01CF
+IL_0144: newobj 0x0A000073 System.Diagnostics.Process..ctor() -> Void
+IL_0149: stloc.s 5
+IL_014B: ldloc.s 5
+IL_014D: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_0152: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_0157: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_015C: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_0161: ldstr "USTCORi.ExamSystem.Client.exe"
+IL_0166: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_016B: callvirt 0x0A000075 System.Diagnostics.ProcessStartInfo.set_FileName(String) -> Void
+IL_0170: ldloc.s 5
+IL_0172: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_0177: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_017C: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_0181: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_0186: callvirt 0x0A000076 System.Diagnostics.ProcessStartInfo.set_WorkingDirectory(String) -> Void
+IL_018B: ldloc.s 5
+IL_018D: ldc.i4.1 
+IL_018E: callvirt 0x0A000077 System.Diagnostics.Process.set_EnableRaisingEvents(Boolean) -> Void
+IL_0193: ldloc.s 5
+IL_0195: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_019A: ldarg.1 
+IL_019B: callvirt 0x0A000078 System.Diagnostics.ProcessStartInfo.set_Arguments(String) -> Void
+IL_01A0: ldloc.s 5
+IL_01A2: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_01A7: ldstr "runas"
+IL_01AC: callvirt 0x0A000079 System.Diagnostics.ProcessStartInfo.set_Verb(String) -> Void
+IL_01B1: ldloc.s 5
+IL_01B3: callvirt 0x0A00007A System.Diagnostics.Process.Start() -> Boolean
+IL_01B8: pop 
+IL_01B9: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_01BE: callvirt 0x06000041 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Global() -> USTCORi.WebLabClient.RuningInfo.RunningInfoGlobalVariable
+IL_01C3: ldloc.s 5
+IL_01C5: callvirt 0x06000046 USTCORi.WebLabClient.RuningInfo.RunningInfoGlobalVariable.set_RunningProcess(System.Diagnostics.Process) -> Void
+IL_01CA: br IL_0255
+IL_01CF: newobj 0x0A000073 System.Diagnostics.Process..ctor() -> Void
+IL_01D4: stloc.s 6
+IL_01D6: ldloc.s 6
+IL_01D8: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_01DD: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_01E2: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_01E7: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_01EC: ldstr "4\\USTCORi.ExamSystem.Client.exe"
+IL_01F1: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_01F6: callvirt 0x0A000075 System.Diagnostics.ProcessStartInfo.set_FileName(String) -> Void
+IL_01FB: ldloc.s 6
+IL_01FD: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_0202: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_0207: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_020C: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_0211: callvirt 0x0A000076 System.Diagnostics.ProcessStartInfo.set_WorkingDirectory(String) -> Void
+IL_0216: ldloc.s 6
+IL_0218: ldc.i4.1 
+IL_0219: callvirt 0x0A000077 System.Diagnostics.Process.set_EnableRaisingEvents(Boolean) -> Void
+IL_021E: ldloc.s 6
+IL_0220: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_0225: ldarg.1 
+IL_0226: callvirt 0x0A000078 System.Diagnostics.ProcessStartInfo.set_Arguments(String) -> Void
+IL_022B: ldloc.s 6
+IL_022D: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_0232: ldstr "runas"
+IL_0237: callvirt 0x0A000079 System.Diagnostics.ProcessStartInfo.set_Verb(String) -> Void
+IL_023C: ldloc.s 6
+IL_023E: callvirt 0x0A00007A System.Diagnostics.Process.Start() -> Boolean
+IL_0243: pop 
+IL_0244: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_0249: callvirt 0x06000041 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Global() -> USTCORi.WebLabClient.RuningInfo.RunningInfoGlobalVariable
+IL_024E: ldloc.s 6
+IL_0250: callvirt 0x06000046 USTCORi.WebLabClient.RuningInfo.RunningInfoGlobalVariable.set_RunningProcess(System.Diagnostics.Process) -> Void
+IL_0255: call 0x0A00007B System.Windows.Application.get_Current() -> System.Windows.Application
+IL_025A: callvirt 0x0A00007C System.Windows.Application.Shutdown() -> Void
+IL_025F: br IL_04C9
+IL_0264: ldarg.0 
+IL_0265: ldfld 0x04000018 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.Sys : String
+IL_026A: ldstr "3"
+IL_026F: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_0274: brfalse IL_0399
+IL_0279: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_027E: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_0283: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_0288: ldstr "USTCORi.RecordingClient.exe"
+IL_028D: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_0292: newobj 0x0A000071 System.IO.FileInfo..ctor(String) -> Void
+IL_0297: callvirt 0x0A000072 System.IO.FileSystemInfo.get_Exists() -> Boolean
+IL_029C: brfalse.s IL_0315
+IL_029E: newobj 0x0A000073 System.Diagnostics.Process..ctor() -> Void
+IL_02A3: stloc.s 7
+IL_02A5: ldloc.s 7
+IL_02A7: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_02AC: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_02B1: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_02B6: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_02BB: ldstr "USTCORi.RecordingClient.exe"
+IL_02C0: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_02C5: callvirt 0x0A000075 System.Diagnostics.ProcessStartInfo.set_FileName(String) -> Void
+IL_02CA: ldloc.s 7
+IL_02CC: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_02D1: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_02D6: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_02DB: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_02E0: callvirt 0x0A000076 System.Diagnostics.ProcessStartInfo.set_WorkingDirectory(String) -> Void
+IL_02E5: ldloc.s 7
+IL_02E7: ldc.i4.1 
+IL_02E8: callvirt 0x0A000077 System.Diagnostics.Process.set_EnableRaisingEvents(Boolean) -> Void
+IL_02ED: ldloc.s 7
+IL_02EF: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_02F4: ldarg.1 
+IL_02F5: callvirt 0x0A000078 System.Diagnostics.ProcessStartInfo.set_Arguments(String) -> Void
+IL_02FA: ldloc.s 7
+IL_02FC: callvirt 0x0A00007A System.Diagnostics.Process.Start() -> Boolean
+IL_0301: pop 
+IL_0302: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_0307: callvirt 0x06000041 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Global() -> USTCORi.WebLabClient.RuningInfo.RunningInfoGlobalVariable
+IL_030C: ldloc.s 7
+IL_030E: callvirt 0x06000046 USTCORi.WebLabClient.RuningInfo.RunningInfoGlobalVariable.set_RunningProcess(System.Diagnostics.Process) -> Void
+IL_0313: br.s IL_038A
+IL_0315: newobj 0x0A000073 System.Diagnostics.Process..ctor() -> Void
+IL_031A: stloc.s 8
+IL_031C: ldloc.s 8
+IL_031E: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_0323: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_0328: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_032D: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_0332: ldstr "4\\USTCORi.RecordingClient.exe"
+IL_0337: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_033C: callvirt 0x0A000075 System.Diagnostics.ProcessStartInfo.set_FileName(String) -> Void
+IL_0341: ldloc.s 8
+IL_0343: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_0348: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_034D: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_0352: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_0357: callvirt 0x0A000076 System.Diagnostics.ProcessStartInfo.set_WorkingDirectory(String) -> Void
+IL_035C: ldloc.s 8
+IL_035E: ldc.i4.1 
+IL_035F: callvirt 0x0A000077 System.Diagnostics.Process.set_EnableRaisingEvents(Boolean) -> Void
+IL_0364: ldloc.s 8
+IL_0366: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_036B: ldarg.1 
+IL_036C: callvirt 0x0A000078 System.Diagnostics.ProcessStartInfo.set_Arguments(String) -> Void
+IL_0371: ldloc.s 8
+IL_0373: callvirt 0x0A00007A System.Diagnostics.Process.Start() -> Boolean
+IL_0378: pop 
+IL_0379: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_037E: callvirt 0x06000041 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Global() -> USTCORi.WebLabClient.RuningInfo.RunningInfoGlobalVariable
+IL_0383: ldloc.s 8
+IL_0385: callvirt 0x06000046 USTCORi.WebLabClient.RuningInfo.RunningInfoGlobalVariable.set_RunningProcess(System.Diagnostics.Process) -> Void
+IL_038A: call 0x0A00007B System.Windows.Application.get_Current() -> System.Windows.Application
+IL_038F: callvirt 0x0A00007C System.Windows.Application.Shutdown() -> Void
+IL_0394: br IL_04C9
+IL_0399: ldarg.0 
+IL_039A: ldfld 0x04000018 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.Sys : String
+IL_039F: ldstr "5"
+IL_03A4: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_03A9: brfalse IL_04C9
+IL_03AE: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_03B3: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_03B8: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_03BD: ldstr "USTCORi.PlatWebLabClient.exe"
+IL_03C2: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_03C7: newobj 0x0A000071 System.IO.FileInfo..ctor(String) -> Void
+IL_03CC: callvirt 0x0A000072 System.IO.FileSystemInfo.get_Exists() -> Boolean
+IL_03D1: brfalse.s IL_044A
+IL_03D3: newobj 0x0A000073 System.Diagnostics.Process..ctor() -> Void
+IL_03D8: stloc.s 9
+IL_03DA: ldloc.s 9
+IL_03DC: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_03E1: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_03E6: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_03EB: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_03F0: ldstr "USTCORi.PlatWebLabClient.exe"
+IL_03F5: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_03FA: callvirt 0x0A000075 System.Diagnostics.ProcessStartInfo.set_FileName(String) -> Void
+IL_03FF: ldloc.s 9
+IL_0401: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_0406: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_040B: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_0410: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_0415: callvirt 0x0A000076 System.Diagnostics.ProcessStartInfo.set_WorkingDirectory(String) -> Void
+IL_041A: ldloc.s 9
+IL_041C: ldc.i4.1 
+IL_041D: callvirt 0x0A000077 System.Diagnostics.Process.set_EnableRaisingEvents(Boolean) -> Void
+IL_0422: ldloc.s 9
+IL_0424: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_0429: ldarg.1 
+IL_042A: callvirt 0x0A000078 System.Diagnostics.ProcessStartInfo.set_Arguments(String) -> Void
+IL_042F: ldloc.s 9
+IL_0431: callvirt 0x0A00007A System.Diagnostics.Process.Start() -> Boolean
+IL_0436: pop 
+IL_0437: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_043C: callvirt 0x06000041 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Global() -> USTCORi.WebLabClient.RuningInfo.RunningInfoGlobalVariable
+IL_0441: ldloc.s 9
+IL_0443: callvirt 0x06000046 USTCORi.WebLabClient.RuningInfo.RunningInfoGlobalVariable.set_RunningProcess(System.Diagnostics.Process) -> Void
+IL_0448: br.s IL_04BF
+IL_044A: newobj 0x0A000073 System.Diagnostics.Process..ctor() -> Void
+IL_044F: stloc.s 10
+IL_0451: ldloc.s 10
+IL_0453: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_0458: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_045D: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_0462: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_0467: ldstr "4\\USTCORi.PlatWebLabClient.exe"
+IL_046C: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_0471: callvirt 0x0A000075 System.Diagnostics.ProcessStartInfo.set_FileName(String) -> Void
+IL_0476: ldloc.s 10
+IL_0478: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_047D: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_0482: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_0487: callvirt 0x06000033 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_048C: callvirt 0x0A000076 System.Diagnostics.ProcessStartInfo.set_WorkingDirectory(String) -> Void
+IL_0491: ldloc.s 10
+IL_0493: ldc.i4.1 
+IL_0494: callvirt 0x0A000077 System.Diagnostics.Process.set_EnableRaisingEvents(Boolean) -> Void
+IL_0499: ldloc.s 10
+IL_049B: callvirt 0x0A000074 System.Diagnostics.Process.get_StartInfo() -> System.Diagnostics.ProcessStartInfo
+IL_04A0: ldarg.1 
+IL_04A1: callvirt 0x0A000078 System.Diagnostics.ProcessStartInfo.set_Arguments(String) -> Void
+IL_04A6: ldloc.s 10
+IL_04A8: callvirt 0x0A00007A System.Diagnostics.Process.Start() -> Boolean
+IL_04AD: pop 
+IL_04AE: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_04B3: callvirt 0x06000041 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Global() -> USTCORi.WebLabClient.RuningInfo.RunningInfoGlobalVariable
+IL_04B8: ldloc.s 10
+IL_04BA: callvirt 0x06000046 USTCORi.WebLabClient.RuningInfo.RunningInfoGlobalVariable.set_RunningProcess(System.Diagnostics.Process) -> Void
+IL_04BF: call 0x0A00007B System.Windows.Application.get_Current() -> System.Windows.Application
+IL_04C4: callvirt 0x0A00007C System.Windows.Application.Shutdown() -> Void
+IL_04C9: leave.s IL_0534
+IL_04CB: stloc.s 11
+IL_04CD: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_04D2: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_04D7: callvirt 0x0600002A USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_Language() -> String
+IL_04DC: ldstr "ZH-EN"
+IL_04E1: call 0x0A000054 System.String.op_Equality(String, String) -> Boolean
+IL_04E6: brfalse.s IL_0506
+IL_04E8: ldstr "The running environment failed to start\uFF01"
+IL_04ED: call 0x0A00007D System.Environment.get_NewLine() -> String
+IL_04F2: ldloc.s 11
+IL_04F4: callvirt 0x0A000049 System.Exception.get_Message() -> String
+IL_04F9: call 0x0A00007E System.String.Concat(String, String, String) -> String
+IL_04FE: call 0x0A00004A System.Windows.MessageBox.Show(String) -> System.Windows.MessageBoxResult
+IL_0503: pop 
+IL_0504: br.s IL_0522
+IL_0506: ldstr "\u8FD0\u884C\u73AF\u5883\u542F\u52A8\u5931\u8D25\uFF01"
+IL_050B: call 0x0A00007D System.Environment.get_NewLine() -> String
+IL_0510: ldloc.s 11
+IL_0512: callvirt 0x0A000049 System.Exception.get_Message() -> String
+IL_0517: call 0x0A00007E System.String.Concat(String, String, String) -> String
+IL_051C: call 0x0A00004A System.Windows.MessageBox.Show(String) -> System.Windows.MessageBoxResult
+IL_0521: pop 
+IL_0522: ldc.i4.0 
+IL_0523: call 0x0A00007F System.Environment.Exit(Int32) -> Void
+IL_0528: call 0x0A00007B System.Windows.Application.get_Current() -> System.Windows.Application
+IL_052D: callvirt 0x0A00007C System.Windows.Application.Shutdown() -> Void
+IL_0532: leave.s IL_0534
+IL_0534: ret 
+EXCEPTION Catch try=100+146 handler=246+25 catch=System.Exception
+EXCEPTION Catch try=0+1227 handler=1227+105 catch=System.Exception
+METHOD 0x06000027 RVA=15464 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.Window_MouseLeftButtonDown(Object, System.Windows.Input.MouseButtonEventArgs) -> Void
+IL_0000: ldarg.0 
+IL_0001: call 0x0A00009D System.Windows.Window.DragMove() -> Void
+IL_0006: ret 
+METHOD 0x06000028 RVA=15472 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.InitializeComponent() -> Void
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000020 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow._contentLoaded : Boolean
+IL_0006: brfalse.s IL_0009
+IL_0008: ret 
+IL_0009: ldarg.0 
+IL_000A: ldc.i4.1 
+IL_000B: stfld 0x04000020 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow._contentLoaded : Boolean
+IL_0010: ldstr "/USTCORi.WebLabClient;component/views/downloadwindow/downloadwindow.xaml"
+IL_0015: ldc.i4.2 
+IL_0016: newobj 0x0A000028 System.Uri..ctor(String, System.UriKind) -> Void
+IL_001B: stloc.0 
+IL_001C: ldarg.0 
+IL_001D: ldloc.0 
+IL_001E: call 0x0A00003D System.Windows.Application.LoadComponent(Object, System.Uri) -> Void
+IL_0023: ret 
+METHOD 0x06000029 RVA=15520 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.System.Windows.Markup.IComponentConnector.Connect(Int32, Object) -> Void
+IL_0000: ldarg.1 
+IL_0001: ldc.i4.1 
+IL_0002: sub 
+IL_0003: switch IL_002D, IL_0045, IL_0052, IL_005F, IL_006C, IL_0079, IL_0086, IL_0093
+IL_0028: br IL_00B7
+IL_002D: ldarg.2 
+IL_002E: castclass 0x02000005 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow
+IL_0033: ldarg.0 
+IL_0034: ldftn 0x06000027 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.Window_MouseLeftButtonDown(Object, System.Windows.Input.MouseButtonEventArgs) -> Void
+IL_003A: newobj 0x0A00009E System.Windows.Input.MouseButtonEventHandler..ctor(Object, IntPtr) -> Void
+IL_003F: callvirt 0x0A00009F System.Windows.UIElement.add_MouseLeftButtonDown(System.Windows.Input.MouseButtonEventHandler) -> Void
+IL_0044: ret 
+IL_0045: ldarg.0 
+IL_0046: ldarg.2 
+IL_0047: castclass 0x01000036 System.Windows.Controls.Border
+IL_004C: stfld 0x04000019 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.MainBorder : System.Windows.Controls.Border
+IL_0051: ret 
+IL_0052: ldarg.0 
+IL_0053: ldarg.2 
+IL_0054: castclass 0x01000037 System.Windows.Controls.Grid
+IL_0059: stfld 0x0400001A USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.DownloadView : System.Windows.Controls.Grid
+IL_005E: ret 
+IL_005F: ldarg.0 
+IL_0060: ldarg.2 
+IL_0061: castclass 0x0100001C System.Windows.Controls.ProgressBar
+IL_0066: stfld 0x0400001B USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.DownloadProgressBar : System.Windows.Controls.ProgressBar
+IL_006B: ret 
+IL_006C: ldarg.0 
+IL_006D: ldarg.2 
+IL_006E: castclass 0x0100001D System.Windows.Controls.TextBlock
+IL_0073: stfld 0x0400001C USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.txt : System.Windows.Controls.TextBlock
+IL_0078: ret 
+IL_0079: ldarg.0 
+IL_007A: ldarg.2 
+IL_007B: castclass 0x0100001D System.Windows.Controls.TextBlock
+IL_0080: stfld 0x0400001D USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.percent : System.Windows.Controls.TextBlock
+IL_0085: ret 
+IL_0086: ldarg.0 
+IL_0087: ldarg.2 
+IL_0088: castclass 0x01000037 System.Windows.Controls.Grid
+IL_008D: stfld 0x0400001E USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.OkView : System.Windows.Controls.Grid
+IL_0092: ret 
+IL_0093: ldarg.0 
+IL_0094: ldarg.2 
+IL_0095: castclass 0x01000038 System.Windows.Controls.Button
+IL_009A: stfld 0x0400001F USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.ProgressButton : System.Windows.Controls.Button
+IL_009F: ldarg.0 
+IL_00A0: ldfld 0x0400001F USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.ProgressButton : System.Windows.Controls.Button
+IL_00A5: ldarg.0 
+IL_00A6: ldftn 0x06000021 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow.BtnOK_Click(Object, System.Windows.RoutedEventArgs) -> Void
+IL_00AC: newobj 0x0A00003E System.Windows.RoutedEventHandler..ctor(Object, IntPtr) -> Void
+IL_00B1: callvirt 0x0A0000A0 System.Windows.Controls.Primitives.ButtonBase.add_Click(System.Windows.RoutedEventHandler) -> Void
+IL_00B6: ret 
+IL_00B7: ldarg.0 
+IL_00B8: ldc.i4.1 
+IL_00B9: stfld 0x04000020 USTCORi.WebLabClient.Views.DownloadWindow.DownloadWindow._contentLoaded : Boolean
+IL_00BE: ret 
+TYPE USTCORi.WebLabClient.RuningInfo.RuningInfoConst : System.Object
+FIELD USTCORi.WebLabClient.RuningInfo.RuningInfoConst.version : String
+FIELD USTCORi.WebLabClient.RuningInfo.RuningInfoConst.allowedUser : String
+FIELD USTCORi.WebLabClient.RuningInfo.RuningInfoConst.userName : String
+FIELD USTCORi.WebLabClient.RuningInfo.RuningInfoConst.name : String
+FIELD USTCORi.WebLabClient.RuningInfo.RuningInfoConst.password : String
+FIELD USTCORi.WebLabClient.RuningInfo.RuningInfoConst.downloadExperimentPath : String
+FIELD USTCORi.WebLabClient.RuningInfo.RuningInfoConst.downloadExperimentXmlPath : String
+FIELD USTCORi.WebLabClient.RuningInfo.RuningInfoConst.downloadUpdataPath : String
+FIELD USTCORi.WebLabClient.RuningInfo.RuningInfoConst.isShowPhysic : String
+FIELD USTCORi.WebLabClient.RuningInfo.RuningInfoConst.language : String
+FIELD USTCORi.WebLabClient.RuningInfo.RuningInfoConst.serverip : String
+PROPERTY Language() -> String
+PROPERTY Version() -> String
+PROPERTY SchoolUser() -> String
+PROPERTY UserName() -> String
+PROPERTY Name() -> String
+PROPERTY IsShowPhysic() -> String
+PROPERTY ConfigName() -> String
+PROPERTY DownloadExperimentPath() -> String
+PROPERTY DownloadExperimentXmlPath() -> String
+PROPERTY DownloadUpdataPath() -> String
+PROPERTY ServerIP() -> String
+METHOD 0x0600002A RVA=15723 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_Language() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x0400002A USTCORi.WebLabClient.RuningInfo.RuningInfoConst.language : String
+IL_0006: ret 
+METHOD 0x0600002B RVA=15731 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_Version() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000021 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.version : String
+IL_0006: ret 
+METHOD 0x0600002C RVA=15739 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_SchoolUser() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000022 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.allowedUser : String
+IL_0006: ret 
+METHOD 0x0600002D RVA=15747 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_UserName() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000023 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.userName : String
+IL_0006: ret 
+METHOD 0x0600002E RVA=15755 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_Name() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000024 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.name : String
+IL_0006: ret 
+METHOD 0x0600002F RVA=15763 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_IsShowPhysic() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000029 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.isShowPhysic : String
+IL_0006: ret 
+METHOD 0x06000030 RVA=15772 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_ConfigName() -> String
+IL_0000: call 0x0A000059 System.AppDomain.get_CurrentDomain() -> System.AppDomain
+IL_0005: callvirt 0x0A0000A1 System.AppDomain.get_FriendlyName() -> String
+IL_000A: stloc.0 
+IL_000B: ldloc.0 
+IL_000C: ldc.i4.0 
+IL_000D: ldloc.0 
+IL_000E: callvirt 0x0A000044 System.String.get_Length() -> Int32
+IL_0013: ldc.i4.4 
+IL_0014: sub 
+IL_0015: callvirt 0x0A000045 System.String.Substring(Int32, Int32) -> String
+IL_001A: stloc.0 
+IL_001B: ldloc.0 
+IL_001C: ldstr ".xml"
+IL_0021: call 0x0A00002B System.String.Concat(String, String) -> String
+IL_0026: stloc.0 
+IL_0027: ldloc.0 
+IL_0028: ret 
+METHOD 0x06000031 RVA=15825 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadExperimentPath() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000026 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.downloadExperimentPath : String
+IL_0006: ret 
+METHOD 0x06000032 RVA=15833 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadExperimentXmlPath() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000027 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.downloadExperimentXmlPath : String
+IL_0006: ret 
+METHOD 0x06000033 RVA=15841 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_DownloadUpdataPath() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000028 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.downloadUpdataPath : String
+IL_0006: ret 
+METHOD 0x06000034 RVA=15849 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_ServerIP() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x0400002B USTCORi.WebLabClient.RuningInfo.RuningInfoConst.serverip : String
+IL_0006: ret 
+METHOD 0x06000035 RVA=15857 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.SetServerIP(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x0400002B USTCORi.WebLabClient.RuningInfo.RuningInfoConst.serverip : String
+IL_0007: ret 
+METHOD 0x06000036 RVA=15866 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.SetLanguage(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x0400002A USTCORi.WebLabClient.RuningInfo.RuningInfoConst.language : String
+IL_0007: ret 
+METHOD 0x06000037 RVA=15875 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.SetVersion(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x04000021 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.version : String
+IL_0007: ret 
+METHOD 0x06000038 RVA=15884 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.SetIsShowPhysic(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x04000029 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.isShowPhysic : String
+IL_0007: ret 
+METHOD 0x06000039 RVA=15893 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.SetShoolUser(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x04000022 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.allowedUser : String
+IL_0007: ret 
+METHOD 0x0600003A RVA=15902 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.SetUserName(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x04000023 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.userName : String
+IL_0007: ret 
+METHOD 0x0600003B RVA=15911 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.SetName(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x04000024 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.name : String
+IL_0007: ret 
+METHOD 0x0600003C RVA=15920 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.SetDownloadExperimentPath(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x04000026 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.downloadExperimentPath : String
+IL_0007: ret 
+METHOD 0x0600003D RVA=15929 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.SetDownloadExperimentXmlPath(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x04000027 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.downloadExperimentXmlPath : String
+IL_0007: ret 
+METHOD 0x0600003E RVA=15938 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.SetDownloadUpdataPath(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x04000028 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.downloadUpdataPath : String
+IL_0007: ret 
+METHOD 0x0600003F RVA=15947 USTCORi.WebLabClient.RuningInfo.RuningInfoConst..ctor() -> Void
+IL_0000: ldarg.0 
+IL_0001: call 0x0A00001B System.Object..ctor() -> Void
+IL_0006: ret 
+METHOD 0x06000042 RVA=15993 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x0400002C USTCORi.WebLabClient.RuningInfo.RunningInfo.rConst : USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_0006: ret 
+TYPE USTCORi.WebLabClient.Common.LabExamUrlSer : System.Object
+FIELD USTCORi.WebLabClient.Common.LabExamUrlSer.<Diff>k__BackingField : String
+FIELD USTCORi.WebLabClient.Common.LabExamUrlSer.<ExamOrLabID>k__BackingField : String
+FIELD USTCORi.WebLabClient.Common.LabExamUrlSer.<SiteAdress>k__BackingField : String
+FIELD USTCORi.WebLabClient.Common.LabExamUrlSer.<StudentID>k__BackingField : String
+FIELD USTCORi.WebLabClient.Common.LabExamUrlSer.<Whtn>k__BackingField : String
+FIELD USTCORi.WebLabClient.Common.LabExamUrlSer.<UserType>k__BackingField : String
+FIELD USTCORi.WebLabClient.Common.LabExamUrlSer.<Clientip>k__BackingField : String
+FIELD USTCORi.WebLabClient.Common.LabExamUrlSer.<ClienTarea>k__BackingField : String
+FIELD USTCORi.WebLabClient.Common.LabExamUrlSer._language : String
+FIELD USTCORi.WebLabClient.Common.LabExamUrlSer._courseID : String
+FIELD USTCORi.WebLabClient.Common.LabExamUrlSer.<SysID>k__BackingField : String
+FIELD USTCORi.WebLabClient.Common.LabExamUrlSer.<Port>k__BackingField : String
+FIELD USTCORi.WebLabClient.Common.LabExamUrlSer.<Mode>k__BackingField : String
+FIELD USTCORi.WebLabClient.Common.LabExamUrlSer.<LabMode>k__BackingField : String
+FIELD USTCORi.WebLabClient.Common.LabExamUrlSer.<ActionType>k__BackingField : String
+PROPERTY Diff() -> String
+PROPERTY ExamOrLabID() -> String
+PROPERTY SiteAdress() -> String
+PROPERTY StudentID() -> String
+PROPERTY Whtn() -> String
+PROPERTY UserType() -> String
+PROPERTY Clientip() -> String
+PROPERTY ClienTarea() -> String
+PROPERTY Language() -> String
+PROPERTY CourseID() -> String
+PROPERTY SysID() -> String
+PROPERTY Port() -> String
+PROPERTY Mode() -> String
+PROPERTY LabMode() -> String
+PROPERTY ActionType() -> String
+METHOD 0x06000058 RVA=16305 USTCORi.WebLabClient.Common.LabExamUrlSer.get_Diff() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000033 USTCORi.WebLabClient.Common.LabExamUrlSer.<Diff>k__BackingField : String
+IL_0006: ret 
+METHOD 0x06000059 RVA=16313 USTCORi.WebLabClient.Common.LabExamUrlSer.set_Diff(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x04000033 USTCORi.WebLabClient.Common.LabExamUrlSer.<Diff>k__BackingField : String
+IL_0007: ret 
+METHOD 0x0600005A RVA=16322 USTCORi.WebLabClient.Common.LabExamUrlSer.get_ExamOrLabID() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000034 USTCORi.WebLabClient.Common.LabExamUrlSer.<ExamOrLabID>k__BackingField : String
+IL_0006: ret 
+METHOD 0x0600005B RVA=16330 USTCORi.WebLabClient.Common.LabExamUrlSer.set_ExamOrLabID(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x04000034 USTCORi.WebLabClient.Common.LabExamUrlSer.<ExamOrLabID>k__BackingField : String
+IL_0007: ret 
+METHOD 0x0600005C RVA=16339 USTCORi.WebLabClient.Common.LabExamUrlSer.get_SiteAdress() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000035 USTCORi.WebLabClient.Common.LabExamUrlSer.<SiteAdress>k__BackingField : String
+IL_0006: ret 
+METHOD 0x0600005D RVA=16347 USTCORi.WebLabClient.Common.LabExamUrlSer.set_SiteAdress(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x04000035 USTCORi.WebLabClient.Common.LabExamUrlSer.<SiteAdress>k__BackingField : String
+IL_0007: ret 
+METHOD 0x0600005E RVA=16356 USTCORi.WebLabClient.Common.LabExamUrlSer.get_StudentID() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000036 USTCORi.WebLabClient.Common.LabExamUrlSer.<StudentID>k__BackingField : String
+IL_0006: ret 
+METHOD 0x0600005F RVA=16364 USTCORi.WebLabClient.Common.LabExamUrlSer.set_StudentID(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x04000036 USTCORi.WebLabClient.Common.LabExamUrlSer.<StudentID>k__BackingField : String
+IL_0007: ret 
+METHOD 0x06000060 RVA=16373 USTCORi.WebLabClient.Common.LabExamUrlSer.get_Whtn() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000037 USTCORi.WebLabClient.Common.LabExamUrlSer.<Whtn>k__BackingField : String
+IL_0006: ret 
+METHOD 0x06000061 RVA=16381 USTCORi.WebLabClient.Common.LabExamUrlSer.set_Whtn(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x04000037 USTCORi.WebLabClient.Common.LabExamUrlSer.<Whtn>k__BackingField : String
+IL_0007: ret 
+METHOD 0x06000062 RVA=16390 USTCORi.WebLabClient.Common.LabExamUrlSer.get_UserType() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000038 USTCORi.WebLabClient.Common.LabExamUrlSer.<UserType>k__BackingField : String
+IL_0006: ret 
+METHOD 0x06000063 RVA=16398 USTCORi.WebLabClient.Common.LabExamUrlSer.set_UserType(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x04000038 USTCORi.WebLabClient.Common.LabExamUrlSer.<UserType>k__BackingField : String
+IL_0007: ret 
+METHOD 0x06000064 RVA=16407 USTCORi.WebLabClient.Common.LabExamUrlSer.get_Clientip() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000039 USTCORi.WebLabClient.Common.LabExamUrlSer.<Clientip>k__BackingField : String
+IL_0006: ret 
+METHOD 0x06000065 RVA=16415 USTCORi.WebLabClient.Common.LabExamUrlSer.set_Clientip(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x04000039 USTCORi.WebLabClient.Common.LabExamUrlSer.<Clientip>k__BackingField : String
+IL_0007: ret 
+METHOD 0x06000066 RVA=16424 USTCORi.WebLabClient.Common.LabExamUrlSer.get_ClienTarea() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x0400003A USTCORi.WebLabClient.Common.LabExamUrlSer.<ClienTarea>k__BackingField : String
+IL_0006: ret 
+METHOD 0x06000067 RVA=16432 USTCORi.WebLabClient.Common.LabExamUrlSer.set_ClienTarea(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x0400003A USTCORi.WebLabClient.Common.LabExamUrlSer.<ClienTarea>k__BackingField : String
+IL_0007: ret 
+METHOD 0x06000068 RVA=16441 USTCORi.WebLabClient.Common.LabExamUrlSer.get_Language() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x0400003B USTCORi.WebLabClient.Common.LabExamUrlSer._language : String
+IL_0006: ret 
+METHOD 0x06000069 RVA=16449 USTCORi.WebLabClient.Common.LabExamUrlSer.set_Language(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x0400003B USTCORi.WebLabClient.Common.LabExamUrlSer._language : String
+IL_0007: ret 
+METHOD 0x0600006A RVA=16458 USTCORi.WebLabClient.Common.LabExamUrlSer.get_CourseID() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x0400003C USTCORi.WebLabClient.Common.LabExamUrlSer._courseID : String
+IL_0006: ret 
+METHOD 0x0600006B RVA=16466 USTCORi.WebLabClient.Common.LabExamUrlSer.set_CourseID(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x0400003C USTCORi.WebLabClient.Common.LabExamUrlSer._courseID : String
+IL_0007: ret 
+METHOD 0x0600006C RVA=16475 USTCORi.WebLabClient.Common.LabExamUrlSer.get_SysID() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x0400003D USTCORi.WebLabClient.Common.LabExamUrlSer.<SysID>k__BackingField : String
+IL_0006: ret 
+METHOD 0x0600006D RVA=16483 USTCORi.WebLabClient.Common.LabExamUrlSer.set_SysID(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x0400003D USTCORi.WebLabClient.Common.LabExamUrlSer.<SysID>k__BackingField : String
+IL_0007: ret 
+METHOD 0x0600006E RVA=16492 USTCORi.WebLabClient.Common.LabExamUrlSer.get_Port() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x0400003E USTCORi.WebLabClient.Common.LabExamUrlSer.<Port>k__BackingField : String
+IL_0006: ret 
+METHOD 0x0600006F RVA=16500 USTCORi.WebLabClient.Common.LabExamUrlSer.set_Port(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x0400003E USTCORi.WebLabClient.Common.LabExamUrlSer.<Port>k__BackingField : String
+IL_0007: ret 
+METHOD 0x06000070 RVA=16509 USTCORi.WebLabClient.Common.LabExamUrlSer.get_Mode() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x0400003F USTCORi.WebLabClient.Common.LabExamUrlSer.<Mode>k__BackingField : String
+IL_0006: ret 
+METHOD 0x06000071 RVA=16517 USTCORi.WebLabClient.Common.LabExamUrlSer.set_Mode(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x0400003F USTCORi.WebLabClient.Common.LabExamUrlSer.<Mode>k__BackingField : String
+IL_0007: ret 
+METHOD 0x06000072 RVA=16526 USTCORi.WebLabClient.Common.LabExamUrlSer.get_LabMode() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000040 USTCORi.WebLabClient.Common.LabExamUrlSer.<LabMode>k__BackingField : String
+IL_0006: ret 
+METHOD 0x06000073 RVA=16534 USTCORi.WebLabClient.Common.LabExamUrlSer.set_LabMode(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x04000040 USTCORi.WebLabClient.Common.LabExamUrlSer.<LabMode>k__BackingField : String
+IL_0007: ret 
+METHOD 0x06000074 RVA=16543 USTCORi.WebLabClient.Common.LabExamUrlSer.get_ActionType() -> String
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000041 USTCORi.WebLabClient.Common.LabExamUrlSer.<ActionType>k__BackingField : String
+IL_0006: ret 
+METHOD 0x06000075 RVA=16551 USTCORi.WebLabClient.Common.LabExamUrlSer.set_ActionType(String) -> Void
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: stfld 0x04000041 USTCORi.WebLabClient.Common.LabExamUrlSer.<ActionType>k__BackingField : String
+IL_0007: ret 
+METHOD 0x06000076 RVA=16560 USTCORi.WebLabClient.Common.LabExamUrlSer..ctor() -> Void
+IL_0000: ldarg.0 
+IL_0001: ldstr "ZH-CN"
+IL_0006: stfld 0x0400003B USTCORi.WebLabClient.Common.LabExamUrlSer._language : String
+IL_000B: ldarg.0 
+IL_000C: ldstr "-1"
+IL_0011: stfld 0x0400003C USTCORi.WebLabClient.Common.LabExamUrlSer._courseID : String
+IL_0016: ldarg.0 
+IL_0017: call 0x0A00001B System.Object..ctor() -> Void
+IL_001C: ret 
+TYPE USTCORi.WebLabClient.Common.WLConstants : System.Object
+FIELD USTCORi.WebLabClient.Common.WLConstants.BIZEXCEPTION_NAME : String
+FIELD USTCORi.WebLabClient.Common.WLConstants.BLL_NAMESPACE : String
+FIELD USTCORi.WebLabClient.Common.WLConstants.SERVICE_ADDRESS : String
+FIELD USTCORi.WebLabClient.Common.WLConstants.SESSION_KEY_EXCEPTION : String
+FIELD USTCORi.WebLabClient.Common.WLConstants.ERROR_PAGE_URL : String
+FIELD USTCORi.WebLabClient.Common.WLConstants.DEFAULT_PAGE_URL : String
+FIELD USTCORi.WebLabClient.Common.WLConstants.FILE_LABCLIENT : Int32
+FIELD USTCORi.WebLabClient.Common.WLConstants.FILE_LAB : Int32
+FIELD USTCORi.WebLabClient.Common.WLConstants.FILE_INSTRUCTION_TYPE : Int32
+FIELD USTCORi.WebLabClient.Common.WLConstants.FILE_LAB_SHOWONLINE : Int32
+FIELD USTCORi.WebLabClient.Common.WLConstants.FILE_IMAGE_TYPE : Int32
+FIELD USTCORi.WebLabClient.Common.WLConstants.BLOCK : Int32
+FIELD USTCORi.WebLabClient.Common.WLConstants.FILE_LABCLIENT_PATH : String
+FIELD USTCORi.WebLabClient.Common.WLConstants.FILE_LAB_PATH : String
+FIELD USTCORi.WebLabClient.Common.WLConstants.FILE_INSTRUCTION_TYPE_PATH : String
+FIELD USTCORi.WebLabClient.Common.WLConstants.FILE_LAB_SHOWONLINE_PATH : String
+FIELD USTCORi.WebLabClient.Common.WLConstants.FILE_IMAGE_TYPE_PATH : String
+FIELD USTCORi.WebLabClient.Common.WLConstants.LAB_SOURCES_PATH : String
+FIELD USTCORi.WebLabClient.Common.WLConstants.ROLE_ADMIN : String
+FIELD USTCORi.WebLabClient.Common.WLConstants.ROLE_STUDENT : String
+FIELD USTCORi.WebLabClient.Common.WLConstants.SYJJ_FILENAME : String
+FIELD USTCORi.WebLabClient.Common.WLConstants.SYYL_FILENAME : String
+FIELD USTCORi.WebLabClient.Common.WLConstants.SYZD_FILENAME : String
+FIELD USTCORi.WebLabClient.Common.WLConstants.SYZDS_FILENAME : String
+FIELD USTCORi.WebLabClient.Common.WLConstants.SYNR_FILENAME : String
+FIELD USTCORi.WebLabClient.Common.WLConstants.SYYQ_FILENAME : String
+FIELD USTCORi.WebLabClient.Common.WLConstants.SYYS_FILENAME : String
+FIELD USTCORi.WebLabClient.Common.WLConstants.SYTP_FILENAME : String
+METHOD 0x060000CE RVA=15947 USTCORi.WebLabClient.Common.WLConstants..ctor() -> Void
+IL_0000: ldarg.0 
+IL_0001: call 0x0A00001B System.Object..ctor() -> Void
+IL_0006: ret 
+METHOD 0x060000CF RVA=23456 USTCORi.WebLabClient.Common.WLConstants..cctor() -> Void
+IL_0000: ldstr "USTCORI.CommonLib.ExceptionHandling.BizException"
+IL_0005: stsfld 0x04000061 USTCORi.WebLabClient.Common.WLConstants.BIZEXCEPTION_NAME : String
+IL_000A: ldstr "USTCORi.WebLab.BLL."
+IL_000F: stsfld 0x04000062 USTCORi.WebLabClient.Common.WLConstants.BLL_NAMESPACE : String
+IL_0014: ldstr "http://"
+IL_0019: ldsfld 0x0400000D USTCORi.WebLabClient.App.runningInfo : USTCORi.WebLabClient.RuningInfo.RunningInfo
+IL_001E: callvirt 0x06000042 USTCORi.WebLabClient.RuningInfo.RunningInfo.get_Const() -> USTCORi.WebLabClient.RuningInfo.RuningInfoConst
+IL_0023: callvirt 0x06000034 USTCORi.WebLabClient.RuningInfo.RuningInfoConst.get_ServerIP() -> String
+IL_0028: ldstr "/"
+IL_002D: call 0x0A00007E System.String.Concat(String, String, String) -> String
+IL_0032: stsfld 0x04000063 USTCORi.WebLabClient.Common.WLConstants.SERVICE_ADDRESS : String
+IL_0037: ldstr "SESSION\u5F02\u5E38"
+IL_003C: stsfld 0x04000064 USTCORi.WebLabClient.Common.WLConstants.SESSION_KEY_EXCEPTION : String
+IL_0041: ldstr "/Common/ErrorPage.xaml"
+IL_0046: stsfld 0x04000065 USTCORi.WebLabClient.Common.WLConstants.ERROR_PAGE_URL : String
+IL_004B: ldstr "/USTCORi.WebLab.WebUITestPage.html"
+IL_0050: stsfld 0x04000066 USTCORi.WebLabClient.Common.WLConstants.DEFAULT_PAGE_URL : String
+IL_0055: ldc.i4.0 
+IL_0056: stsfld 0x04000067 USTCORi.WebLabClient.Common.WLConstants.FILE_LABCLIENT : Int32
+IL_005B: ldc.i4.1 
+IL_005C: stsfld 0x04000068 USTCORi.WebLabClient.Common.WLConstants.FILE_LAB : Int32
+IL_0061: ldc.i4.2 
+IL_0062: stsfld 0x04000069 USTCORi.WebLabClient.Common.WLConstants.FILE_INSTRUCTION_TYPE : Int32
+IL_0067: ldc.i4.3 
+IL_0068: stsfld 0x0400006A USTCORi.WebLabClient.Common.WLConstants.FILE_LAB_SHOWONLINE : Int32
+IL_006D: ldc.i4.4 
+IL_006E: stsfld 0x0400006B USTCORi.WebLabClient.Common.WLConstants.FILE_IMAGE_TYPE : Int32
+IL_0073: ldc.i4 1000000
+IL_0078: stsfld 0x0400006C USTCORi.WebLabClient.Common.WLConstants.BLOCK : Int32
+IL_007D: ldstr "FileUpload/labClient/"
+IL_0082: stsfld 0x0400006D USTCORi.WebLabClient.Common.WLConstants.FILE_LABCLIENT_PATH : String
+IL_0087: ldstr "/FileUpload/lab/"
+IL_008C: stsfld 0x0400006E USTCORi.WebLabClient.Common.WLConstants.FILE_LAB_PATH : String
+IL_0091: ldstr "FileUpload/instruction/"
+IL_0096: stsfld 0x0400006F USTCORi.WebLabClient.Common.WLConstants.FILE_INSTRUCTION_TYPE_PATH : String
+IL_009B: ldstr "FileUpload/showonline/"
+IL_00A0: stsfld 0x04000070 USTCORi.WebLabClient.Common.WLConstants.FILE_LAB_SHOWONLINE_PATH : String
+IL_00A5: ldstr "FileUpload/image/"
+IL_00AA: stsfld 0x04000071 USTCORi.WebLabClient.Common.WLConstants.FILE_IMAGE_TYPE_PATH : String
+IL_00AF: ldstr "FileUpload/LabSources/"
+IL_00B4: stsfld 0x04000072 USTCORi.WebLabClient.Common.WLConstants.LAB_SOURCES_PATH : String
+IL_00B9: ldstr "1"
+IL_00BE: stsfld 0x04000073 USTCORi.WebLabClient.Common.WLConstants.ROLE_ADMIN : String
+IL_00C3: ldstr "2"
+IL_00C8: stsfld 0x04000074 USTCORi.WebLabClient.Common.WLConstants.ROLE_STUDENT : String
+IL_00CD: ret 
+METHOD 0x060000D2 RVA=23686 .<>c.<Application_Startup>b__3_0(Newtonsoft.Json.Linq.JProperty) -> .<>f__AnonymousType0`2<String,Newtonsoft.Json.Linq.JToken>
+IL_0000: ldarg.1 
+IL_0001: callvirt 0x0A000126 Newtonsoft.Json.Linq.JProperty.get_Name() -> String
+IL_0006: callvirt 0x0A000022 System.Object.ToString() -> String
+IL_000B: ldarg.1 
+IL_000C: callvirt 0x0A000127 Newtonsoft.Json.Linq.JProperty.get_Value() -> Newtonsoft.Json.Linq.JToken
+IL_0011: newobj 0x0A000128 .<>f__AnonymousType0`2<String,Newtonsoft.Json.Linq.JToken>..ctor(!0, !1) -> Void
+IL_0016: ret 
